@@ -333,3 +333,27 @@ document.addEventListener('DOMContentLoaded', function() {
             
             animateMarquee();
         }
+        // Handle window resize
+function handleResize() {
+    // Adjust marquee speed based on screen size
+    const marqueeContent = document.querySelector('.marquee-content');
+    if (marqueeContent) {
+        const speed = window.innerWidth < 768 ? 0.5 : 1;
+        marqueeContent.style.animationDuration = `${100/speed}s`;
+    }
+    
+    // Adjust process timeline for mobile
+    const processSteps = document.querySelectorAll('.process-step');
+    if (window.innerWidth < 1024) {
+        processSteps.forEach(step => {
+            step.style.marginLeft = '0';
+            step.style.marginRight = '0';
+        });
+    }
+}
+
+// Initial call
+handleResize();
+
+// Add event listener
+window.addEventListener('resize', handleResize);

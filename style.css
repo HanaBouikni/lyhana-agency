@@ -480,3 +480,151 @@ body {
             left: -40px;
         }
     }
+    /* Responsive adjustments */
+@media (max-width: 1024px) {
+    /* Adjust process section for tablets */
+    .process-step {
+        margin-bottom: 40px;
+    }
+    
+    .process-card {
+        max-width: 100%;
+    }
+    
+    /* Services grid */
+    .grid-cols-3 {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    /* Hero section */
+    .hero-content {
+        text-align: center;
+    }
+    
+    .hero-buttons {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 768px) {
+    /* Navigation */
+    .nav-links {
+        display: none;
+    }
+    
+    .mobile-menu-btn {
+        display: block;
+    }
+    
+    /* Hero section */
+    .hero-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .hero-image {
+        margin-top: 40px;
+    }
+    
+    /* Services grid */
+    .grid-cols-3, .grid-cols-2 {
+        grid-template-columns: 1fr;
+    }
+    
+    /* Portfolio grid */
+    .portfolio-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    /* Testimonials */
+    .testimonial-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    /* Contact section */
+    .contact-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+    
+    /* Footer */
+    .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+    
+    /* Process timeline */
+    .wave-path {
+        display: none;
+    }
+    
+    .process-card {
+        margin-left: 0;
+    }
+    
+    .process-card::before {
+        display: none;
+    }
+}
+
+@media (max-width: 480px) {
+    /* Hero section */
+    .hero-title {
+        font-size: 2.5rem;
+    }
+    
+    .hero-subtitle {
+        font-size: 1.2rem;
+    }
+    
+    .hero-buttons {
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    .hero-button {
+        width: 100%;
+    }
+    
+    /* Section titles */
+    .section-title {
+        font-size: 2rem;
+    }
+    
+    /* Portfolio filter */
+    .portfolio-filter {
+        padding: 8px 12px;
+        font-size: 0.8rem;
+    }
+    
+    /* Contact form */
+    .contact-form {
+        padding: 20px;
+    }
+    
+    /* Footer */
+    .footer-logo {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .footer-logo img {
+        margin-right: 0;
+        margin-bottom: 15px;
+    }
+}
+/* Image optimization */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Lazy loading */
+.lazy {
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.lazy.loaded {
+    opacity: 1;
+}
