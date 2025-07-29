@@ -1,21 +1,22 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lyhana Agency - Creative Studio</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <script src="script.js"></script>
     <link rel="stylesheet" href="style.css">
 </head>
 <body class="bg-white">
-    <!-- Navigation -->
-    <nav class="bg-white/95 backdrop-blur-sm shadow-sm sticky top-0 z-50">
+    <!-- Navigation améliorée -->
+    <nav class="bg-white/95 backdrop-blur-sm shadow-sm sticky top-0 z-50 transition-all duration-300">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center h-20">
-                <!-- Logo -->
-                <div class="flex items-center">
-                    <div class="w-12 h-12 gradient-bg rounded-full flex items-center justify-center mr-3 overflow-hidden">
+                <!-- Logo avec animation -->
+                <div class="flex items-center group">
+                    <div class="w-12 h-12 gradient-bg rounded-full flex items-center justify-center mr-3 overflow-hidden transition-transform duration-500 group-hover:rotate-[360deg]">
                         <img src="image/lyhana.png" alt="Lyhana Agency Logo" class="w-full h-full object-cover" />
                     </div>
                     <div>
@@ -26,16 +27,35 @@
                 
                 <!-- Menu Desktop -->
                 <div class="hidden md:flex space-x-8">
-                    <a href="#home" class="text-gray-700 hover:text-lyhana-blue transition-colors font-medium">Home</a>
-                    <a href="#about" class="text-gray-700 hover:text-lyhana-blue transition-colors font-medium">About</a>
-                    <a href="#services" class="text-gray-700 hover:text-lyhana-blue transition-colors font-medium">Services</a>
-                    <a href="#portfolio" class="text-gray-700 hover:text-lyhana-blue transition-colors font-medium">Portfolio</a>
-                    <a href="#contact" class="text-gray-700 hover:text-lyhana-blue transition-colors font-medium">Contact</a>
+                    <a href="#home" class="nav-link relative group">
+                        <span>Home</span>
+                        <div class="absolute bottom-0 left-0 w-0 h-0.5 bg-lyhana-blue transition-all duration-300 group-hover:w-full"></div>
+                    </a>
+                    <a href="#about" class="nav-link relative group">
+                        <span>About</span>
+                        <div class="absolute bottom-0 left-0 w-0 h-0.5 bg-lyhana-blue transition-all duration-300 group-hover:w-full"></div>
+                    </a>
+                    <a href="#services" class="nav-link relative group">
+                        <span>Services</span>
+                        <div class="absolute bottom-0 left-0 w-0 h-0.5 bg-lyhana-blue transition-all duration-300 group-hover:w-full"></div>
+                    </a>
+                    <a href="#process" class="nav-link relative group">
+                        <span>Process</span>
+                        <div class="absolute bottom-0 left-0 w-0 h-0.5 bg-lyhana-blue transition-all duration-300 group-hover:w-full"></div>
+                    </a>
+                    <a href="#portfolio" class="nav-link relative group">
+                        <span>Portfolio</span>
+                        <div class="absolute bottom-0 left-0 w-0 h-0.5 bg-lyhana-blue transition-all duration-300 group-hover:w-full"></div>
+                    </a>
+                    <a href="#contact" class="nav-link relative group">
+                        <span>Contact</span>
+                        <div class="absolute bottom-0 left-0 w-0 h-0.5 bg-lyhana-blue transition-all duration-300 group-hover:w-full"></div>
+                    </a>
                 </div>
                 
                 <!-- Menu Mobile -->
                 <div class="md:hidden">
-                    <button id="mobile-menu-btn" class="text-gray-700 p-2">
+                    <button id="mobile-menu-btn" class="text-gray-700 p-2 transition-transform hover:scale-110">
                         <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
                         </svg>
@@ -45,54 +65,68 @@
         </div>
         
         <!-- Menu Mobile Dropdown -->
-        <div id="mobile-menu" class="md:hidden hidden bg-white border-t">
+        <div id="mobile-menu" class="md:hidden hidden bg-white border-t transform origin-top transition-all duration-300">
             <div class="px-4 py-3 space-y-3">
-                <a href="#home" class="block text-gray-700 hover:text-lyhana-blue font-medium">Home</a>
-                <a href="#about" class="block text-gray-700 hover:text-lyhana-blue font-medium">About</a>
-                <a href="#services" class="block text-gray-700 hover:text-lyhana-blue font-medium">Services</a>
-                <a href="#portfolio" class="block text-gray-700 hover:text-lyhana-blue font-medium">Portfolio</a>
-                <a href="#contact" class="block text-gray-700 hover:text-lyhana-blue font-medium">Contact</a>
+                <a href="#home" class="block text-gray-700 hover:text-lyhana-blue font-medium transition-colors">Home</a>
+                <a href="#about" class="block text-gray-700 hover:text-lyhana-blue font-medium transition-colors">About</a>
+                <a href="#services" class="block text-gray-700 hover:text-lyhana-blue font-medium transition-colors">Services</a>
+                <a href="#process" class="block text-gray-700 hover:text-lyhana-blue font-medium transition-colors">Process</a>
+                <a href="#portfolio" class="block text-gray-700 hover:text-lyhana-blue font-medium transition-colors">Portfolio</a>
+                <a href="#contact" class="block text-gray-700 hover:text-lyhana-blue font-medium transition-colors">Contact</a>
             </div>
         </div>
     </nav>
 
-    <!-- Hero Section -->
+    <!-- Hero Section avec parallaxe -->
     <section id="home" class="min-h-screen gradient-bg flex items-center relative overflow-hidden">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+        <!-- Éléments décoratifs animés -->
+        <div class="absolute top-0 left-0 w-full h-full overflow-hidden z-0">
+            <div class="shape shape-1"></div>
+            <div class="shape shape-2"></div>
+            <div class="shape shape-3"></div>
+        </div>
+        
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 relative z-10">
             <div class="grid lg:grid-cols-2 gap-12 items-center">
-                <div class="text-white">
+                <div class="text-white reveal">
                     <h1 class="text-5xl md:text-7xl font-bold mb-6 leading-tight">
-                        We bring <span class="text-lyhana-light-blue">ideas</span> to life with elegance & impact.
+                        We bring <span class="text-lyhana-light-blue animate-pulse">ideas</span> to life with elegance & impact.
                     </h1>
                     <p class="text-xl md:text-2xl mb-8 text-white/90 leading-relaxed">
                         Let's create together a visual identity that reflects who you are and leaves a lasting impression.
                     </p>
-                    <button onclick="document.getElementById('portfolio').scrollIntoView({behavior: 'smooth'})" 
-                            class="bg-white text-lyhana-blue hover:bg-gray-100 px-8 py-4 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105 shadow-lg">
-                        Discover our work 
-                    </button>
+                    <div class="flex space-x-4">
+                        <button onclick="document.getElementById('portfolio').scrollIntoView({behavior: 'smooth'})" 
+                                class="bg-white text-lyhana-blue hover:bg-gray-100 px-8 py-4 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl">
+                            Discover our work 
+                        </button>
+                        <button onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'})" 
+                                class="border-2 border-white text-white hover:bg-white/10 px-8 py-4 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105">
+                            Get in touch
+                        </button>
+                    </div>
                 </div>
                 
-                <div class="relative">
+                <div class="relative reveal">
                     <div class="floating-animation">
-                        <!-- Mockup créatif avec des formes géométriques -->
+                        <!-- Mockup créatif amélioré -->
                         <div class="relative w-full h-96">
                             <!-- Smartphone mockup -->
-                            <div class="absolute top-0 right-0 w-48 h-80 bg-white rounded-3xl shadow-2xl p-4 transform rotate-12">
-                                <div class="w-full h-full bg-gradient-to-br from-lyhana-blue to-lyhana-light-blue rounded-2xl p-4">
-                                    <div class="bg-white/20 rounded-xl h-12 mb-4"></div>
-                                    <div class="bg-white/30 rounded-lg h-8 mb-3"></div>
-                                    <div class="bg-white/20 rounded-lg h-6 mb-2"></div>
-                                    <div class="bg-white/20 rounded-lg h-6 w-3/4"></div>
+                            <div class="absolute top-0 right-0 w-48 h-80 bg-white rounded-3xl shadow-2xl p-4 transform rotate-12 transition-transform hover:rotate-6">
+                                <div class="w-full h-full bg-gradient-to-br from-lyhana-blue to-lyhana-light-blue rounded-2xl p-4 overflow-hidden">
+                                    <div class="bg-white/20 rounded-xl h-12 mb-4 animate-pulse"></div>
+                                    <div class="bg-white/30 rounded-lg h-8 mb-3 animate-pulse delay-100"></div>
+                                    <div class="bg-white/20 rounded-lg h-6 mb-2 animate-pulse delay-200"></div>
+                                    <div class="bg-white/20 rounded-lg h-6 w-3/4 animate-pulse delay-300"></div>
                                 </div>
                             </div>
                             
                             <!-- Business card mockup -->
-                            <div class="absolute bottom-0 left-0 w-56 h-36 bg-white rounded-2xl shadow-2xl p-6 transform -rotate-6">
-                                <div class="w-8 h-8 bg-lyhana-blue rounded-full mb-3"></div>
-                                <div class="bg-gray-200 h-3 rounded mb-2"></div>
-                                <div class="bg-gray-200 h-3 rounded w-2/3 mb-4"></div>
-                                <div class="bg-lyhana-light-blue h-2 rounded w-1/2"></div>
+                            <div class="absolute bottom-0 left-0 w-56 h-36 bg-white rounded-2xl shadow-2xl p-6 transform -rotate-6 transition-transform hover:-rotate-3">
+                                <div class="w-8 h-8 bg-lyhana-blue rounded-full mb-3 animate-bounce"></div>
+                                <div class="bg-gray-200 h-3 rounded mb-2 animate-pulse"></div>
+                                <div class="bg-gray-200 h-3 rounded w-2/3 mb-4 animate-pulse delay-100"></div>
+                                <div class="bg-lyhana-light-blue h-2 rounded w-1/2 animate-pulse delay-200"></div>
                             </div>
                             
                             <!-- Decorative elements -->
@@ -103,49 +137,540 @@
                 </div>
             </div>
         </div>
+        
+        <!-- Scroll indicator -->
+        <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce">
+            <div class="w-6 h-10 border-2 border-white rounded-full flex justify-center">
+                <div class="w-1 h-2 bg-white rounded-full mt-2 animate-scroll"></div>
+            </div>
+        </div>
     </section>
 
-    <!-- About -->
+    <!-- Clients Logo Marquee -->
+    <section class="py-12 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-lg text-gray-500 font-medium">Trusted by innovative brands</h2>
+            </div>
+            <div class="marquee-container overflow-hidden">
+                <div class="marquee-content flex space-x-16">
+                    <!-- Logos clients avec images bien crop pour remplir le rond -->
+                    <div class="client-logo opacity-70 hover:opacity-100 transition-opacity">
+                        <div class="h-28 w-28 rounded-full border-4 border-white overflow-hidden flex items-center justify-center bg-white">
+                            <img src="image/Capture d'écran 2025-06-11 210941.png" alt="Client 1 Logo" class="w-full h-full object-cover" />
+                        </div>
+                    </div>
+                    <div class="client-logo opacity-70 hover:opacity-100 transition-opacity">
+                        <div class="h-28 w-28 rounded-full  border-4 border-white overflow-hidden flex items-center justify-center bg-white">
+                            <img src="image/all education.jpg" alt="Client 2 Logo" class="w-full h-full object-cover" />
+                        </div>
+                    </div>
+                    <div class="client-logo opacity-70 hover:opacity-100 transition-opacity">
+                        <div class="h-28 w-28 rounded-full border-4 border-white overflow-hidden flex items-center justify-center bg-white">
+                            <img src="image/Capture d'écran 2025-06-11 212028.png" alt="Client 3 Logo" class="w-full h-full object-cover" />
+                        </div>
+                    </div>
+                    <div class="client-logo opacity-70 hover:opacity-100 transition-opacity">
+                        <div class="h-28 w-28 rounded-full  border-4 border-white overflow-hidden flex items-center justify-center bg-white">
+                            <img src="image/Capture d'écran 2025-06-11 212556.png" alt="Client 4 Logo" class="w-full h-full object-cover" />
+                        </div>
+                    </div>
+                    <div class="client-logo opacity-70 hover:opacity-100 transition-opacity">
+                        <div class="h-28 w-28 rounded-full  border-4 border-white overflow-hidden flex items-center justify-center bg-white">
+                            <img src="image/Capture d'écran 2025-06-25 213941.png" alt="Client 5 Logo" class="w-full h-full object-cover" />
+                        </div>
+                    </div>
+                    <div class="client-logo opacity-70 hover:opacity-100 transition-opacity">
+                        <div class="h-28 w-28 rounded-full border-4 border-white overflow-hidden flex items-center justify-center bg-white">
+                            <img src="image/logo1.jpg" alt="Client 6 Logo" class="w-full h-full object-cover" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About avec animations -->
     <section id="about" class="py-20 bg-gray-50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16">
-                <h2 class="text-4xl md:text-5xl font-bold gradient-text mb-6">About Lyhana Agency</h2>
+            <div class="text-center mb-16 reveal">
+                <h2 class="text-5xl md:text-5xl font-bold gradient-text mb-6">About  LYHANA AGENCY</h2>
                 <div class="w-24 h-1 bg-lyhana-blue mx-auto mb-8"></div>
+            
             </div>
             
             <div class="grid lg:grid-cols-2 gap-16 items-center">
-                <div>
+                <div class="reveal">
                     <p class="text-lg text-gray-700 leading-relaxed mb-6">
-                        <strong>Lyhana Agency</strong> is a creative studio specialized in branding, social media design, and visual identity. We empower businesses to shine through tailored visuals.
+                        <strong class="text-lyhana-blue">Lyhana Agency</strong> is a creative studio specialized in branding, social media design, and visual identity. We empower businesses to shine through tailored visuals.
                     </p>
                     <p class="text-lg text-gray-700 leading-relaxed mb-8">
                         Our mission is to transform your ideas into impactful visual creations that tell your story and connect with your audience. Each project is a new creative adventure that we approach with passion and professionalism.
                     </p>
+                    <p class="text-lg text-gray-700 leading-relaxed">
+                        We believe in the power of collaboration and communication. Our team works closely with you to understand your needs and create designs that reflect your unique identity.
                     
-                    <div class="grid md:grid-cols-3 gap-6">
-                        <div class="text-center">
-                            <div class="text-3xl font-bold gradient-text">50+</div>
-                            <div class="text-gray-600">Projects completed</div>
-                        </div>
-                        <div class="text-center">
-                            <div class="text-3xl font-bold gradient-text">100%</div>
-                            <div class="text-gray-600">Client satisfaction</div>
-                        </div>
-                        <div class="text-center">
-                            <div class="text-3xl font-bold gradient-text">24h</div>
-                            <div class="text-gray-600">Response time</div>
-                        </div>
-                    </div>
                 </div>
                 
-                <div class="relative">
-                    <div class="w-full h-96 bg-white rounded-3xl shadow-2xl p-8 flex items-center justify-center">
-                        <div class="text-center">
-                            <div class="w-24 h-24 gradient-bg rounded-full mx-auto mb-6 flex items-center justify-center overflow-hidden">
+                <div class="relative reveal">
+                    <div class="w-full h-96 bg-gradient-to-br from-lyhana-blue/10 via-white to-lyhana-light-blue/10 rounded-3xl shadow-2xl p-8 flex items-center justify-center hover-card overflow-hidden">
+                        <!-- Decorative floating shapes -->
+                        <div class="absolute top-8 left-8 w-12 h-12 bg-lyhana-blue/20 rounded-full animate-bounce-slow"></div>
+                        <div class="absolute bottom-8 right-16 w-8 h-8 bg-lyhana-light-blue/20 rounded-full animate-pulse"></div>
+                        <div class="absolute top-1/2 left-1/2 w-20 h-20 bg-white/30 rounded-full animate-spin-slow -translate-x-1/2 -translate-y-1/2"></div>
+                        <div class="text-center relative z-10">
+                            <div class="w-24 h-24 gradient-bg rounded-full mx-auto mb-6 flex items-center justify-center overflow-hidden transition-transform hover:scale-110 shadow-lg border-4 border-white animate-float">
                                 <img src="image/lyhana.png" alt="Lyhana Agency Logo" class="w-full h-full object-cover" />
                             </div>
-                            <h3 class="text-2xl font-bold gradient-text mb-4">Our Vision</h3>
-                            <p class="text-gray-600">Creating authentic visual identities that reveal the unique personality of each brand.</p>
+                            <h3 class="text-3xl font-extrabold gradient-text mb-4 tracking-tight animate-gradient">Our Vision</h3>
+                            <p class="text-lg text-gray-700 font-light mb-4 animate-fade-in">
+                                We craft <span class="gradient-text font-bold">authentic</span> visual identities that reveal the <span class="text-lyhana-blue font-bold">unique personality</span> of every brand.
+                            </p>
+                            <div class="flex justify-center mt-6 space-x-4">
+                                <span class="inline-block px-4 py-2 bg-lyhana-blue/10 text-lyhana-blue rounded-full font-semibold text-sm shadow hover:bg-lyhana-blue/20 transition-colors animate-bounce">Creativity</span>
+                                <span class="inline-block px-4 py-2 bg-lyhana-light-blue/10 text-lyhana-light-blue rounded-full font-semibold text-sm shadow hover:bg-lyhana-light-blue/20 transition-colors animate-bounce delay-150">Authenticity</span>
+                                <span class="inline-block px-4 py-2 bg-white/20 text-gray-700 rounded-full font-semibold text-sm shadow hover:bg-white/30 transition-colors animate-bounce delay-300">Impact</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process Section - Sophisticated Timeline -->
+<section id="process" class="py-20 bg-white overflow-hidden relative">
+ <!-- Animated Background Elements -->
+ <div class="absolute inset-0 overflow-hidden z-0">
+      <!-- Floating gradient circles (doubled) -->
+      <div class="absolute top-1/4 left-10 w-40 h-40 rounded-full bg-lyhana-blue/10 blur-xl animate-float-circle animation-delay-100"></div>
+      <div class="absolute top-1/3 right-20 w-60 h-60 rounded-full bg-lyhana-light-blue/10 blur-xl animate-float-circle animation-delay-300"></div>
+      <div class="absolute bottom-1/4 left-1/4 w-80 h-80 rounded-full bg-gradient-to-br from-lyhana-blue/5 to-lyhana-light-blue/5 blur-xl animate-float-circle"></div>
+      <!-- Doubled circles -->
+      <div class="absolute top-2/3 left-1/2 w-32 h-32 rounded-full bg-lyhana-blue/10 blur-xl animate-float-circle animation-delay-300"></div>
+        <div class="absolute bottom-10 right-1/3 w-48 h-48 rounded-full bg-lyhana-light-blue/10 blur-xl animate-float-circle animation-delay-100"></div>
+        <div class="absolute top-10 right-10 w-24 h-24 rounded-full bg-gradient-to-br from-lyhana-blue/10 to-lyhana-light-blue/10 blur-xl animate-float-circle"></div>
+
+        <!-- Extra visible circles -->
+        <div class="absolute top-1/2 left-10 w-24 h-24 rounded-full bg-lyhana-blue/20 blur-md animate-float-circle"></div>
+        <div class="absolute bottom-1/3 right-10 w-32 h-32 rounded-full bg-lyhana-light-blue/20 blur-md animate-float-circle"></div>
+        <div class="absolute top-1/4 right-1/2 w-16 h-16 rounded-full bg-lyhana-blue/30 blur-sm animate-float-circle"></div>
+
+        <!-- Geometric shapes (doubled) -->
+        <div class="absolute top-20 right-1/4 w-24 h-24 bg-transparent border-2 border-lyhana-blue/20 rounded-lg rotate-45 animate-spin-slow"></div>
+        <div class="absolute bottom-32 left-1/3 w-16 h-16 bg-transparent border-2 border-lyhana-light-blue/20 rounded-full animate-pulse-slow"></div>
+        <!-- Doubled shapes -->
+        <div class="absolute top-1/2 left-1/5 w-20 h-20 bg-transparent border-2 border-lyhana-blue/20 rounded-lg rotate-12 animate-spin-slow"></div>
+        <div class="absolute bottom-10 right-1/5 w-12 h-12 bg-transparent border-2 border-lyhana-light-blue/20 rounded-full animate-pulse-slow"></div>
+
+        <!-- Extra visible shapes -->
+        <div class="absolute top-1/3 left-1/3 w-14 h-14 bg-transparent border-2 border-lyhana-blue/40 rounded-lg rotate-6 animate-spin-slow"></div>
+        <div class="absolute bottom-20 left-1/2 w-10 h-10 bg-transparent border-2 border-lyhana-light-blue/40 rounded-full animate-pulse-slow"></div>
+        <div class="absolute top-10 left-1/4 w-8 h-8 bg-transparent border-2 border-lyhana-blue/30 rounded-lg rotate-12 animate-spin-slow"></div>
+
+        <!-- Particle animation (doubled) -->
+        <div class="particles-container absolute inset-0 overflow-hidden">
+            <div class="particle particle-1"></div>
+            <div class="particle particle-2"></div>
+            <div class="particle particle-3"></div>
+            <div class="particle particle-4"></div>
+            <div class="particle particle-5"></div>
+            <!-- Doubled particles -->
+            <div class="particle particle-1" style="top:40%;left:25%;"></div>
+            <div class="particle particle-2" style="top:70%;left:60%;"></div>
+            <div class="particle particle-3" style="top:50%;left:80%;"></div>
+            <!-- Extra visible particles -->
+            <div class="particle particle-4" style="top:15%;left:70%;width:12px;height:12px;background-color:rgba(59,130,246,0.25);"></div>
+            <div class="particle particle-5" style="top:80%;left:30%;width:10px;height:10px;background-color:rgba(96,165,250,0.25);"></div>
+            <div class="particle particle-2" style="top:60%;left:10%;width:8px;height:8px;background-color:rgba(59,130,246,0.25);"></div>
+        </div>
+    </div>
+        <!-- Subtle grid overlay -->
+        <div class="absolute inset-0 bg-grid-pattern opacity-5"></div>
+    </div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div class="text-center mb-16 reveal">
+            <h2 class="text-5xl md:text-6xl font-extrabold gradient-text mb-6 tracking-tight animate-gradient">Our Creative Journey</h2>
+            <div class="w-24 h-1 bg-lyhana-blue mx-auto mb-8"></div>
+            <p class="text-2xl text-gray-700 max-w-2xl mx-auto font-light animate-fade-in">
+                The path we take to transform your vision into stunning reality
+            </p>
+        </div>
+        
+        <!-- Creative Process Timeline -->
+        <div class="relative py-12">
+            <!-- Animated Wave Path -->
+            <div class="absolute left-1/2 top-0 h-full w-2 transform -translate-x-1/2 z-0 overflow-hidden">
+                <div class="absolute inset-0 bg-gradient-to-b from-lyhana-blue to-lyhana-light-blue wave-path animate-wave"></div>
+            </div>
+            
+            <!-- Process Steps Container -->
+            <div class="space-y-32 w-full z-10 relative">
+                <!-- Step 1 - Discovery -->
+                <div class="process-step animate-float">
+                    <div class="process-card discovery transform hover:scale-105">
+                        <div class="step-number">01</div>
+                        <div class="step-icon flex items-center justify-center w-full h-32 mx-auto mt-6">
+                            <img src="image/discovery.png" alt="Step 6 Icon" class="w-full h-full object-cover rounded-2xl shadow-lg" />
+                        </div>
+                        <h3 class="step-title">Discovery</h3>
+                        <p class="step-description">We dive deep to understand your business, goals, and audience through immersive workshops.</p>
+                        <div class="step-dots">
+                            <span></span><span></span><span></span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Step 2 - Research -->
+                <div class="process-step animate-float delay-100">
+                    <div class="process-card research transform hover:scale-105">
+                        <div class="step-number">02</div>
+                        <div class="step-icon flex items-center justify-center w-full h-32 mx-auto mt-6">
+                            <img src="image/recherche.jpg" alt="Step 6 Icon" class="w-full h-full object-cover rounded-2xl shadow-lg" />
+                        </div>
+                        <h3 class="step-title">Research & Strategy</h3>
+                        <p class="step-description">Market analysis and competitive research to craft your unique visual strategy.</p>
+                        <div class="step-dots">
+                            <span></span><span></span><span></span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Step 3 - Concept -->
+                <div class="process-step animate-float delay-200">
+                    <div class="process-card concept transform hover:scale-105">
+                        <div class="step-number">03</div>
+                         <div class="step-icon flex items-center justify-center w-full h-32 mx-auto mt-6">
+                            <img src="image/ampoule.jpg" alt="Step 6 Icon" class="w-full h-full object-cover rounded-2xl shadow-lg" />
+                        </div>
+                        <h3 class="step-title">Concept Development</h3>
+                        <p class="step-description">Creative brainstorming sessions to generate concepts that embody your brand.</p>
+                        <div class="step-dots">
+                            <span></span><span></span><span></span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Step 4 - Design -->
+                <div class="process-step animate-float delay-300">
+                    <div class="process-card design transform hover:scale-105">
+                        <div class="step-number">04</div>
+                       <div class="step-icon flex items-center justify-center w-full h-32 mx-auto mt-6">
+                            <img src="image/design.jpg" alt="Step 6 Icon" class="w-full h-full object-cover rounded-2xl shadow-lg" />
+                        </div>
+                        <h3 class="step-title">Design & Creation</h3>
+                        <p class="step-description">Transforming concepts into stunning designs that capture your essence.</p>
+                        <div class="step-dots">
+                            <span></span><span></span><span></span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Step 5 - Feedback -->
+                <div class="process-step animate-float delay-400">
+                    <div class="process-card feedback transform hover:scale-105">
+                        <div class="step-number">05</div>
+                         <div class="step-icon flex items-center justify-center w-full h-32 mx-auto mt-6">
+                            <img src="image/feed back.jpg" alt="Step 6 Icon" class="w-full h-full object-cover rounded-2xl shadow-lg" />
+                        </div>
+                        <h3 class="step-title">Feedback & Refinement</h3>
+                        <p class="step-description">Collaborative review process to perfect every detail of your design.</p>
+                        <div class="step-dots">
+                            <span></span><span></span><span></span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Step 6 - Delivery -->
+                <div class="process-step animate-float delay-500">
+                    <div class="process-card delivery transform hover:scale-105">
+                        <div class="step-number">06</div>
+                        <div class="step-icon flex items-center justify-center w-full h-32 mx-auto mt-6">
+                            <img src="image/delivery.jpg" alt="Step 6 Icon" class="w-full h-full object-cover rounded-2xl shadow-lg" />
+                        </div>
+                        <h3 class="step-title">Delivery & Support</h3>
+                        <p class="step-description">Final files delivery and ongoing support to ensure your success.</p>
+                        <div class="step-dots">
+                            <span></span><span></span><span></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+    <!-- Services Section - Sophisticated & Attractive -->
+    <section id="services" class="py-24 bg-gradient-to-br from-white via-gray-50 to-lyhana-light-blue/10 relative overflow-hidden">
+        <!-- Animated Decorative Shapes -->
+        <div class="absolute inset-0 z-0 pointer-events-none">
+            <div class="absolute top-10 left-10 w-32 h-32 bg-lyhana-blue/10 rounded-full blur-2xl animate-float-circle"></div>
+            <div class="absolute bottom-20 right-20 w-40 h-40 bg-lyhana-light-blue/10 rounded-full blur-2xl animate-float-circle animation-delay-200"></div>
+            <div class="absolute top-1/2 left-1/2 w-24 h-24 bg-gradient-to-br from-lyhana-blue/20 to-lyhana-light-blue/20 rounded-full blur-xl animate-spin-slow -translate-x-1/2 -translate-y-1/2"></div>
+            <div class="absolute top-1/4 right-1/3 w-16 h-16 bg-lyhana-blue/20 rounded-lg rotate-12 animate-spin-slow"></div>
+        </div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="text-center mb-20 reveal">
+                <h2 class="text-5xl md:text-6xl font-extrabold gradient-text mb-6 tracking-tight animate-gradient">Our Expertise</h2>
+                <div class="w-32 h-1 bg-lyhana-blue mx-auto mb-8 rounded-full animate-pulse"></div>
+                <p class="text-2xl text-gray-700 max-w-2xl mx-auto font-light animate-fade-in">
+                    Elevate your brand with creative solutions designed for impact and elegance.
+                </p>
+            </div>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-12">
+                <!-- Service Card 1 -->
+                <div class="bg-white rounded-3xl p-10 shadow-xl card-hover border border-gray-100 reveal relative group transition-all duration-300 hover:scale-[1.03] hover:shadow-2xl">
+                    <div class="absolute -top-6 left-1/2 -translate-x-1/2 w-20 h-20 gradient-bg rounded-full flex items-center justify-center shadow-lg animate-float">
+                        <i class="fas fa-palette text-white text-3xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold gradient-text mb-4 mt-12">Branding</h3>
+                    <p class="text-gray-600 mb-6 text-base font-medium">Signature logos, full brand identity, and style guides that set you apart.</p>
+                    <div class="flex justify-between items-center">
+                        <span class="text-green-600 font-semibold text-lg">From $150</span>
+                        <a href="#contact" class="text-lyhana-blue hover:text-lyhana-light-blue transition-colors text-xl">
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                    
+                </div>
+                <!-- Service Card 2 -->
+                <div class="bg-white rounded-3xl p-10 shadow-xl card-hover border border-gray-100 reveal relative group transition-all duration-300 hover:scale-[1.03] hover:shadow-2xl">
+                    <div class="absolute -top-6 left-1/2 -translate-x-1/2 w-20 h-20 bg-gradient-to-br from-lyhana-light-blue to-lyhana-blue rounded-full flex items-center justify-center shadow-lg animate-float animation-delay-100">
+                        <i class="fab fa-instagram text-white text-3xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold gradient-text mb-4 mt-12">Social Media Design</h3>
+                    <p class="text-gray-600 mb-6 text-base font-medium">Captivating posts, reels, and stories to grow your online presence.</p>
+                    <div class="flex justify-between items-center">
+                        <span class="text-green-600 font-semibold text-lg">From $50</span>
+                        <a href="#contact" class="text-lyhana-blue hover:text-lyhana-light-blue transition-colors text-xl">
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                   
+                </div>
+                <!-- Service Card 3 -->
+                <div class="bg-white rounded-3xl p-10 shadow-xl card-hover border border-gray-100 reveal relative group transition-all duration-300 hover:scale-[1.03] hover:shadow-2xl">
+                    <div class="absolute -top-6 left-1/2 -translate-x-1/2 w-20 h-20 gradient-bg rounded-full flex items-center justify-center shadow-lg animate-float animation-delay-200">
+                        <i class="fas fa-box-open text-white text-3xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold gradient-text mb-4 mt-12">Packaging Design</h3>
+                    <p class="text-gray-600 mb-6 text-base font-medium">Innovative packaging that makes your products irresistible.</p>
+                    <div class="flex justify-between items-center">
+                        <span class="text-green-600 font-semibold text-lg">From $100</span>
+                        <a href="#contact" class="text-lyhana-blue hover:text-lyhana-light-blue transition-colors text-xl">
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                    
+                </div>
+                <!-- Service Card 4 -->
+                <div class="bg-white rounded-3xl p-10 shadow-xl card-hover border border-gray-100 reveal relative group transition-all duration-300 hover:scale-[1.03] hover:shadow-2xl">
+                    <div class="absolute -top-6 left-1/2 -translate-x-1/2 w-20 h-20 bg-gradient-to-br from-lyhana-light-blue to-lyhana-blue rounded-full flex items-center justify-center shadow-lg animate-float animation-delay-300">
+                        <i class="fas fa-video text-white text-3xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold gradient-text mb-4 mt-12">Video Editing</h3>
+                    <p class="text-gray-600 mb-6 text-base font-medium">Dynamic reels, teasers, and promo videos for maximum engagement.</p>
+                    <div class="flex justify-between items-center">
+                        <span class="text-green-600 font-semibold text-lg">From $50</span>
+                        <a href="#contact" class="text-lyhana-blue hover:text-lyhana-light-blue transition-colors text-xl">
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                    
+                </div>
+                <!-- Service Card 5 -->
+                <div class="bg-white rounded-3xl p-10 shadow-xl card-hover border border-gray-100 reveal relative group transition-all duration-300 hover:scale-[1.03] hover:shadow-2xl">
+                    <div class="absolute -top-6 left-1/2 -translate-x-1/2 w-20 h-20 gradient-bg rounded-full flex items-center justify-center shadow-lg animate-float animation-delay-400">
+                        <i class="fas fa-laptop-code text-white text-3xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold gradient-text mb-4 mt-12">UI/UX Web Design</h3>
+                    <p class="text-gray-600 mb-6 text-base font-medium">Modern, intuitive websites that convert visitors into clients.</p>
+                    <div class="flex justify-between items-center">
+                        <span class="text-green-600 font-semibold text-lg">From $400</span>
+                        <a href="#contact" class="text-lyhana-blue hover:text-lyhana-light-blue transition-colors text-xl">
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                    
+                </div>
+                <!-- Service Card 6 - Motion Design Coming Soon -->
+                <div class="bg-white rounded-3xl p-10 shadow-xl card-hover border border-gray-100 reveal relative group transition-all duration-300 hover:scale-[1.03] hover:shadow-2xl opacity-70">
+                    <div class="absolute -top-6 left-1/2 -translate-x-1/2 w-20 h-20 bg-gradient-to-br from-lyhana-light-blue to-lyhana-blue rounded-full flex items-center justify-center shadow-lg animate-float animation-delay-500">
+                        <i class="fas fa-film text-white text-3xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold gradient-text mb-4 mt-12">Motion Design</h3>
+                    <p class="text-gray-600 mb-6 text-base font-medium">Animated graphics and video content to energize your brand.</p>
+                
+                    <div class="text-red-600 font-semibold text-lg">Available soon</div>
+                  
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section - Original & Attractive -->
+    <section id="portfolio" class="py-24 bg-gradient-to-br from-white via-gray-50 to-lyhana-light-blue/10 relative overflow-hidden">
+        <!-- Animated Decorative Shapes -->
+        <div class="absolute inset-0 z-0 pointer-events-none">
+            <div class="absolute top-10 left-10 w-32 h-32 bg-lyhana-blue/10 rounded-full blur-2xl animate-float-circle"></div>
+            <div class="absolute bottom-20 right-20 w-40 h-40 bg-lyhana-light-blue/10 rounded-full blur-2xl animate-float-circle animation-delay-200"></div>
+            <div class="absolute top-1/2 left-1/2 w-24 h-24 bg-gradient-to-br from-lyhana-blue/20 to-lyhana-light-blue/20 rounded-full blur-xl animate-spin-slow -translate-x-1/2 -translate-y-1/2"></div>
+            <div class="absolute top-1/4 right-1/3 w-16 h-16 bg-lyhana-blue/20 rounded-lg rotate-12 animate-spin-slow"></div>
+        </div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="text-center mb-16 reveal">
+                <h2 class="text-5xl md:text-6xl font-extrabold gradient-text mb-6 tracking-tight animate-gradient">Our Creations</h2>
+                <div class="w-24 h-1 bg-lyhana-blue mx-auto mb-8"></div>
+                <p class="text-2xl text-gray-700 max-w-2xl mx-auto font-light animate-fade-in">
+                    Explore our creative universe and get inspired!
+                </p>
+            </div>
+            <!-- Portfolio Filter with Icons -->
+            <div class="flex justify-center mb-12">
+                <div class="inline-flex rounded-full p-1 bg-gray-100 shadow-lg">
+                    <button class="portfolio-filter px-5 py-2 rounded-full font-medium text-sm flex items-center gap-2 transition-all active" data-filter="all">
+                        <i class="fas fa-globe"></i> All
+                    </button>
+                    <button class="portfolio-filter px-5 py-2 rounded-full font-medium text-sm flex items-center gap-2 transition-all" data-filter="branding">
+                        <i class="fas fa-palette"></i> Branding
+                    </button>
+                    <button class="portfolio-filter px-5 py-2 rounded-full font-medium text-sm flex items-center gap-2 transition-all" data-filter="social">
+                        <i class="fab fa-instagram"></i> Social Media
+                    </button>
+                    <button class="portfolio-filter px-5 py-2 rounded-full font-medium text-sm flex items-center gap-2 transition-all" data-filter="packaging">
+                        <i class="fas fa-box-open"></i> Packaging
+                    </button>
+                    <button class="portfolio-filter px-5 py-2 rounded-full font-medium text-sm flex items-center gap-2 transition-all" data-filter="web">
+                        <i class="fas fa-laptop-code"></i> UI/UX
+                    </button>
+                </div>
+            </div>
+            <!-- Portfolio Masonry Grid -->
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
+                <!-- Portfolio Item 1 -->
+                <div class="portfolio-item reveal group relative overflow-visible" data-category="branding">
+                    <div class="bg-white rounded-3xl overflow-hidden shadow-xl card-hover transition-all duration-300 hover:scale-[1.04] hover:shadow-2xl">
+                        <div class="h-72 bg-gradient-to-br from-lyhana-blue to-lyhana-light-blue flex items-center justify-center overflow-hidden relative">
+                            <img src="image/3.png" alt="Software Brand Logo" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
+                            <div class="absolute inset-0 bg-black/30 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+                                <button class="lightbox-trigger text-white bg-lyhana-blue rounded-full p-4 hover:bg-lyhana-light-blue transition-colors" data-image="image/3.png" data-title="Visual Identity - Software Brand">
+                                    <i class="fas fa-search-plus text-2xl"></i>
+                                </button>
+                            </div>
+                            <span class="absolute top-4 left-4 bg-white/80 text-lyhana-blue px-3 py-1 rounded-full font-semibold text-xs shadow">Branding</span>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="font-bold text-gray-900 mb-2">Visual Identity - Software Brand</h3>
+                            <p class="text-gray-600 text-sm">Complete visual identity creation for a Software Company.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Portfolio Item 2 -->
+                <div class="portfolio-item reveal group relative overflow-visible" data-category="social">
+                    <div class="bg-white rounded-3xl overflow-hidden shadow-xl card-hover transition-all duration-300 hover:scale-[1.04] hover:shadow-2xl">
+                        <div class="h-72 bg-gradient-to-br from-lyhana-light-blue to-lyhana-blue flex items-center justify-center overflow-hidden relative">
+                            <img src="image/instagram post.jpg" alt="Social Media - company" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
+                            <div class="absolute inset-0 bg-black/30 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+                                <button class="lightbox-trigger text-white bg-lyhana-blue rounded-full p-4 hover:bg-lyhana-light-blue transition-colors" data-image="image/instagram post.jpg" data-title="Social Media - company">
+                                    <i class="fas fa-search-plus text-2xl"></i>
+                                </button>
+                            </div>
+                            <span class="absolute top-4 left-4 bg-white/80 text-lyhana-light-blue px-3 py-1 rounded-full font-semibold text-xs shadow">Social Media</span>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="font-bold text-gray-900 mb-2">Social Media - company</h3>
+                            <p class="text-gray-600 text-sm">Instagram templates and posts for a Software company.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Portfolio Item 3 -->
+                <div class="portfolio-item reveal group relative overflow-visible" data-category="packaging">
+                    <div class="bg-white rounded-3xl overflow-hidden shadow-xl card-hover transition-all duration-300 hover:scale-[1.04] hover:shadow-2xl">
+                        <div class="h-72 bg-gradient-to-br from-lyhana-blue to-lyhana-light-blue flex items-center justify-center overflow-hidden relative">
+                            <img src="image/product.jpg" alt="Packaging - food Product" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
+                            <div class="absolute inset-0 bg-black/30 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+                                <button class="lightbox-trigger text-white bg-lyhana-blue rounded-full p-4 hover:bg-lyhana-light-blue transition-colors" data-image="image/product.jpg" data-title="Packaging - food Product">
+                                    <i class="fas fa-search-plus text-2xl"></i>
+                                </button>
+                            </div>
+                            <span class="absolute top-4 left-4 bg-white/80 text-lyhana-blue px-3 py-1 rounded-full font-semibold text-xs shadow">Packaging</span>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="font-bold text-gray-900 mb-2">Packaging - food Product</h3>
+                            <p class="text-gray-600 text-sm">Packaging design for an innovative drink startup.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Portfolio Item 4 -->
+                <div class="portfolio-item reveal group relative overflow-visible" data-category="social">
+                    <div class="bg-white rounded-3xl overflow-hidden shadow-xl card-hover transition-all duration-300 hover:scale-[1.04] hover:shadow-2xl">
+                        <div class="h-72 bg-gradient-to-br from-lyhana-light-blue to-lyhana-blue flex items-center justify-center overflow-hidden relative">
+                            <img src="image/video.jpg" alt="Video Reel" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
+                            <div class="absolute inset-0 bg-black/30 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+                                <button class="lightbox-trigger text-white bg-lyhana-blue rounded-full p-4 hover:bg-lyhana-light-blue transition-colors" data-image="image/video.jpg" data-title="Video Editing - Sponsor">
+                                    <i class="fas fa-search-plus text-2xl"></i>
+                                </button>
+                            </div>
+                            <span class="absolute top-4 left-4 bg-white/80 text-lyhana-light-blue px-3 py-1 rounded-full font-semibold text-xs shadow">Video</span>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="font-bold text-gray-900 mb-2">Video Editing - Sponsor</h3>
+                            <p class="text-gray-600 text-sm">Instagram reels editing for a Hairdressing training.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Portfolio Item 5 -->
+                <div class="portfolio-item reveal group relative overflow-visible" data-category="web">
+                    <div class="bg-white rounded-3xl overflow-hidden shadow-xl card-hover transition-all duration-300 hover:scale-[1.04] hover:shadow-2xl">
+                        <div class="h-72 bg-gradient-to-br from-lyhana-blue to-lyhana-light-blue flex items-stretch overflow-hidden relative">
+                            <img src="image/Website .png" alt="Website Mockup" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
+                            <div class="absolute inset-0 bg-black/30 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+                                <button class="lightbox-trigger text-white bg-lyhana-blue rounded-full p-4 hover:bg-lyhana-light-blue transition-colors" data-image="image/Website .png" data-title="Website Design">
+                                    <i class="fas fa-search-plus text-2xl"></i>
+                                </button>
+                            </div>
+                            <span class="absolute top-4 left-4 bg-white/80 text-lyhana-blue px-3 py-1 rounded-full font-semibold text-xs shadow">UI/UX</span>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="font-bold text-gray-900 mb-2">Website Design</h3>
+                            <p class="text-gray-600 text-sm">UI/UX design for a travel agency website.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Portfolio Item 6 -->
+                <div class="portfolio-item reveal group relative overflow-visible" data-category="branding">
+                    <div class="bg-white rounded-3xl overflow-hidden shadow-xl card-hover transition-all duration-300 hover:scale-[1.04] hover:shadow-2xl">
+                        <div class="h-72 bg-gradient-to-br from-lyhana-light-blue to-lyhana-blue flex items-center justify-center overflow-hidden relative">
+                            <img src="image/dates.png" alt="Branding - Dates filled Shop" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
+                            <div class="absolute inset-0 bg-black/30 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+                                <button class="lightbox-trigger text-white bg-lyhana-blue rounded-full p-4 hover:bg-lyhana-light-blue transition-colors" data-image="image/dates.png" data-title="Branding - Dates filled Shop">
+                                    <i class="fas fa-search-plus text-2xl"></i>
+                                </button>
+                            </div>
+                            <span class="absolute top-4 left-4 bg-white/80 text-lyhana-blue px-3 py-1 rounded-full font-semibold text-xs shadow">Branding</span>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="font-bold text-gray-900 mb-2">Branding - Dates filled Shop</h3>
+                            <p class="text-gray-600 text-sm">Complete identity for a local and authentic specialty Dates shop.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Lightbox Modal with Animation -->
+            <div id="lightbox-modal" class="fixed inset-0 bg-black/90 z-50 flex items-center justify-center p-4 opacity-0 pointer-events-none transition-opacity duration-500">
+                <div class="relative max-w-4xl w-full animate-fade-in">
+                    <button id="close-lightbox" class="absolute -top-12 right-0 text-white text-3xl hover:text-lyhana-light-blue transition-colors">
+                        <i class="fas fa-times"></i>
+                    </button>
+                    <div class="bg-white rounded-lg overflow-hidden shadow-2xl">
+                        <img id="lightbox-image" src="" alt="" class="w-full max-h-[70vh] object-contain">
+                        <div class="p-4 bg-white">
+                            <h3 id="lightbox-title" class="text-xl font-bold text-gray-900"></h3>
                         </div>
                     </div>
                 </div>
@@ -153,267 +678,107 @@
         </div>
     </section>
 
-    <!-- Services -->
-    <section id="services" class="py-20 bg-white">
+    <!-- Testimonials améliorés -->
+    <section class="py-20 bg-gray-50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16">
-                <h2 class="text-4xl md:text-5xl font-bold gradient-text mb-6">Our Services</h2>
-                <div class="w-24 h-1 bg-lyhana-blue mx-auto mb-8"></div>
-                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
-                    Complete creative solutions to bring your brand to life
-                </p>
-            </div>
-            
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- Service 1 -->
-                <div class="bg-white rounded-3xl p-8 shadow-lg card-hover border border-gray-100">
-                    <div class="w-16 h-16 bg-lyhana-blue/10 rounded-2xl flex items-center justify-center mb-6">
-                        <svg class="w-8 h-8 text-lyhana-blue" fill="currentColor" viewBox="0 0 20 20">
-                            <path d="M4 3a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V5a2 2 0 00-2-2H4zm12 12H4l4-8 3 6 2-4 3 6z"/>
-                        </svg>
-                    </div>
-                    <h3 class="text-xl font-bold text-gray-900 mb-4">Branding</h3>
-                    <p class="text-gray-600 mb-4">Logo creation, complete visual identity, brand guidelines and style guides.</p>
-                    <div class="text-lyhana-blue font-semibold">Starting from $150</div>
-                </div>
-                
-                <!-- Service 2 -->
-                <div class="bg-white rounded-3xl p-8 shadow-lg card-hover border border-gray-100">
-                    <div class="w-16 h-16 bg-lyhana-light-blue/10 rounded-2xl flex items-center justify-center mb-6">
-                        <svg class="w-8 h-8 text-lyhana-light-blue" fill="currentColor" viewBox="0 0 20 20">
-                            <path d="M18 3a1 1 0 00-1.196-.98l-10 2A1 1 0 006 5v9.114A4.369 4.369 0 005 14c-1.657 0-3 .895-3 2s1.343 2 3 2 3-.895 3-2V7.82l8-1.6v5.894A4.37 4.37 0 0015 12c-1.657 0-3 .895-3 2s1.343 2 3 2 3-.895 3-2V3z"/>
-                        </svg>
-                    </div>
-                    <h3 class="text-xl font-bold text-gray-900 mb-4">Social Media</h3>
-                    <p class="text-gray-600 mb-4">Instagram posts, stories, reels, custom templates for your social networks.</p>
-                    <div class="text-lyhana-blue font-semibold">Starting from $50</div>
-                </div>
-                
-                <!-- Service 3 -->
-                <div class="bg-white rounded-3xl p-8 shadow-lg card-hover border border-gray-100">
-                    <div class="w-16 h-16 bg-lyhana-blue/10 rounded-2xl flex items-center justify-center mb-6">
-                        <svg class="w-8 h-8 text-lyhana-blue" fill="currentColor" viewBox="0 0 20 20">
-                            <path d="M3 4a1 1 0 011-1h12a1 1 0 011 1v2a1 1 0 01-1 1H4a1 1 0 01-1-1V4zM3 10a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H4a1 1 0 01-1-1v-6zM14 9a1 1 0 00-1 1v6a1 1 0 001 1h2a1 1 0 001-1v-6a1 1 0 00-1-1h-2z"/>
-                        </svg>
-                    </div>
-                    <h3 class="text-xl font-bold text-gray-900 mb-4">Packaging Design</h3>
-                    <p class="text-gray-600 mb-4">Creative and impactful packaging design for your products.</p>
-                    <div class="text-lyhana-blue font-semibold">Starting from $100</div>
-                </div>
-                
-                <!-- Service 4 -->
-                <div class="bg-white rounded-3xl p-8 shadow-lg card-hover border border-gray-100">
-                    <div class="w-16 h-16 bg-lyhana-light-blue/10 rounded-2xl flex items-center justify-center mb-6">
-                        <svg class="w-8 h-8 text-lyhana-light-blue" fill="currentColor" viewBox="0 0 20 20">
-                            <path d="M2 6a2 2 0 012-2h6a2 2 0 012 2v6a2 2 0 01-2 2H4a2 2 0 01-2-2V6zM14.553 7.106A1 1 0 0014 8v4a1 1 0 00.553.894l2 1A1 1 0 0018 13V7a1 1 0 00-1.447-.894l-2 1z"/>
-                        </svg>
-                    </div>
-                    <h3 class="text-xl font-bold text-gray-900 mb-4">Video Editing</h3>
-                    <p class="text-gray-600 mb-4">Reels editing, teasers, promotional videos for your social media.</p>
-                    <div class="text-lyhana-blue font-semibold">Starting from $50</div>
-                </div>
-                
-                <!-- Service 5 -->
-                <div class="bg-white rounded-3xl p-8 shadow-lg card-hover border border-gray-100">
-                    <div class="w-16 h-16 bg-lyhana-blue/10 rounded-2xl flex items-center justify-center mb-6">
-                        <svg class="w-8 h-8 text-lyhana-blue" fill="currentColor" viewBox="0 0 20 20">
-                            <path d="M3 4a1 1 0 011-1h12a1 1 0 011 1v2a1 1 0 01-1 1H4a1 1 0 01-1-1V4zM3 10a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H4a1 1 0 01-1-1v-6zM14 9a1 1 0 00-1 1v6a1 1 0 001 1h2a1 1 0 001-1v-6a1 1 0 00-1-1h-2z"/>
-                        </svg>
-                    </div>
-                    <h3 class="text-xl font-bold text-gray-900 mb-4">UI/UX Web</h3>
-                    <p class="text-gray-600 mb-4">Showcase website design, modern and intuitive user interfaces.</p>
-                    <div class="text-lyhana-blue font-semibold">Starting from $400</div>
-                </div>
-                
-                <!-- Service 6 -->
-                <div class="bg-white rounded-3xl p-8 shadow-lg card-hover border border-gray-100 relative">
-                    <div class="absolute top-4 right-4 bg-gray-100 text-lyhana-blue text-xs px-3 py-1 rounded-full font-semibold">
-                        Coming Soon
-                    </div>
-                    <div class="w-16 h-16 bg-lyhana-light-blue/10 rounded-2xl flex items-center justify-center mb-6">
-                        <svg class="w-8 h-8 text-lyhana-light-blue" fill="currentColor" viewBox="0 0 20 20">
-                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
-                        </svg>
-                    </div>
-                    <h3 class="text-xl font-bold text-gray-900 mb-4">Motion Design</h3>
-                    <p class="text-gray-600 mb-4">Animations, motion graphics and animated video content to energize your communication.</p>
-                    <div class="text-gray-400 font-semibold">Coming soon</div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Portfolio -->
-    <section id="portfolio" class="py-20 bg-gray-50">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16">
-                <h2 class="text-4xl md:text-5xl font-bold gradient-text mb-6">Our Work</h2>
-                <div class="w-24 h-1 bg-lyhana-blue mx-auto mb-8"></div>
-                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
-                    Discover some of our most recent creations
-                </p>
-            </div>
-            
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- Portfolio Item 1 -->
-                <div class="bg-white rounded-3xl overflow-hidden shadow-lg card-hover">
-                    <div class="h-64 bg-gradient-to-br from-lyhana-blue to-lyhana-light-blue p-0 flex items-center justify-center">
-                        <img src="image/3.png" alt="Software Brand Logo" class="w-full h-full object-cover" />
-                    </div>
-                    <div class="p-6">
-                        <h3 class="font-bold text-gray-900 mb-2">Visual Identity - Software Brand</h3>
-                        <p class="text-gray-600 text-sm">Complete visual identity creation for a Software Company.</p>
-                    </div>
-                </div>
-                
-                <!-- Portfolio Item 2 -->
-                <div class="bg-white rounded-3xl overflow-hidden shadow-lg card-hover">
-                    <div class="h-64 bg-gradient-to-br from-lyhana-light-blue to-lyhana-blue p-0 flex items-center justify-center">
-                        <img src="image/instagram post.jpg" alt="Social Media - company" class="w-full h-full object-cover" />
-                    </div>
-                    <div class="p-6">
-                        <h3 class="font-bold text-gray-900 mb-2">Social Media - company</h3>
-                        <p class="text-gray-600 text-sm">Instagram templates and posts for a Software company.</p>
-                    </div>
-                </div>
-                
-                <!-- Portfolio Item 3 -->
-                <div class="bg-white rounded-3xl overflow-hidden shadow-lg card-hover">
-                    <div class="h-64 bg-gradient-to-br from-lyhana-blue to-lyhana-light-blue p-0 flex items-center justify-center">
-                        <img src="image/product.jpg" alt="Packaging - food Product" class="w-full h-full object-cover" />
-                    </div>
-                    <div class="p-6">
-                        <h3 class="font-bold text-gray-900 mb-2">Packaging - food Product</h3>
-                        <p class="text-gray-600 text-sm">Packaging design for an innovative drink startup.</p>
-                    </div>
-                </div>
-                
-                <!-- Portfolio Item 4 -->
-                <div class="bg-white rounded-3xl overflow-hidden shadow-lg card-hover">
-                    <div class="h-64 bg-gradient-to-br from-lyhana-light-blue to-lyhana-blue p-0 flex items-center justify-center">
-                        <img src="image/video.jpg" alt="Video Reel" class="w-full h-full object-cover" />
-                    </div>
-                    <div class="p-6">
-                        <h3 class="font-bold text-gray-900 mb-2">Video Editing - Sponsor</h3>
-                        <p class="text-gray-600 text-sm">Instagram reels editing for a Hairdressing training.</p>
-                    </div>
-                </div>
-                
-                <!-- Portfolio Item 5 -->
-                <div class="bg-white rounded-3xl overflow-hidden shadow-lg card-hover">
-                    <div class="h-64 bg-gradient-to-br from-lyhana-blue to-lyhana-light-blue p-0 flex items-stretch">
-                        <img src="image/Website .png" alt="Website Mockup" class="w-full h-full object-cover rounded-2xl shadow-lg" style="object-fit: cover; width: 100%; height: 100%;" />
-                    </div>
-                    <div class="p-6">
-                        <h3 class="font-bold text-gray-900 mb-2">Website </h3>
-                        <p class="text-gray-600 text-sm">UI/UX design for a travel agency website.</p>
-                    </div>
-                </div>
-                
-                <!-- Portfolio Item 6 -->
-                <div class="bg-white rounded-3xl overflow-hidden shadow-lg card-hover">
-                    <div class="h-64 bg-gradient-to-br from-lyhana-light-blue to-lyhana-blue p-0 flex items-center justify-center">
-                        <img src="image/dates.png" alt="Branding - Dates filled Shop" class="w-full h-full object-cover" />
-                    </div>
-                    <div class="p-6">
-                        <h3 class="font-bold text-gray-900 mb-2">Branding - Dates filled Shop</h3>
-                        <p class="text-gray-600 text-sm">Complete identity for a local and authentic specialty Dates shop.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Testimonials -->
-    <section class="py-20 bg-white">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16">
-                <h2 class="text-4xl md:text-5xl font-bold gradient-text mb-6">What our clients say</h2>
+            <div class="text-center mb-16 reveal">
+                <h2 class="text-5xl md:text-6xl font-extrabold gradient-text mb-6 tracking-tight animate-gradient">Client Voices </h2>
                 <div class="w-24 h-1 bg-lyhana-blue mx-auto mb-8"></div>
             </div>
-            
             <div class="grid md:grid-cols-3 gap-8">
                 <!-- Testimonial 1 -->
-                <div class="bg-gray-50 rounded-3xl p-8 card-hover">
+                <div class="bg-white rounded-3xl p-8 card-hover reveal shadow-lg transition-all duration-300 hover:scale-[1.03]">
                     <div class="flex items-center mb-6">
-                        <div class="w-12 h-12 bg-lyhana-blue rounded-full flex items-center justify-center mr-4">
-                            <span class="text-white font-bold">A</span>
+                        <div class="w-12 h-12 bg-lyhana-blue rounded-full flex items-center justify-center mr-4 text-white font-bold text-xl">
+                            A
                         </div>
                         <div>
-                            <div class="font-semibold text-gray-900">All Education </div>
-                            <div class="text-sm text-gray-600">Training school</div>
+                            <div class="font-semibold text-gray-900">All Education</div>
+                            <div class="text-sm text-gray-600">Training School</div>
                         </div>
                     </div>
                     <p class="text-gray-700 italic mb-4">
-                        "Lyhana Agency created a perfect reel video  for my haidresser training. Their creativity and professionalism are exceptional!"
+                        “Lyhana Agency created a perfect reel video for my hairdresser training. Their creativity and professionalism are exceptional!”
                     </p>
-                    <div class="flex text-lyhana-blue">
-                        ⭐⭐⭐⭐⭐
+                    <div class="flex text-yellow-400 space-x-1">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
                     </div>
                 </div>
-                
                 <!-- Testimonial 2 -->
-                <div class="bg-gray-50 rounded-3xl p-8 card-hover">
+                <div class="bg-white rounded-3xl p-8 card-hover reveal shadow-lg transition-all duration-300 hover:scale-[1.03]">
                     <div class="flex items-center mb-6">
-                        <div class="w-12 h-12 bg-lyhana-light-blue rounded-full flex items-center justify-center mr-4">
-                            <span class="text-white font-bold">Z</span>
+                        <div class="w-12 h-12 bg-lyhana-light-blue rounded-full flex items-center justify-center mr-4 text-white font-bold text-xl">
+                            Z
                         </div>
                         <div>
-                            <div class="font-semibold text-gray-900">Zahra délice</div>
-                            <div class="text-sm text-gray-600">Chef, dates shop</div>
+                            <div class="font-semibold text-gray-900">Zahra Délice</div>
+                            <div class="text-sm text-gray-600">Chef, Dates Shop</div>
                         </div>
                     </div>
                     <p class="text-gray-700 italic mb-4">
-                        "Our social media came to life thanks to Lyhana's creations. Our community engagement has doubled!"
+                        “Our social media came to life thanks to Lyhana's creations. Our community engagement has doubled!”
                     </p>
-                    <div class="flex text-lyhana-blue">
-                        ⭐⭐⭐⭐⭐
+                    <div class="flex text-yellow-400 space-x-1">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
                     </div>
                 </div>
-                
                 <!-- Testimonial 3 -->
-                <div class="bg-gray-50 rounded-3xl p-8 card-hover">
+                <div class="bg-white rounded-3xl p-8 card-hover reveal shadow-lg transition-all duration-300 hover:scale-[1.03]">
                     <div class="flex items-center mb-6">
-                        <div class="w-12 h-12 bg-lyhana-blue rounded-full flex items-center justify-center mr-4">
-                            <span class="text-white font-bold">T</span>
+                        <div class="w-12 h-12 bg-lyhana-blue rounded-full flex items-center justify-center mr-4 text-white font-bold text-xl">
+                            T
                         </div>
                         <div>
-                            <div class="font-semibold text-gray-900">Trendy shop</div>
-                            <div class="text-sm text-gray-600">fashion store</div>
+                            <div class="font-semibold text-gray-900">Trendy Shop</div>
+                            <div class="text-sm text-gray-600">Fashion Store</div>
                         </div>
                     </div>
                     <p class="text-gray-700 italic mb-4">
-                        "Thank you for this magical collaboration!"
+                        “Thank you for this magical collaboration!”
                     </p>
-                    <div class="flex text-lyhana-blue">
-                        ⭐⭐⭐⭐⭐
+                    <div class="flex text-yellow-400 space-x-1">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Contact -->
-    <section id="contact" class="py-20 gradient-bg text-white">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16">
-                <h2 class="text-4xl md:text-5xl font-bold mb-6">Let's create magic together! </h2>
+    <!-- Contact amélioré -->
+    <section id="contact" class="py-20 gradient-bg text-white relative overflow-hidden">
+        <!-- Éléments décoratifs -->
+        <div class="absolute top-0 left-0 w-full h-full overflow-hidden z-0">
+            <div class="shape shape-contact-1"></div>
+            <div class="shape shape-contact-2"></div>
+        </div>
+        
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="text-center mb-16 reveal">
+                <h2 class="text-4xl md:text-5xl font-bold mb-6">Let's create magic together!</h2>
                 <div class="w-24 h-1 bg-white mx-auto mb-8"></div>
                 <p class="text-xl text-white/90 max-w-3xl mx-auto">
-                   Ready to bring your project to life? Contact us for a free consultation!
-
+                    Ready to bring your project to life? Contact us for a free consultation!
                 </p>
             </div>
             
             <div class="grid lg:grid-cols-2 gap-16 items-center">
-                <div>
+                <div class="reveal">
                     <div class="space-y-8">
-                        <div class="flex items-center">
-                            <div class="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center mr-4">
-                                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20">
-                                    <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"/>
-                                    <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"/>
-                                </svg>
+                        <div class="flex items-center hover-card">
+                            <div class="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center mr-4 transition-transform hover:scale-110">
+                                <i class="fas fa-envelope"></i>
                             </div>
                             <div>
                                 <div class="font-semibold">Email</div>
@@ -421,11 +786,9 @@
                             </div>
                         </div>
                         
-                        <div class="flex items-center">
-                            <div class="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center mr-4">
-                                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20">
-                                    <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"/>
-                                </svg>
+                        <div class="flex items-center hover-card">
+                            <div class="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center mr-4 transition-transform hover:scale-110">
+                                <i class="fab fa-whatsapp"></i>
                             </div>
                             <div>
                                 <div class="font-semibold">WhatsApp</div>
@@ -433,11 +796,9 @@
                             </div>
                         </div>
                         
-                        <div class="flex items-center">
-                            <div class="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center mr-4">
-                                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
-                                    <path d="M7.75 2h8.5A5.75 5.75 0 0 1 22 7.75v8.5A5.75 5.75 0 0 1 16.25 22h-8.5A5.75 5.75 0 0 1 2 16.25v-8.5A5.75 5.75 0 0 1 7.75 2zm0 1.5A4.25 4.25 0 0 0 3.5 7.75v8.5A4.25 4.25 0 0 0 7.75 20.5h8.5a4.25 4.25 0 0 0 4.25-4.25v-8.5A4.25 4.25 0 0 0 16.25 3.5h-8.5zm4.25 3.25a5.25 5.25 0 1 1 0 10.5 5.25 5.25 0 0 1 0-10.5zm0 1.5a3.75 3.75 0 1 0 0 7.5 3.75 3.75 0 0 0 0-7.5zm5.25.75a1 1 0 1 1-2 0 1 1 0 0 1 2 0z"/>
-                                </svg>
+                        <div class="flex items-center hover-card">
+                            <div class="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center mr-4 transition-transform hover:scale-110">
+                                <i class="fab fa-instagram"></i>
                             </div>
                             <div>
                                 <div class="font-semibold">Instagram</div>
@@ -446,33 +807,45 @@
                         </div>
                     </div>
                     
-                    <div class="mt-12 flex space-x-4">
-                        <a href="https://wa.me/33612345678" target="_blank" 
-                           class="bg-green-500 hover:bg-green-600 text-white px-6 py-3 rounded-full font-semibold transition-colors flex items-center">
-                            <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24">
-                                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.885 3.488"/>
-                            </svg>
+                    <div class="mt-12 flex flex-wrap gap-4">
+                        <a href="https://wa.me/213779520330" target="_blank" 
+                           class="bg-green-500 hover:bg-green-600 text-white px-6 py-3 rounded-full font-semibold transition-colors flex items-center transform hover:scale-105">
+                            <i class="fab fa-whatsapp mr-2"></i>
                             WhatsApp
                         </a>
-                        <a href="https://instagram.com/lyhana.agency" target="_blank" 
-                           class="bg-pink-500 hover:bg-pink-600 text-white px-6 py-3 rounded-full font-semibold transition-colors flex items-center">
-                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
-                                    <path d="M7.75 2h8.5A5.75 5.75 0 0 1 22 7.75v8.5A5.75 5.75 0 0 1 16.25 22h-8.5A5.75 5.75 0 0 1 2 16.25v-8.5A5.75 5.75 0 0 1 7.75 2zm0 1.5A4.25 4.25 0 0 0 3.5 7.75v8.5A4.25 4.25 0 0 0 7.75 20.5h8.5a4.25 4.25 0 0 0 4.25-4.25v-8.5A4.25 4.25 0 0 0 16.25 3.5h-8.5zm4.25 3.25a5.25 5.25 0 1 1 0 10.5 5.25 5.25 0 0 1 0-10.5zm0 1.5a3.75 3.75 0 1 0 0 7.5 3.75 3.75 0 0 0 0-7.5zm5.25.75a1 1 0 1 1-2 0 1 1 0 0 1 2 0z"/>
-                                </svg>
+                        <a href="https://instagram.com/lyhana_agency" target="_blank" 
+                           class="bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white px-6 py-3 rounded-full font-semibold transition-colors flex items-center transform hover:scale-105">
+                            <i class="fab fa-instagram mr-2"></i>
                             Instagram
                         </a>
                     </div>
+                    
+                    <!-- Social Links -->
+                    <div class="mt-12">
+                        <h3 class="text-lg font-semibold mb-4">Follow us</h3>
+                        <div class="flex space-x-4">
+                            <a href="#" class="w-10 h-10 bg-white/20 rounded-full flex items-center justify-center hover:bg-white/30 transition-colors">
+                                <i class="fab fa-behance"></i>
+                            </a>
+                            <a href="#" class="w-10 h-10 bg-white/20 rounded-full flex items-center justify-center hover:bg-white/30 transition-colors">
+                                <i class="fab fa-dribbble"></i>
+                            </a>
+                            <a href="#" class="w-10 h-10 bg-white/20 rounded-full flex items-center justify-center hover:bg-white/30 transition-colors">
+                                <i class="fab fa-linkedin-in"></i>
+                            </a>
+                        </div>
+                    </div>
                 </div>
                 
-                <div class="bg-white/10 backdrop-blur-sm rounded-3xl p-8">
-                    <form class="space-y-6">
+                <div class="bg-white/10 backdrop-blur-sm rounded-3xl p-8 hover-card reveal">
+                    <form class="space-y-6" id="contact-form">
                         <div>
                             <label class="block text-sm font-medium mb-2">Full Name</label>
-                            <input type="text" class="w-full px-4 py-3 rounded-xl bg-white/20 border border-white/30 text-white placeholder-white/70 focus:outline-none focus:ring-2 focus:ring-white/50" placeholder="Your name">
+                            <input type="text" class="w-full px-4 py-3 rounded-xl bg-white/20 border border-white/30 text-white placeholder-white/70 focus:outline-none focus:ring-2 focus:ring-white/50" placeholder="Your name" required>
                         </div>
                         <div>
                             <label class="block text-sm font-medium mb-2">Email</label>
-                            <input type="email" class="w-full px-4 py-3 rounded-xl bg-white/20 border border-white/30 text-white placeholder-white/70 focus:outline-none focus:ring-2 focus:ring-white/50" placeholder="your@email.com">
+                            <input type="email" class="w-full px-4 py-3 rounded-xl bg-white/20 border border-white/30 text-white placeholder-white/70 focus:outline-none focus:ring-2 focus:ring-white/50" placeholder="your@email.com" required>
                         </div>
                         <div>
                             <label class="block text-sm font-medium mb-2">Project Type</label>
@@ -487,10 +860,11 @@
                         </div>
                         <div>
                             <label class="block text-sm font-medium mb-2">Message</label>
-                            <textarea rows="4" class="w-full px-4 py-3 rounded-xl bg-white/20 border border-white/30 text-white placeholder-white/70 focus:outline-none focus:ring-2 focus:ring-white/50" placeholder="Tell us about your project..."></textarea>
+                            <textarea rows="4" class="w-full px-4 py-3 rounded-xl bg-white/20 border border-white/30 text-white placeholder-white/70 focus:outline-none focus:ring-2 focus:ring-white/50" placeholder="Tell us about your project..." required></textarea>
                         </div>
-                        <button type="submit" class="w-full bg-white text-lyhana-blue hover:bg-gray-100 hover:text-lyhana-blue px-8 py-4 rounded-xl font-semibold transition-colors">
+                        <button type="submit" class="w-full bg-white text-lyhana-blue hover:bg-gray-100 hover:text-lyhana-blue px-8 py-4 rounded-xl font-semibold transition-colors transform hover:scale-[1.02]">
                             Send Message 
+                            <i class="fas fa-paper-plane ml-2"></i>
                         </button>
                     </form>
                 </div>
@@ -498,89 +872,75 @@
         </div>
     </section>
 
-    <!-- Footer -->
+    <!-- Footer amélioré -->
     <footer class="bg-gray-900 text-white py-12">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center">
-                <div class="flex items-center justify-center mb-6">
-                    <div class="w-12 h-12 gradient-bg rounded-full flex items-center justify-center mr-3 overflow-hidden">
-                        <img src="image/lyhana.png" alt="Lyhana Agency Logo" class="w-full h-full object-cover object-center" />
+            <div class="grid md:grid-cols-4 gap-8">
+                <div class="md:col-span-2">
+                    <div class="flex items-center mb-6">
+                        <div class="w-12 h-12 gradient-bg rounded-full flex items-center justify-center mr-3 overflow-hidden transition-transform hover:rotate-12">
+                            <img src="image/lyhana.png" alt="Lyhana Agency Logo" class="w-full h-full object-cover object-center" />
+                        </div>
+                        <div>
+                            <span class="text-2xl font-bold gradient-text">Lyhana</span>
+                            <div class="text-sm text-gray-400 -mt-1">Agency</div>
+                        </div>
                     </div>
-                    <div>
-                        <span class="text-2xl font-bold gradient-text">Lyhana</span>
-                        <div class="text-sm text-gray-400 -mt-1">Agency</div>
-                    </div>
-                </div>
-                <p class="text-gray-400 mb-6 max-w-2xl mx-auto">
-                    Creative studio specialized in branding, design and visual identity. 
-                    We bring your ideas to life with elegance and impact.
-                </p>
-                <div class="flex justify-center space-x-6 mb-8">
-                    <a href="#" class="text-gray-400 hover:text-lyhana-purple transition-colors">
-                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
-                            <path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"/>
-                        </svg>
-                    </a>
-                    <a href="#" class="text-gray-400 hover:text-lyhana-purple transition-colors">
-                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
-                            <path d="M12.017 0C5.396 0 .029 5.367.029 11.987c0 5.079 3.158 9.417 7.618 11.174-.105-.949-.199-2.403.041-3.439.219-.937 1.406-5.957 1.406-5.957s-.359-.72-.359-1.781c0-1.663.967-2.911 2.168-2.911 1.024 0 1.518.769 1.518 1.688 0 1.029-.653 2.567-.992 3.992-.285 1.193.6 2.165 1.775 2.165 2.128 0 3.768-2.245 3.768-5.487 0-2.861-2.063-4.869-5.008-4.869-3.41 0-5.409 2.562-5.409 5.199 0 1.033.394 2.143.889 2.741.099.12.112.225.085.345-.09.375-.293 1.199-.334 1.363-.053.225-.172.271-.402.165-1.495-.69-2.433-2.878-2.433-4.646 0-3.776 2.748-7.252 7.92-7.252 4.158 0 7.392 2.967 7.392 6.923 0 4.135-2.607 7.462-6.233 7.462-1.214 0-2.357-.629-2.75-1.378l-.748 2.853c-.271 1.043-1.002 2.35-1.492 3.146C9.57 23.812 10.763 24.009 12.017 24.009c6.624 0 11.99-5.367 11.99-11.988C24.007 5.367 18.641.001.012.001z"/>
-                        </svg>
-                    </a>
-                    <a href="#" class="text-gray-400 hover:text-lyhana-purple transition-colors">
-                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
-                            <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
-                        </svg>
-                    </a>
-                </div>
-                <div class="border-t border-gray-800 pt-8">
-                    <p class="text-gray-400 text-sm">
-                        © 2024 Lyhana Agency. Tous droits réservés. Créé par Bouikni Lydia Hana.
+                    <p class="text-gray-400 mb-6">
+                        Creative studio specialized in branding, design and visual identity. 
+                        We bring your ideas to life with elegance and impact.
                     </p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                            <i class="fab fa-behance"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                    </div>
                 </div>
+                
+                <div>
+                    <h3 class="text-lg font-semibold mb-6">Quick Links</h3>
+                    <ul class="space-y-3">
+                        <li><a href="#home" class="text-gray-400 hover:text-white transition-colors">Home</a></li>
+                        <li><a href="#about" class="text-gray-400 hover:text-white transition-colors">About</a></li>
+                        <li><a href="#services" class="text-gray-400 hover:text-white transition-colors">Services</a></li>
+                        <li><a href="#portfolio" class="text-gray-400 hover:text-white transition-colors">Portfolio</a></li>
+                        <li><a href="#contact" class="text-gray-400 hover:text-white transition-colors">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-semibold mb-6">Services</h3>
+                    <ul class="space-y-3">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Branding</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Social Media</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Packaging Design</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Video Editing</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">UI/UX Design</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 mt-12 pt-8 text-center">
+                <p class="text-gray-400 text-sm">
+                    © 2024 Lyhana Agency. All rights reserved. Created by Bouikni Lydia Hana.
+                </p>
             </div>
         </div>
     </footer>
 
-    <script>
-        // Menu mobile toggle
-        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
-        const mobileMenu = document.getElementById('mobile-menu');
-        
-        mobileMenuBtn.addEventListener('click', () => {
-            mobileMenu.classList.toggle('hidden');
-        });
+    <!-- Back to top button -->
+    <button id="back-to-top" class="fixed bottom-8 right-8 w-12 h-12 bg-lyhana-blue text-white rounded-full shadow-lg flex items-center justify-center opacity-0 invisible transition-all duration-300 hover:bg-lyhana-light-blue">
+        <i class="fas fa-arrow-up"></i>
+    </button>
 
-        // Smooth scrolling
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
-                }
-                // Fermer le menu mobile après clic
-                mobileMenu.classList.add('hidden');
-            });
-        });
-
-        // Navigation scroll effect
-        window.addEventListener('scroll', () => {
-            const nav = document.querySelector('nav');
-            if (window.scrollY > 100) {
-                nav.classList.add('shadow-lg');
-            } else {
-                nav.classList.remove('shadow-lg');
-            }
-        });
-
-        // Form submission
-        document.querySelector('form').addEventListener('submit', function(e) {
-            e.preventDefault();
-            alert('Merci pour votre message ! Nous vous répondrons très bientôt. ✨');
-        });
-    </script>
-<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'962cf65601e4ba9c',t:'MTc1MzEyNDY0Ny4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</body>
 </html>

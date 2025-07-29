@@ -1,40 +1,482 @@
-  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
-        body { font-family: 'Poppins', sans-serif; }
-        
-        .gradient-bg {
-            background: linear-gradient(135deg, #0073E6 0%, #00BFFF 100%);
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+body { 
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
+}
+
+/* Gradient styles */
+.gradient-bg {
+    background: linear-gradient(135deg, #0073E6 0%, #00BFFF 100%);
+}
+
+.gradient-text {
+    background: linear-gradient(135deg, #0073E6, #00BFFF);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+/* Card hover effect */
+.card-hover {
+    transition: all 0.3s ease;
+}
+
+.card-hover:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 25px 50px rgba(0,0,0,0.15);
+}
+
+.hover-card {
+    transition: all 0.3s ease;
+}
+
+.hover-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+/* Animations */
+.floating-animation {
+    animation: float 6s ease-in-out infinite;
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-20px); }
+}
+
+.pulse-animation {
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.7; }
+}
+
+/* Scroll animation */
+.reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.6s ease;
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Scroll indicator animation */
+@keyframes scroll {
+    0% { transform: translateY(0); opacity: 1; }
+    100% { transform: translateY(10px); opacity: 0; }
+}
+
+.animate-scroll {
+    animation: scroll 1.5s infinite;
+}
+
+/* Shapes for background decoration */
+.shape {
+    position: absolute;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(5px);
+}
+
+.shape-1 {
+    width: 300px;
+    height: 300px;
+    top: -150px;
+    right: -150px;
+    animation: float 8s ease-in-out infinite;
+}
+
+.shape-2 {
+    width: 200px;
+    height: 200px;
+    bottom: -100px;
+    left: -100px;
+    animation: float 10s ease-in-out infinite reverse;
+}
+
+.shape-3 {
+    width: 150px;
+    height: 150px;
+    top: 50%;
+    left: 20%;
+    animation: float 7s ease-in-out infinite 1s;
+}
+
+.shape-contact-1 {
+    width: 400px;
+    height: 400px;
+    top: -200px;
+    left: -200px;
+    animation: float 12s ease-in-out infinite;
+}
+
+.shape-contact-2 {
+    width: 300px;
+    height: 300px;
+    bottom: -150px;
+    right: -150px;
+    animation: float 15s ease-in-out infinite reverse;
+}
+
+/* Marquee styles */
+.marquee-container {
+    width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.marquee-content {
+    display: inline-block;
+    white-space: nowrap;
+    padding-right: 100%;
+}
+
+.client-logo {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #333;
+    min-width: 200px;
+}
+
+/* Process timeline */
+.process-item:nth-child(odd) .lg\:w-5\/12:first-child {
+    animation-delay: 0.2s;
+}
+
+.process-item:nth-child(odd) .lg\:w-5\/12:last-child {
+    animation-delay: 0.4s;
+}
+
+.process-item:nth-child(even) .lg\:w-5\/12:first-child {
+    animation-delay: 0.4s;
+}
+
+.process-item:nth-child(even) .lg\:w-5\/12:last-child {
+    animation-delay: 0.2s;
+}
+
+/* Lightbox transition */
+#lightbox-modal {
+    transition: opacity 0.3s ease;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #0073E6;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #00BFFF;
+}
+ /* New Background Animations */
+    .bg-grid-pattern {
+        background-image: 
+            linear-gradient(rgba(59, 130, 246, 0.1) 1px, transparent 1px),
+            linear-gradient(90deg, rgba(59, 130, 246, 0.1) 1px, transparent 1px);
+        background-size: 40px 40px;
+    }
+
+    @keyframes float-circle {
+        0%, 100% {
+            transform: translate(0, 0) rotate(0deg);
+        }
+        25% {
+            transform: translate(10px, 15px) rotate(5deg);
+        }
+        50% {
+            transform: translate(5px, 20px) rotate(0deg);
+        }
+        75% {
+            transform: translate(15px, 10px) rotate(-5deg);
+        }
+    }
+
+    .animate-float-circle {
+        animation: float-circle 15s ease-in-out infinite;
+    }
+
+    .animation-delay-100 {
+        animation-delay: 1s;
+    }
+
+    .animation-delay-300 {
+        animation-delay: 3s;
+    }
+
+    @keyframes spin-slow {
+        from {
+            transform: rotate(0deg);
+        }
+        to {
+            transform: rotate(360deg);
+        }
+    }
+
+    .animate-spin-slow {
+        animation: spin-slow 30s linear infinite;
+    }
+
+    @keyframes pulse-slow {
+        0%, 100% {
+            transform: scale(1);
+            opacity: 0.3;
+        }
+        50% {
+            transform: scale(1.2);
+            opacity: 0.5;
+        }
+    }
+
+    .animate-pulse-slow {
+        animation: pulse-slow 8s ease-in-out infinite;
+    }
+
+    /* Particle animations */
+    .particles-container {
+        pointer-events: none;
+    }
+
+    .particle {
+        position: absolute;
+        background-color: rgba(59, 130, 246, 0.15);
+        border-radius: 50%;
+        pointer-events: none;
+    }
+
+    .particle-1 {
+        width: 6px;
+        height: 6px;
+        top: 20%;
+        left: 15%;
+        animation: particle-move 20s linear infinite;
+    }
+
+    .particle-2 {
+        width: 8px;
+        height: 8px;
+        top: 60%;
+        left: 80%;
+        animation: particle-move 25s linear infinite reverse;
+    }
+
+    .particle-3 {
+        width: 4px;
+        height: 4px;
+        top: 70%;
+        left: 10%;
+        animation: particle-move 18s linear infinite;
+    }
+
+    .particle-4 {
+        width: 10px;
+        height: 10px;
+        top: 30%;
+        left: 50%;
+        animation: particle-move 30s linear infinite;
+    }
+
+    .particle-5 {
+        width: 5px;
+        height: 5px;
+        top: 80%;
+        left: 60%;
+        animation: particle-move 22s linear infinite reverse;
+    }
+
+    @keyframes particle-move {
+        0% {
+            transform: translate(0, 0);
+        }
+        25% {
+            transform: translate(50px, 30px);
+        }
+        50% {
+            transform: translate(20px, 80px);
+        }
+        75% {
+            transform: translate(70px, 20px);
+        }
+        100% {
+            transform: translate(0, 0);
+        }
+    }
+
+    /* Creative Process Styles */
+    .wave-path {
+        width: 100%;
+        height: 100%;
+        background-size: 50px 50px;
+        mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cpath d='M0,50 Q25,25 50,50 T100,50' fill='none' stroke='black' stroke-width='2'/%3E%3C/svg%3E");
+        mask-repeat: repeat-y;
+        mask-position: center;
+    }
+
+    .animate-wave {
+        animation: waveMove 20s linear infinite;
+    }
+
+    @keyframes waveMove {
+        0% { background-position: 0 0; }
+        100% { background-position: 0 100%; }
+    }
+
+    .process-step {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        position: relative;
+    }
+
+    .process-card {
+        width: 100%;
+        max-width: 400px;
+        background: white;
+        border-radius: 20px;
+        padding: 30px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+        position: relative;
+        overflow: hidden;
+        transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        border: 1px solid rgba(0, 0, 0, 0.03);
+    }
+
+    .process-card::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 5px;
+        height: 100%;
+        background: linear-gradient(to bottom, var(--tw-gradient-stops));
+        --tw-gradient-from: #3b82f6;
+        --tw-gradient-to: #60a5fa;
+        --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+    }
+
+    .process-card:hover {
+        transform: translateY(-10px) scale(1.02);
+        box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+    }
+
+    .step-number {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        font-size: 1.5rem;
+        font-weight: 800;
+        color: rgba(35, 32, 250, 0.307);
+        line-height: 1;
+    }
+
+    .step-icon {
+        width: 60px;
+        height: 60px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: linear-gradient(135deg, #3b82f6, #60a5fa);
+        border-radius: 18px;
+        margin-bottom: 20px;
+        color: white;
+    }
+
+    .step-icon svg {
+        width: 30px;
+        height: 30px;
+    }
+
+    .step-title {
+        font-size: 1.5rem;
+        font-weight: 700;
+        margin-bottom: 15px;
+        color: #111827;
+        position: relative;
+    }
+
+    .step-description {
+        color: #4b5563;
+        line-height: 1.6;
+        margin-bottom: 20px;
+    }
+
+    .step-dots {
+        display: flex;
+        gap: 5px;
+    }
+
+    .step-dots span {
+        display: block;
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        background: #e5e7eb;
+    }
+
+    /* Different card colors */
+    .discovery .step-icon { background: linear-gradient(135deg, #3b82f6, #60a5fa); }
+    .research .step-icon { background: linear-gradient(135deg, #10b981, #34d399); }
+    .concept .step-icon { background: linear-gradient(135deg, #f59e0b, #fbbf24); }
+    .design .step-icon { background: linear-gradient(135deg, #8b5cf6, #a78bfa); }
+    .feedback .step-icon { background: linear-gradient(135deg, #ec4899, #f472b6); }
+    .delivery .step-icon { background: linear-gradient(135deg, #6366f1, #818cf8); }
+
+    /* Animations */
+    .animate-float {
+        animation: float 6s ease-in-out infinite;
+    }
+
+    .animate-float.delay-100 { animation-delay: 0.6s; }
+    .animate-float.delay-200 { animation-delay: 1.2s; }
+    .animate-float.delay-300 { animation-delay: 1.8s; }
+    .animate-float.delay-400 { animation-delay: 2.4s; }
+    .animate-float.delay-500 { animation-delay: 3s; }
+
+    @keyframes float {
+        0%, 100% { transform: translateY(0); }
+        50% { transform: translateY(-15px); }
+    }
+
+    /* Responsive adjustments */
+    @media (min-width: 1024px) {
+        .process-step:nth-child(odd) .process-card {
+            margin-left: auto;
+            margin-right: 50px;
         }
         
-        .gradient-text {
-            background: linear-gradient(135deg, #0073E6, #00BFFF);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
+        .process-step:nth-child(even) .process-card {
+            margin-right: auto;
+            margin-left: 50px;
+        }
+    }
+
+    @media (max-width: 1023px) {
+        .wave-path {
+            left: 40px;
         }
         
-        .card-hover {
-            transition: all 0.3s ease;
+        .process-card {
+            margin-left: 60px;
         }
         
-        .card-hover:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 25px 50px rgba(0,0,0,0.15);
+        .process-card::before {
+            left: -40px;
         }
-        
-        .floating-animation {
-            animation: float 6s ease-in-out infinite;
-        }
-        
-        @keyframes float {
-            0%, 100% { transform: translateY(0px); }
-            50% { transform: translateY(-20px); }
-        }
-        
-        .pulse-animation {
-            animation: pulse 2s infinite;
-        }
-        
-        @keyframes pulse {
-            0%, 100% { opacity: 1; }
-            50% { opacity: 0.7; }
-        }
+    }
