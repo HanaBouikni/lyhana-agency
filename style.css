@@ -564,6 +564,63 @@ body {
     .process-card::before {
         display: none;
     }
+    
+    /* Adjust shapes for mobile */
+    .shape-1, .shape-2, .shape-3 {
+        width: 150px;
+        height: 150px;
+    }
+    
+    .shape-1 {
+        top: -75px;
+        right: -75px;
+    }
+    
+    .shape-2 {
+        bottom: -75px;
+        left: -75px;
+    }
+    
+    .shape-contact-1, .shape-contact-2 {
+        width: 200px;
+        height: 200px;
+    }
+    
+    .shape-contact-1 {
+        top: -100px;
+        left: -100px;
+    }
+    
+    .shape-contact-2 {
+        bottom: -100px;
+        right: -100px;
+    }
+    
+    /* Adjust client logos */
+    .client-logo {
+        min-width: 150px;
+    }
+    
+    /* Adjust process cards */
+    .process-card {
+        padding: 20px;
+    }
+    
+    .step-icon {
+        width: 50px;
+        height: 50px;
+        margin-bottom: 15px;
+    }
+    
+    .step-title {
+        font-size: 1.3rem;
+        margin-bottom: 10px;
+    }
+    
+    .step-description {
+        font-size: 0.9rem;
+        margin-bottom: 15px;
+    }
 }
 
 @media (max-width: 480px) {
@@ -611,6 +668,44 @@ body {
         margin-right: 0;
         margin-bottom: 15px;
     }
+    
+    /* Adjust client logos */
+    .client-logo {
+        min-width: 120px;
+    }
+    
+    /* Adjust process cards */
+    .process-card {
+        padding: 15px;
+    }
+    
+    .step-number {
+        top: 15px;
+        right: 15px;
+        font-size: 1.2rem;
+    }
+    
+    .step-icon {
+        width: 40px;
+        height: 40px;
+        border-radius: 12px;
+        margin-bottom: 10px;
+    }
+    
+    .step-icon svg {
+        width: 20px;
+        height: 20px;
+    }
+    
+    .step-title {
+        font-size: 1.1rem;
+        margin-bottom: 8px;
+    }
+    
+    .step-description {
+        font-size: 0.8rem;
+        margin-bottom: 12px;
+    }
 }
 /* Image optimization */
 img {
@@ -627,4 +722,51 @@ img {
 
 .lazy.loaded {
     opacity: 1;
+}
+
+/* Mobile menu animation */
+#mobile-menu {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+}
+
+#mobile-menu:not(.hidden) {
+    max-height: 300px;
+}
+
+/* Improved touch targets for mobile */
+@media (max-width: 768px) {
+    .nav-link, .portfolio-filter, button, a {
+        min-height: 44px;
+        min-width: 44px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+/* Prevent horizontal scrolling */
+html, body {
+    overflow-x: hidden;
+    width: 100%;
+}
+
+/* Improved text readability on mobile */
+@media (max-width: 768px) {
+    body {
+        font-size: 16px; /* Prevents zoom on iOS */
+        line-height: 1.6;
+    }
+    
+    h1, h2, h3, h4, h5, h6 {
+        line-height: 1.3;
+    }
+}
+
+/* Improved form elements on mobile */
+@media (max-width: 768px) {
+    input, select, textarea {
+        font-size: 16px; /* Prevents zoom on iOS */
+    }
 }

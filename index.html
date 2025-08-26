@@ -6,7 +6,7 @@
     <title>Lyhana Agency - Creative Studio</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <script src="script.js"></script>
+    <script src="script.js" defer></script>
     <link rel="stylesheet" href="style.css">
 </head>
 <body class="bg-white">
@@ -16,39 +16,39 @@
             <div class="flex justify-between items-center h-20">
                 <!-- Logo avec animation -->
                 <div class="flex items-center group">
-                    <div class="w-12 h-12 gradient-bg rounded-full flex items-center justify-center mr-3 overflow-hidden transition-transform duration-500 group-hover:rotate-[360deg]">
+                    <div class="w-10 h-10 md:w-12 md:h-12 gradient-bg rounded-full flex items-center justify-center mr-2 md:mr-3 overflow-hidden transition-transform duration-500 group-hover:rotate-[360deg]">
                         <img src="image/lyhana.png" alt="Lyhana Agency Logo" class="w-full h-full object-cover" />
                     </div>
                     <div>
-                        <span class="text-2xl font-bold gradient-text">Lyhana</span>
-                        <div class="text-sm text-gray-600 -mt-1">Agency</div>
+                        <span class="text-xl md:text-2xl font-bold gradient-text">Lyhana</span>
+                        <div class="text-xs md:text-sm text-gray-600 -mt-1">Agency</div>
                     </div>
                 </div>
                 
                 <!-- Menu Desktop -->
-                <div class="hidden md:flex space-x-8">
+                <div class="hidden md:flex space-x-6 lg:space-x-8">
                     <a href="#home" class="nav-link relative group">
-                        <span>Home</span>
+                        <span class="text-sm lg:text-base">Home</span>
                         <div class="absolute bottom-0 left-0 w-0 h-0.5 bg-lyhana-blue transition-all duration-300 group-hover:w-full"></div>
                     </a>
                     <a href="#about" class="nav-link relative group">
-                        <span>About</span>
+                        <span class="text-sm lg:text-base">About</span>
                         <div class="absolute bottom-0 left-0 w-0 h-0.5 bg-lyhana-blue transition-all duration-300 group-hover:w-full"></div>
                     </a>
                     <a href="#services" class="nav-link relative group">
-                        <span>Services</span>
+                        <span class="text-sm lg:text-base">Services</span>
                         <div class="absolute bottom-0 left-0 w-0 h-0.5 bg-lyhana-blue transition-all duration-300 group-hover:w-full"></div>
                     </a>
                     <a href="#process" class="nav-link relative group">
-                        <span>Process</span>
+                        <span class="text-sm lg:text-base">Process</span>
                         <div class="absolute bottom-0 left-0 w-0 h-0.5 bg-lyhana-blue transition-all duration-300 group-hover:w-full"></div>
                     </a>
                     <a href="#portfolio" class="nav-link relative group">
-                        <span>Portfolio</span>
+                        <span class="text-sm lg:text-base">Portfolio</span>
                         <div class="absolute bottom-0 left-0 w-0 h-0.5 bg-lyhana-blue transition-all duration-300 group-hover:w-full"></div>
                     </a>
                     <a href="#contact" class="nav-link relative group">
-                        <span>Contact</span>
+                        <span class="text-sm lg:text-base">Contact</span>
                         <div class="absolute bottom-0 left-0 w-0 h-0.5 bg-lyhana-blue transition-all duration-300 group-hover:w-full"></div>
                     </a>
                 </div>
@@ -67,12 +67,12 @@
         <!-- Menu Mobile Dropdown -->
         <div id="mobile-menu" class="md:hidden hidden bg-white border-t transform origin-top transition-all duration-300">
             <div class="px-4 py-3 space-y-3">
-                <a href="#home" class="block text-gray-700 hover:text-lyhana-blue font-medium transition-colors">Home</a>
-                <a href="#about" class="block text-gray-700 hover:text-lyhana-blue font-medium transition-colors">About</a>
-                <a href="#services" class="block text-gray-700 hover:text-lyhana-blue font-medium transition-colors">Services</a>
-                <a href="#process" class="block text-gray-700 hover:text-lyhana-blue font-medium transition-colors">Process</a>
-                <a href="#portfolio" class="block text-gray-700 hover:text-lyhana-blue font-medium transition-colors">Portfolio</a>
-                <a href="#contact" class="block text-gray-700 hover:text-lyhana-blue font-medium transition-colors">Contact</a>
+                <a href="#home" class="block text-gray-700 hover:text-lyhana-blue font-medium transition-colors py-2">Home</a>
+                <a href="#about" class="block text-gray-700 hover:text-lyhana-blue font-medium transition-colors py-2">About</a>
+                <a href="#services" class="block text-gray-700 hover:text-lyhana-blue font-medium transition-colors py-2">Services</a>
+                <a href="#process" class="block text-gray-700 hover:text-lyhana-blue font-medium transition-colors py-2">Process</a>
+                <a href="#portfolio" class="block text-gray-700 hover:text-lyhana-blue font-medium transition-colors py-2">Portfolio</a>
+                <a href="#contact" class="block text-gray-700 hover:text-lyhana-blue font-medium transition-colors py-2">Contact</a>
             </div>
         </div>
     </nav>
@@ -87,51 +87,51 @@
         </div>
         
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 relative z-10">
-            <div class="grid lg:grid-cols-2 gap-12 items-center">
-                <div class="text-white reveal">
-                    <h1 class="text-5xl md:text-7xl font-bold mb-6 leading-tight">
+            <div class="grid lg:grid-cols-2 gap-8 md:gap-12 items-center">
+                <div class="text-white reveal text-center lg:text-left">
+                    <h1 class="text-4xl sm:text-5xl md:text-6xl font-bold mb-4 md:mb-6 leading-tight">
                         We bring <span class="text-lyhana-light-blue animate-pulse">ideas</span> to life with elegance & impact.
                     </h1>
-                    <p class="text-xl md:text-2xl mb-8 text-white/90 leading-relaxed">
+                    <p class="text-lg md:text-xl mb-6 md:mb-8 text-white/90 leading-relaxed">
                         Let's create together a visual identity that reflects who you are and leaves a lasting impression.
                     </p>
-                    <div class="flex space-x-4">
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
                         <button onclick="document.getElementById('portfolio').scrollIntoView({behavior: 'smooth'})" 
-                                class="bg-white text-lyhana-blue hover:bg-gray-100 px-8 py-4 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl">
+                                class="bg-white text-lyhana-blue hover:bg-gray-100 px-6 py-3 md:px-8 md:py-4 rounded-full font-semibold text-base md:text-lg transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl">
                             Discover our work 
                         </button>
                         <button onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'})" 
-                                class="border-2 border-white text-white hover:bg-white/10 px-8 py-4 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105">
+                                class="border-2 border-white text-white hover:bg-white/10 px-6 py-3 md:px-8 md:py-4 rounded-full font-semibold text-base md:text-lg transition-all duration-300 transform hover:scale-105">
                             Get in touch
                         </button>
                     </div>
                 </div>
                 
-                <div class="relative reveal">
+                <div class="relative reveal mt-10 lg:mt-0">
                     <div class="floating-animation">
                         <!-- Mockup créatif amélioré -->
-                        <div class="relative w-full h-96">
+                        <div class="relative w-full h-64 sm:h-80 md:h-96 mx-auto max-w-md">
                             <!-- Smartphone mockup -->
-                            <div class="absolute top-0 right-0 w-48 h-80 bg-white rounded-3xl shadow-2xl p-4 transform rotate-12 transition-transform hover:rotate-6">
-                                <div class="w-full h-full bg-gradient-to-br from-lyhana-blue to-lyhana-light-blue rounded-2xl p-4 overflow-hidden">
-                                    <div class="bg-white/20 rounded-xl h-12 mb-4 animate-pulse"></div>
-                                    <div class="bg-white/30 rounded-lg h-8 mb-3 animate-pulse delay-100"></div>
-                                    <div class="bg-white/20 rounded-lg h-6 mb-2 animate-pulse delay-200"></div>
-                                    <div class="bg-white/20 rounded-lg h-6 w-3/4 animate-pulse delay-300"></div>
+                            <div class="absolute top-0 right-0 w-32 h-52 md:w-40 md:h-64 lg:w-48 lg:h-80 bg-white rounded-3xl shadow-2xl p-2 md:p-3 lg:p-4 transform rotate-12 transition-transform hover:rotate-6">
+                                <div class="w-full h-full bg-gradient-to-br from-lyhana-blue to-lyhana-light-blue rounded-2xl p-2 md:p-3 lg:p-4 overflow-hidden">
+                                    <div class="bg-white/20 rounded-xl h-8 md:h-10 lg:h-12 mb-2 md:mb-3 lg:mb-4 animate-pulse"></div>
+                                    <div class="bg-white/30 rounded-lg h-6 md:h-7 lg:h-8 mb-2 md:mb-3 animate-pulse delay-100"></div>
+                                    <div class="bg-white/20 rounded-lg h-4 md:h-5 lg:h-6 mb-1 md:mb-2 animate-pulse delay-200"></div>
+                                    <div class="bg-white/20 rounded-lg h-4 md:h-5 lg:h-6 w-3/4 animate-pulse delay-300"></div>
                                 </div>
                             </div>
                             
                             <!-- Business card mockup -->
-                            <div class="absolute bottom-0 left-0 w-56 h-36 bg-white rounded-2xl shadow-2xl p-6 transform -rotate-6 transition-transform hover:-rotate-3">
-                                <div class="w-8 h-8 bg-lyhana-blue rounded-full mb-3 animate-bounce"></div>
-                                <div class="bg-gray-200 h-3 rounded mb-2 animate-pulse"></div>
-                                <div class="bg-gray-200 h-3 rounded w-2/3 mb-4 animate-pulse delay-100"></div>
-                                <div class="bg-lyhana-light-blue h-2 rounded w-1/2 animate-pulse delay-200"></div>
+                            <div class="absolute bottom-0 left-0 w-40 h-24 md:w-48 md:h-28 lg:w-56 lg:h-32 bg-white rounded-2xl shadow-2xl p-3 md:p-4 lg:p-5 xl:p-6 transform -rotate-6 transition-transform hover:-rotate-3">
+                                <div class="w-5 h-5 md:w-6 md:h-6 lg:w-7 lg:h-7 xl:w-8 xl:h-8 bg-lyhana-blue rounded-full mb-2 md:mb-3 animate-bounce"></div>
+                                <div class="bg-gray-200 h-2 md:h-2.5 rounded mb-1 md:mb-2 animate-pulse"></div>
+                                <div class="bg-gray-200 h-2 md:h-2.5 rounded w-2/3 mb-2 md:mb-3 lg:mb-4 animate-pulse delay-100"></div>
+                                <div class="bg-lyhana-light-blue h-1.5 md:h-2 rounded w-1/2 animate-pulse delay-200"></div>
                             </div>
                             
                             <!-- Decorative elements -->
-                            <div class="absolute top-20 left-20 w-16 h-16 bg-white/30 rounded-full pulse-animation"></div>
-                            <div class="absolute bottom-20 right-20 w-12 h-12 bg-white/20 rounded-full pulse-animation" style="animation-delay: 1s;"></div>
+                            <div class="absolute top-16 left-16 md:top-20 md:left-20 w-10 h-10 md:w-12 md:h-12 lg:w-14 lg:h-14 bg-white/30 rounded-full pulse-animation"></div>
+                            <div class="absolute bottom-16 right-16 md:bottom-20 md:right-20 w-8 h-8 md:w-10 md:h-10 lg:w-12 lg:h-12 bg-white/20 rounded-full pulse-animation" style="animation-delay: 1s;"></div>
                         </div>
                     </div>
                 </div>
@@ -147,41 +147,41 @@
     </section>
 
     <!-- Clients Logo Marquee -->
-    <section class="py-12 bg-gray-50">
+    <section class="py-8 md:py-12 bg-gray-50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-12">
-                <h2 class="text-lg text-gray-500 font-medium">Trusted by innovative brands</h2>
+            <div class="text-center mb-8 md:mb-12">
+                <h2 class="text-base md:text-lg text-gray-500 font-medium">Trusted by innovative brands</h2>
             </div>
             <div class="marquee-container overflow-hidden">
-                <div class="marquee-content flex space-x-16">
+                <div class="marquee-content flex space-x-8 md:space-x-16">
                     <!-- Logos clients avec images bien crop pour remplir le rond -->
                     <div class="client-logo opacity-70 hover:opacity-100 transition-opacity">
-                        <div class="h-28 w-28 rounded-full border-4 border-white overflow-hidden flex items-center justify-center bg-white">
+                        <div class="h-20 w-20 md:h-24 md:w-24 lg:h-28 lg:w-28 rounded-full border-4 border-white overflow-hidden flex items-center justify-center bg-white">
                             <img src="image/Capture d'écran 2025-06-11 210941.png" alt="Client 1 Logo" class="w-full h-full object-cover" />
                         </div>
                     </div>
                     <div class="client-logo opacity-70 hover:opacity-100 transition-opacity">
-                        <div class="h-28 w-28 rounded-full  border-4 border-white overflow-hidden flex items-center justify-center bg-white">
+                        <div class="h-20 w-20 md:h-24 md:w-24 lg:h-28 lg:w-28 rounded-full  border-4 border-white overflow-hidden flex items-center justify-center bg-white">
                             <img src="image/all education.jpg" alt="Client 2 Logo" class="w-full h-full object-cover" />
                         </div>
                     </div>
                     <div class="client-logo opacity-70 hover:opacity-100 transition-opacity">
-                        <div class="h-28 w-28 rounded-full border-4 border-white overflow-hidden flex items-center justify-center bg-white">
+                        <div class="h-20 w-20 md:h-24 md:w-24 lg:h-28 lg:w-28 rounded-full border-4 border-white overflow-hidden flex items-center justify-center bg-white">
                             <img src="image/Capture d'écran 2025-06-11 212028.png" alt="Client 3 Logo" class="w-full h-full object-cover" />
                         </div>
                     </div>
                     <div class="client-logo opacity-70 hover:opacity-100 transition-opacity">
-                        <div class="h-28 w-28 rounded-full  border-4 border-white overflow-hidden flex items-center justify-center bg-white">
+                        <div class="h-20 w-20 md:h-24 md:w-24 lg:h-28 lg:w-28 rounded-full  border-4 border-white overflow-hidden flex items-center justify-center bg-white">
                             <img src="image/Capture d'écran 2025-06-11 212556.png" alt="Client 4 Logo" class="w-full h-full object-cover" />
                         </div>
                     </div>
                     <div class="client-logo opacity-70 hover:opacity-100 transition-opacity">
-                        <div class="h-28 w-28 rounded-full  border-4 border-white overflow-hidden flex items-center justify-center bg-white">
+                        <div class="h-20 w-20 md:h-24 md:w-24 lg:h-28 lg:w-28 rounded-full  border-4 border-white overflow-hidden flex items-center justify-center bg-white">
                             <img src="image/Capture d'écran 2025-06-25 213941.png" alt="Client 5 Logo" class="w-full h-full object-cover" />
                         </div>
                     </div>
                     <div class="client-logo opacity-70 hover:opacity-100 transition-opacity">
-                        <div class="h-28 w-28 rounded-full border-4 border-white overflow-hidden flex items-center justify-center bg-white">
+                        <div class="h-20 w-20 md:h-24 md:w-24 lg:h-28 lg:w-28 rounded-full border-4 border-white overflow-hidden flex items-center justify-center bg-white">
                             <img src="image/logo1.jpg" alt="Client 6 Logo" class="w-full h-full object-cover" />
                         </div>
                     </div>
@@ -191,45 +191,45 @@
     </section>
 
     <!-- About avec animations -->
-    <section id="about" class="py-20 bg-gray-50">
+    <section id="about" class="py-16 md:py-20 bg-gray-50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16 reveal">
-                <h2 class="text-5xl md:text-5xl font-bold gradient-text mb-6">About  LYHANA AGENCY</h2>
-                <div class="w-24 h-1 bg-lyhana-blue mx-auto mb-8"></div>
+            <div class="text-center mb-12 md:mb-16 reveal">
+                <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold gradient-text mb-4 md:mb-6">About  LYHANA AGENCY</h2>
+                <div class="w-20 md:w-24 h-1 bg-lyhana-blue mx-auto mb-6 md:mb-8"></div>
             
             </div>
             
-            <div class="grid lg:grid-cols-2 gap-16 items-center">
+            <div class="grid lg:grid-cols-2 gap-12 md:gap-16 items-center">
                 <div class="reveal">
-                    <p class="text-lg text-gray-700 leading-relaxed mb-6">
+                    <p class="text-base md:text-lg text-gray-700 leading-relaxed mb-4 md:mb-6">
                         <strong class="text-lyhana-blue">Lyhana Agency</strong> is a creative studio specialized in branding, social media design, and visual identity. We empower businesses to shine through tailored visuals.
                     </p>
-                    <p class="text-lg text-gray-700 leading-relaxed mb-8">
+                    <p class="text-base md:text-lg text-gray-700 leading-relaxed mb-6 md:mb-8">
                         Our mission is to transform your ideas into impactful visual creations that tell your story and connect with your audience. Each project is a new creative adventure that we approach with passion and professionalism.
                     </p>
-                    <p class="text-lg text-gray-700 leading-relaxed">
+                    <p class="text-base md:text-lg text-gray-700 leading-relaxed">
                         We believe in the power of collaboration and communication. Our team works closely with you to understand your needs and create designs that reflect your unique identity.
                     
                 </div>
                 
-                <div class="relative reveal">
-                    <div class="w-full h-96 bg-gradient-to-br from-lyhana-blue/10 via-white to-lyhana-light-blue/10 rounded-3xl shadow-2xl p-8 flex items-center justify-center hover-card overflow-hidden">
+                <div class="relative reveal mt-10 lg:mt-0">
+                    <div class="w-full h-80 md:h-96 bg-gradient-to-br from-lyhana-blue/10 via-white to-lyhana-light-blue/10 rounded-3xl shadow-2xl p-6 md:p-8 flex items-center justify-center hover-card overflow-hidden">
                         <!-- Decorative floating shapes -->
-                        <div class="absolute top-8 left-8 w-12 h-12 bg-lyhana-blue/20 rounded-full animate-bounce-slow"></div>
-                        <div class="absolute bottom-8 right-16 w-8 h-8 bg-lyhana-light-blue/20 rounded-full animate-pulse"></div>
-                        <div class="absolute top-1/2 left-1/2 w-20 h-20 bg-white/30 rounded-full animate-spin-slow -translate-x-1/2 -translate-y-1/2"></div>
+                        <div class="absolute top-6 md:top-8 left-6 md:left-8 w-8 h-8 md:w-10 md:h-10 lg:w-12 lg:h-12 bg-lyhana-blue/20 rounded-full animate-bounce-slow"></div>
+                        <div class="absolute bottom-6 md:bottom-8 right-10 md:right-12 lg:right-16 w-6 h-6 md:w-7 md:h-7 lg:w-8 lg:h-8 bg-lyhana-light-blue/20 rounded-full animate-pulse"></div>
+                        <div class="absolute top-1/2 left-1/2 w-14 h-14 md:w-16 md:h-16 lg:w-20 lg:h-20 bg-white/30 rounded-full animate-spin-slow -translate-x-1/2 -translate-y-1/2"></div>
                         <div class="text-center relative z-10">
-                            <div class="w-24 h-24 gradient-bg rounded-full mx-auto mb-6 flex items-center justify-center overflow-hidden transition-transform hover:scale-110 shadow-lg border-4 border-white animate-float">
+                            <div class="w-16 h-16 md:w-20 md:h-20 lg:w-24 lg:h-24 gradient-bg rounded-full mx-auto mb-4 md:mb-6 flex items-center justify-center overflow-hidden transition-transform hover:scale-110 shadow-lg border-4 border-white animate-float">
                                 <img src="image/lyhana.png" alt="Lyhana Agency Logo" class="w-full h-full object-cover" />
                             </div>
-                            <h3 class="text-3xl font-extrabold gradient-text mb-4 tracking-tight animate-gradient">Our Vision</h3>
-                            <p class="text-lg text-gray-700 font-light mb-4 animate-fade-in">
+                            <h3 class="text-2xl md:text-3xl font-extrabold gradient-text mb-3 md:mb-4 tracking-tight animate-gradient">Our Vision</h3>
+                            <p class="text-base md:text-lg text-gray-700 font-light mb-3 md:mb-4 animate-fade-in">
                                 We craft <span class="gradient-text font-bold">authentic</span> visual identities that reveal the <span class="text-lyhana-blue font-bold">unique personality</span> of every brand.
                             </p>
-                            <div class="flex justify-center mt-6 space-x-4">
-                                <span class="inline-block px-4 py-2 bg-lyhana-blue/10 text-lyhana-blue rounded-full font-semibold text-sm shadow hover:bg-lyhana-blue/20 transition-colors animate-bounce">Creativity</span>
-                                <span class="inline-block px-4 py-2 bg-lyhana-light-blue/10 text-lyhana-light-blue rounded-full font-semibold text-sm shadow hover:bg-lyhana-light-blue/20 transition-colors animate-bounce delay-150">Authenticity</span>
-                                <span class="inline-block px-4 py-2 bg-white/20 text-gray-700 rounded-full font-semibold text-sm shadow hover:bg-white/30 transition-colors animate-bounce delay-300">Impact</span>
+                            <div class="flex flex-wrap justify-center gap-2 md:gap-3 mt-4 md:mt-6">
+                                <span class="inline-block px-3 py-1 md:px-4 md:py-2 bg-lyhana-blue/10 text-lyhana-blue rounded-full font-semibold text-xs md:text-sm shadow hover:bg-lyhana-blue/20 transition-colors animate-bounce">Creativity</span>
+                                <span class="inline-block px-3 py-1 md:px-4 md:py-2 bg-lyhana-light-blue/10 text-lyhana-light-blue rounded-full font-semibold text-xs md:text-sm shadow hover:bg-lyhana-light-blue/20 transition-colors animate-bounce delay-150">Authenticity</span>
+                                <span class="inline-block px-3 py-1 md:px-4 md:py-2 bg-white/20 text-gray-700 rounded-full font-semibold text-xs md:text-sm shadow hover:bg-white/30 transition-colors animate-bounce delay-300">Impact</span>
                             </div>
                         </div>
                     </div>
@@ -240,34 +240,34 @@
     </section>
 
     <!-- Process Section - Sophisticated Timeline -->
-<section id="process" class="py-20 bg-white overflow-hidden relative">
+<section id="process" class="py-16 md:py-20 bg-white overflow-hidden relative">
  <!-- Animated Background Elements -->
  <div class="absolute inset-0 overflow-hidden z-0">
       <!-- Floating gradient circles (doubled) -->
-      <div class="absolute top-1/4 left-10 w-40 h-40 rounded-full bg-lyhana-blue/10 blur-xl animate-float-circle animation-delay-100"></div>
-      <div class="absolute top-1/3 right-20 w-60 h-60 rounded-full bg-lyhana-light-blue/10 blur-xl animate-float-circle animation-delay-300"></div>
-      <div class="absolute bottom-1/4 left-1/4 w-80 h-80 rounded-full bg-gradient-to-br from-lyhana-blue/5 to-lyhana-light-blue/5 blur-xl animate-float-circle"></div>
+      <div class="absolute top-1/4 left-10 w-32 h-32 md:w-40 md:h-40 rounded-full bg-lyhana-blue/10 blur-xl animate-float-circle animation-delay-100"></div>
+      <div class="absolute top-1/3 right-16 md:right-20 w-40 h-40 md:w-52 md:h-52 lg:w-60 lg:h-60 rounded-full bg-lyhana-light-blue/10 blur-xl animate-float-circle animation-delay-300"></div>
+      <div class="absolute bottom-1/4 left-1/4 w-60 h-60 md:w-72 md:h-72 lg:w-80 lg:h-80 rounded-full bg-gradient-to-br from-lyhana-blue/5 to-lyhana-light-blue/5 blur-xl animate-float-circle"></div>
       <!-- Doubled circles -->
-      <div class="absolute top-2/3 left-1/2 w-32 h-32 rounded-full bg-lyhana-blue/10 blur-xl animate-float-circle animation-delay-300"></div>
-        <div class="absolute bottom-10 right-1/3 w-48 h-48 rounded-full bg-lyhana-light-blue/10 blur-xl animate-float-circle animation-delay-100"></div>
-        <div class="absolute top-10 right-10 w-24 h-24 rounded-full bg-gradient-to-br from-lyhana-blue/10 to-lyhana-light-blue/10 blur-xl animate-float-circle"></div>
+      <div class="absolute top-2/3 left-1/2 w-24 h-24 md:w-28 md:h-28 lg:w-32 lg:h-32 rounded-full bg-lyhana-blue/10 blur-xl animate-float-circle animation-delay-300"></div>
+        <div class="absolute bottom-10 right-1/3 w-36 h-36 md:w-40 md:h-40 lg:w-48 lg:h-48 rounded-full bg-lyhana-light-blue/10 blur-xl animate-float-circle animation-delay-100"></div>
+        <div class="absolute top-10 right-10 w-16 h-16 md:w-20 md:h-20 lg:w-24 lg:h-24 rounded-full bg-gradient-to-br from-lyhana-blue/10 to-lyhana-light-blue/10 blur-xl animate-float-circle"></div>
 
         <!-- Extra visible circles -->
-        <div class="absolute top-1/2 left-10 w-24 h-24 rounded-full bg-lyhana-blue/20 blur-md animate-float-circle"></div>
-        <div class="absolute bottom-1/3 right-10 w-32 h-32 rounded-full bg-lyhana-light-blue/20 blur-md animate-float-circle"></div>
-        <div class="absolute top-1/4 right-1/2 w-16 h-16 rounded-full bg-lyhana-blue/30 blur-sm animate-float-circle"></div>
+        <div class="absolute top-1/2 left-10 w-16 h-16 md:w-20 md:h-20 lg:w-24 lg:h-24 rounded-full bg-lyhana-blue/20 blur-md animate-float-circle"></div>
+        <div class="absolute bottom-1/3 right-10 w-20 h-20 md:w-24 md:h-24 lg:w-28 lg:h-28 lg:w-32 lg:h-32 rounded-full bg-lyhana-light-blue/20 blur-md animate-float-circle"></div>
+        <div class="absolute top-1/4 right-1/2 w-12 h-12 md:w-14 md:h-14 lg:w-16 lg:h-16 rounded-full bg-lyhana-blue/30 blur-sm animate-float-circle"></div>
 
         <!-- Geometric shapes (doubled) -->
-        <div class="absolute top-20 right-1/4 w-24 h-24 bg-transparent border-2 border-lyhana-blue/20 rounded-lg rotate-45 animate-spin-slow"></div>
-        <div class="absolute bottom-32 left-1/3 w-16 h-16 bg-transparent border-2 border-lyhana-light-blue/20 rounded-full animate-pulse-slow"></div>
+        <div class="absolute top-20 right-1/4 w-16 h-16 md:w-20 md:h-20 lg:w-24 lg:h-24 bg-transparent border-2 border-lyhana-blue/20 rounded-lg rotate-45 animate-spin-slow"></div>
+        <div class="absolute bottom-32 left-1/3 w-12 h-12 md:w-14 md:h-14 lg:w-16 lg:h-16 bg-transparent border-2 border-lyhana-light-blue/20 rounded-full animate-pulse-slow"></div>
         <!-- Doubled shapes -->
-        <div class="absolute top-1/2 left-1/5 w-20 h-20 bg-transparent border-2 border-lyhana-blue/20 rounded-lg rotate-12 animate-spin-slow"></div>
-        <div class="absolute bottom-10 right-1/5 w-12 h-12 bg-transparent border-2 border-lyhana-light-blue/20 rounded-full animate-pulse-slow"></div>
+        <div class="absolute top-1/2 left-1/5 w-14 h-14 md:w-16 md:h-16 lg:w-20 lg:h-20 bg-transparent border-2 border-lyhana-blue/20 rounded-lg rotate-12 animate-spin-slow"></div>
+        <div class="absolute bottom-10 right-1/5 w-10 h-10 md:w-12 md:h-12 bg-transparent border-2 border-lyhana-light-blue/20 rounded-full animate-pulse-slow"></div>
 
         <!-- Extra visible shapes -->
-        <div class="absolute top-1/3 left-1/3 w-14 h-14 bg-transparent border-2 border-lyhana-blue/40 rounded-lg rotate-6 animate-spin-slow"></div>
-        <div class="absolute bottom-20 left-1/2 w-10 h-10 bg-transparent border-2 border-lyhana-light-blue/40 rounded-full animate-pulse-slow"></div>
-        <div class="absolute top-10 left-1/4 w-8 h-8 bg-transparent border-2 border-lyhana-blue/30 rounded-lg rotate-12 animate-spin-slow"></div>
+        <div class="absolute top-1/3 left-1/3 w-12 h-12 md:w-14 md:h-14 bg-transparent border-2 border-lyhana-blue/40 rounded-lg rotate-6 animate-spin-slow"></div>
+        <div class="absolute bottom-20 left-1/2 w-8 h-8 md:w-10 md:h-10 bg-transparent border-2 border-lyhana-light-blue/40 rounded-full animate-pulse-slow"></div>
+        <div class="absolute top-10 left-1/4 w-6 h-6 md:w-8 md:h-8 bg-transparent border-2 border-lyhana-blue/30 rounded-lg rotate-12 animate-spin-slow"></div>
 
         <!-- Particle animation (doubled) -->
         <div class="particles-container absolute inset-0 overflow-hidden">
@@ -281,9 +281,9 @@
             <div class="particle particle-2" style="top:70%;left:60%;"></div>
             <div class="particle particle-3" style="top:50%;left:80%;"></div>
             <!-- Extra visible particles -->
-            <div class="particle particle-4" style="top:15%;left:70%;width:12px;height:12px;background-color:rgba(59,130,246,0.25);"></div>
-            <div class="particle particle-5" style="top:80%;left:30%;width:10px;height:10px;background-color:rgba(96,165,250,0.25);"></div>
-            <div class="particle particle-2" style="top:60%;left:10%;width:8px;height:8px;background-color:rgba(59,130,246,0.25);"></div>
+            <div class="particle particle-4" style="top:15%;left:70%;width:10px;height:10px;background-color:rgba(59,130,246,0.25);"></div>
+            <div class="particle particle-5" style="top:80%;left:30%;width:8px;height:8px;background-color:rgba(96,165,250,0.25);"></div>
+            <div class="particle particle-2" style="top:60%;left:10%;width:6px;height:6px;background-color:rgba(59,130,246,0.25);"></div>
         </div>
     </div>
         <!-- Subtle grid overlay -->
@@ -291,29 +291,29 @@
     </div>
 
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div class="text-center mb-16 reveal">
-            <h2 class="text-5xl md:text-6xl font-extrabold gradient-text mb-6 tracking-tight animate-gradient">Our Creative Journey</h2>
-            <div class="w-24 h-1 bg-lyhana-blue mx-auto mb-8"></div>
-            <p class="text-2xl text-gray-700 max-w-2xl mx-auto font-light animate-fade-in">
+        <div class="text-center mb-12 md:mb-16 reveal">
+            <h2 class="text-3xl md:text-4xl lg:text-5xl font-extrabold gradient-text mb-4 md:mb-6 tracking-tight animate-gradient">Our Creative Journey</h2>
+            <div class="w-20 md:w-24 h-1 bg-lyhana-blue mx-auto mb-6 md:mb-8"></div>
+            <p class="text-xl md:text-2xl text-gray-700 max-w-2xl mx-auto font-light animate-fade-in">
                 The path we take to transform your vision into stunning reality
             </p>
         </div>
         
         <!-- Creative Process Timeline -->
-        <div class="relative py-12">
+        <div class="relative py-8 md:py-12">
             <!-- Animated Wave Path -->
-            <div class="absolute left-1/2 top-0 h-full w-2 transform -translate-x-1/2 z-0 overflow-hidden">
+            <div class="hidden lg:block absolute left-1/2 top-0 h-full w-2 transform -translate-x-1/2 z-0 overflow-hidden">
                 <div class="absolute inset-0 bg-gradient-to-b from-lyhana-blue to-lyhana-light-blue wave-path animate-wave"></div>
             </div>
             
             <!-- Process Steps Container -->
-            <div class="space-y-32 w-full z-10 relative">
+            <div class="space-y-16 md:space-y-24 lg:space-y-32 w-full z-10 relative">
                 <!-- Step 1 - Discovery -->
                 <div class="process-step animate-float">
                     <div class="process-card discovery transform hover:scale-105">
                         <div class="step-number">01</div>
-                        <div class="step-icon flex items-center justify-center w-full h-32 mx-auto mt-6">
-                            <img src="image/discovery.png" alt="Step 6 Icon" class="w-full h-full object-cover rounded-2xl shadow-lg" />
+                        <div class="step-icon flex items-center justify-center w-full h-24 md:h-28 lg:h-32 mx-auto mt-4 md:mt-6">
+                            <img src="image/discovery.png" alt="Step 6 Icon" class="w-full h-full object-cover rounded-xl md:rounded-2xl shadow-lg" />
                         </div>
                         <h3 class="step-title">Discovery</h3>
                         <p class="step-description">We dive deep to understand your business, goals, and audience through immersive workshops.</p>
@@ -327,8 +327,8 @@
                 <div class="process-step animate-float delay-100">
                     <div class="process-card research transform hover:scale-105">
                         <div class="step-number">02</div>
-                        <div class="step-icon flex items-center justify-center w-full h-32 mx-auto mt-6">
-                            <img src="image/recherche.jpg" alt="Step 6 Icon" class="w-full h-full object-cover rounded-2xl shadow-lg" />
+                        <div class="step-icon flex items-center justify-center w-full h-24 md:h-28 lg:h-32 mx-auto mt-4 md:mt-6">
+                            <img src="image/recherche.jpg" alt="Step 6 Icon" class="w-full h-full object-cover rounded-xl md:rounded-2xl shadow-lg" />
                         </div>
                         <h3 class="step-title">Research & Strategy</h3>
                         <p class="step-description">Market analysis and competitive research to craft your unique visual strategy.</p>
@@ -342,8 +342,8 @@
                 <div class="process-step animate-float delay-200">
                     <div class="process-card concept transform hover:scale-105">
                         <div class="step-number">03</div>
-                         <div class="step-icon flex items-center justify-center w-full h-32 mx-auto mt-6">
-                            <img src="image/ampoule.jpg" alt="Step 6 Icon" class="w-full h-full object-cover rounded-2xl shadow-lg" />
+                         <div class="step-icon flex items-center justify-center w-full h-24 md:h-28 lg:h-32 mx-auto mt-4 md:mt-6">
+                            <img src="image/ampoule.jpg" alt="Step 6 Icon" class="w-full h-full object-cover rounded-xl md:rounded-2xl shadow-lg" />
                         </div>
                         <h3 class="step-title">Concept Development</h3>
                         <p class="step-description">Creative brainstorming sessions to generate concepts that embody your brand.</p>
@@ -357,8 +357,8 @@
                 <div class="process-step animate-float delay-300">
                     <div class="process-card design transform hover:scale-105">
                         <div class="step-number">04</div>
-                       <div class="step-icon flex items-center justify-center w-full h-32 mx-auto mt-6">
-                            <img src="image/design.jpg" alt="Step 6 Icon" class="w-full h-full object-cover rounded-2xl shadow-lg" />
+                       <div class="step-icon flex items-center justify-center w-full h-24 md:h-28 lg:h-32 mx-auto mt-4 md:mt-6">
+                            <img src="image/design.jpg" alt="Step 6 Icon" class="w-full h-full object-cover rounded-xl md:rounded-2xl shadow-lg" />
                         </div>
                         <h3 class="step-title">Design & Creation</h3>
                         <p class="step-description">Transforming concepts into stunning designs that capture your essence.</p>
@@ -372,8 +372,8 @@
                 <div class="process-step animate-float delay-400">
                     <div class="process-card feedback transform hover:scale-105">
                         <div class="step-number">05</div>
-                         <div class="step-icon flex items-center justify-center w-full h-32 mx-auto mt-6">
-                            <img src="image/feed back.jpg" alt="Step 6 Icon" class="w-full h-full object-cover rounded-2xl shadow-lg" />
+                         <div class="step-icon flex items-center justify-center w-full h-24 md:h-28 lg:h-32 mx-auto mt-4 md:mt-6">
+                            <img src="image/feed back.jpg" alt="Step 6 Icon" class="w-full h-full object-cover rounded-xl md:rounded-2xl shadow-lg" />
                         </div>
                         <h3 class="step-title">Feedback & Refinement</h3>
                         <p class="step-description">Collaborative review process to perfect every detail of your design.</p>
@@ -387,8 +387,8 @@
                 <div class="process-step animate-float delay-500">
                     <div class="process-card delivery transform hover:scale-105">
                         <div class="step-number">06</div>
-                        <div class="step-icon flex items-center justify-center w-full h-32 mx-auto mt-6">
-                            <img src="image/delivery.jpg" alt="Step 6 Icon" class="w-full h-full object-cover rounded-2xl shadow-lg" />
+                        <div class="step-icon flex items-center justify-center w-full h-24 md:h-28 lg:h-32 mx-auto mt-4 md:mt-6">
+                            <img src="image/delivery.jpg" alt="Step 6 Icon" class="w-full h-full object-cover rounded-xl md:rounded-2xl shadow-lg" />
                         </div>
                         <h3 class="step-title">Delivery & Support</h3>
                         <p class="step-description">Final files delivery and ongoing support to ensure your success.</p>
@@ -402,111 +402,108 @@
     </div>
 </section>
 
-
-
-
     <!-- Services Section - Sophisticated & Attractive -->
-    <section id="services" class="py-24 bg-gradient-to-br from-white via-gray-50 to-lyhana-light-blue/10 relative overflow-hidden">
+    <section id="services" class="py-16 md:py-20 lg:py-24 bg-gradient-to-br from-white via-gray-50 to-lyhana-light-blue/10 relative overflow-hidden">
         <!-- Animated Decorative Shapes -->
         <div class="absolute inset-0 z-0 pointer-events-none">
-            <div class="absolute top-10 left-10 w-32 h-32 bg-lyhana-blue/10 rounded-full blur-2xl animate-float-circle"></div>
-            <div class="absolute bottom-20 right-20 w-40 h-40 bg-lyhana-light-blue/10 rounded-full blur-2xl animate-float-circle animation-delay-200"></div>
-            <div class="absolute top-1/2 left-1/2 w-24 h-24 bg-gradient-to-br from-lyhana-blue/20 to-lyhana-light-blue/20 rounded-full blur-xl animate-spin-slow -translate-x-1/2 -translate-y-1/2"></div>
-            <div class="absolute top-1/4 right-1/3 w-16 h-16 bg-lyhana-blue/20 rounded-lg rotate-12 animate-spin-slow"></div>
+            <div class="absolute top-10 left-10 w-24 h-24 md:w-32 md:h-32 bg-lyhana-blue/10 rounded-full blur-xl md:blur-2xl animate-float-circle"></div>
+            <div class="absolute bottom-20 right-20 w-28 h-28 md:w-36 md:h-36 lg:w-40 lg:h-40 bg-lyhana-light-blue/10 rounded-full blur-xl md:blur-2xl animate-float-circle animation-delay-200"></div>
+            <div class="absolute top-1/2 left-1/2 w-20 h-20 md:w-24 md:h-24 bg-gradient-to-br from-lyhana-blue/20 to-lyhana-light-blue/20 rounded-full blur-lg md:blur-xl animate-spin-slow -translate-x-1/2 -translate-y-1/2"></div>
+            <div class="absolute top-1/4 right-1/3 w-14 h-14 md:w-16 md:h-16 bg-lyhana-blue/20 rounded-lg rotate-12 animate-spin-slow"></div>
         </div>
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-            <div class="text-center mb-20 reveal">
-                <h2 class="text-5xl md:text-6xl font-extrabold gradient-text mb-6 tracking-tight animate-gradient">Our Expertise</h2>
-                <div class="w-32 h-1 bg-lyhana-blue mx-auto mb-8 rounded-full animate-pulse"></div>
-                <p class="text-2xl text-gray-700 max-w-2xl mx-auto font-light animate-fade-in">
+            <div class="text-center mb-12 md:mb-16 lg:mb-20 reveal">
+                <h2 class="text-3xl md:text-4xl lg:text-5xl font-extrabold gradient-text mb-4 md:mb-6 tracking-tight animate-gradient">Our Expertise</h2>
+                <div class="w-24 h-1 md:w-28 md:h-1 bg-lyhana-blue mx-auto mb-6 md:mb-8 rounded-full animate-pulse"></div>
+                <p class="text-xl md:text-2xl text-gray-700 max-w-2xl mx-auto font-light animate-fade-in">
                     Elevate your brand with creative solutions designed for impact and elegance.
                 </p>
             </div>
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-12">
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-10 lg:gap-12">
                 <!-- Service Card 1 -->
-                <div class="bg-white rounded-3xl p-10 shadow-xl card-hover border border-gray-100 reveal relative group transition-all duration-300 hover:scale-[1.03] hover:shadow-2xl">
-                    <div class="absolute -top-6 left-1/2 -translate-x-1/2 w-20 h-20 gradient-bg rounded-full flex items-center justify-center shadow-lg animate-float">
-                        <i class="fas fa-palette text-white text-3xl"></i>
+                <div class="bg-white rounded-3xl p-6 md:p-8 lg:p-10 shadow-xl card-hover border border-gray-100 reveal relative group transition-all duration-300 hover:scale-[1.03] hover:shadow-2xl">
+                    <div class="absolute -top-5 md:-top-6 left-1/2 -translate-x-1/2 w-16 h-16 md:w-18 md:h-18 lg:w-20 lg:h-20 gradient-bg rounded-full flex items-center justify-center shadow-lg animate-float">
+                        <i class="fas fa-palette text-white text-2xl md:text-3xl"></i>
                     </div>
-                    <h3 class="text-2xl font-bold gradient-text mb-4 mt-12">Branding</h3>
-                    <p class="text-gray-600 mb-6 text-base font-medium">Signature logos, full brand identity, and style guides that set you apart.</p>
+                    <h3 class="text-xl md:text-2xl font-bold gradient-text mb-3 md:mb-4 mt-14 md:mt-16 lg:mt-18">Branding</h3>
+                    <p class="text-gray-600 mb-4 md:mb-6 text-sm md:text-base font-medium">Signature logos, full brand identity, and style guides that set you apart.</p>
                     <div class="flex justify-between items-center">
-                        <span class="text-green-600 font-semibold text-lg">From $150</span>
-                        <a href="#contact" class="text-lyhana-blue hover:text-lyhana-light-blue transition-colors text-xl">
+                        <span class="text-green-600 font-semibold text-base md:text-lg">From $150</span>
+                        <a href="#contact" class="text-lyhana-blue hover:text-lyhana-light-blue transition-colors text-lg md:text-xl">
                             <i class="fas fa-arrow-right"></i>
                         </a>
                     </div>
                     
                 </div>
                 <!-- Service Card 2 -->
-                <div class="bg-white rounded-3xl p-10 shadow-xl card-hover border border-gray-100 reveal relative group transition-all duration-300 hover:scale-[1.03] hover:shadow-2xl">
-                    <div class="absolute -top-6 left-1/2 -translate-x-1/2 w-20 h-20 bg-gradient-to-br from-lyhana-light-blue to-lyhana-blue rounded-full flex items-center justify-center shadow-lg animate-float animation-delay-100">
-                        <i class="fab fa-instagram text-white text-3xl"></i>
+                <div class="bg-white rounded-3xl p-6 md:p-8 lg:p-10 shadow-xl card-hover border border-gray-100 reveal relative group transition-all duration-300 hover:scale-[1.03] hover:shadow-2xl">
+                    <div class="absolute -top-5 md:-top-6 left-1/2 -translate-x-1/2 w-16 h-16 md:w-18 md:h-18 lg:w-20 lg:h-20 bg-gradient-to-br from-lyhana-light-blue to-lyhana-blue rounded-full flex items-center justify-center shadow-lg animate-float animation-delay-100">
+                        <i class="fab fa-instagram text-white text-2xl md:text-3xl"></i>
                     </div>
-                    <h3 class="text-2xl font-bold gradient-text mb-4 mt-12">Social Media Design</h3>
-                    <p class="text-gray-600 mb-6 text-base font-medium">Captivating posts, reels, and stories to grow your online presence.</p>
+                    <h3 class="text-xl md:text-2xl font-bold gradient-text mb-3 md:mb-4 mt-14 md:mt-16 lg:mt-18">Social Media Design</h3>
+                    <p class="text-gray-600 mb-4 md:mb-6 text-sm md:text-base font-medium">Captivating posts, reels, and stories to grow your online presence.</p>
                     <div class="flex justify-between items-center">
-                        <span class="text-green-600 font-semibold text-lg">From $50</span>
-                        <a href="#contact" class="text-lyhana-blue hover:text-lyhana-light-blue transition-colors text-xl">
+                        <span class="text-green-600 font-semibold text-base md:text-lg">From $50</span>
+                        <a href="#contact" class="text-lyhana-blue hover:text-lyhana-light-blue transition-colors text-lg md:text-xl">
                             <i class="fas fa-arrow-right"></i>
                         </a>
                     </div>
                    
                 </div>
                 <!-- Service Card 3 -->
-                <div class="bg-white rounded-3xl p-10 shadow-xl card-hover border border-gray-100 reveal relative group transition-all duration-300 hover:scale-[1.03] hover:shadow-2xl">
-                    <div class="absolute -top-6 left-1/2 -translate-x-1/2 w-20 h-20 gradient-bg rounded-full flex items-center justify-center shadow-lg animate-float animation-delay-200">
-                        <i class="fas fa-box-open text-white text-3xl"></i>
+                <div class="bg-white rounded-3xl p-6 md:p-8 lg:p-10 shadow-xl card-hover border border-gray-100 reveal relative group transition-all duration-300 hover:scale-[1.03] hover:shadow-2xl">
+                    <div class="absolute -top-5 md:-top-6 left-1/2 -translate-x-1/2 w-16 h-16 md:w-18 md:h-18 lg:w-20 lg:h-20 gradient-bg rounded-full flex items-center justify-center shadow-lg animate-float animation-delay-200">
+                        <i class="fas fa-box-open text-white text-2xl md:text-3xl"></i>
                     </div>
-                    <h3 class="text-2xl font-bold gradient-text mb-4 mt-12">Packaging Design</h3>
-                    <p class="text-gray-600 mb-6 text-base font-medium">Innovative packaging that makes your products irresistible.</p>
+                    <h3 class="text-xl md:text-2xl font-bold gradient-text mb-3 md:mb-4 mt-14 md:mt-16 lg:mt-18">Packaging Design</h3>
+                    <p class="text-gray-600 mb-4 md:mb-6 text-sm md:text-base font-medium">Innovative packaging that makes your products irresistible.</p>
                     <div class="flex justify-between items-center">
-                        <span class="text-green-600 font-semibold text-lg">From $100</span>
-                        <a href="#contact" class="text-lyhana-blue hover:text-lyhana-light-blue transition-colors text-xl">
+                        <span class="text-green-600 font-semibold text-base md:text-lg">From $100</span>
+                        <a href="#contact" class="text-lyhana-blue hover:text-lyhana-light-blue transition-colors text-lg md:text-xl">
                             <i class="fas fa-arrow-right"></i>
                         </a>
                     </div>
                     
                 </div>
                 <!-- Service Card 4 -->
-                <div class="bg-white rounded-3xl p-10 shadow-xl card-hover border border-gray-100 reveal relative group transition-all duration-300 hover:scale-[1.03] hover:shadow-2xl">
-                    <div class="absolute -top-6 left-1/2 -translate-x-1/2 w-20 h-20 bg-gradient-to-br from-lyhana-light-blue to-lyhana-blue rounded-full flex items-center justify-center shadow-lg animate-float animation-delay-300">
-                        <i class="fas fa-video text-white text-3xl"></i>
+                <div class="bg-white rounded-3xl p-6 md:p-8 lg:p-10 shadow-xl card-hover border border-gray-100 reveal relative group transition-all duration-300 hover:scale-[1.03] hover:shadow-2xl">
+                    <div class="absolute -top-5 md:-top-6 left-1/2 -translate-x-1/2 w-16 h-16 md:w-18 md:h-18 lg:w-20 lg:h-20 bg-gradient-to-br from-lyhana-light-blue to-lyhana-blue rounded-full flex items-center justify-center shadow-lg animate-float animation-delay-300">
+                        <i class="fas fa-video text-white text-2xl md:text-3xl"></i>
                     </div>
-                    <h3 class="text-2xl font-bold gradient-text mb-4 mt-12">Video Editing</h3>
-                    <p class="text-gray-600 mb-6 text-base font-medium">Dynamic reels, teasers, and promo videos for maximum engagement.</p>
+                    <h3 class="text-xl md:text-2xl font-bold gradient-text mb-3 md:mb-4 mt-14 md:mt-16 lg:mt-18">Video Editing</h3>
+                    <p class="text-gray-600 mb-4 md:mb-6 text-sm md:text-base font-medium">Dynamic reels, teasers, and promo videos for maximum engagement.</p>
                     <div class="flex justify-between items-center">
-                        <span class="text-green-600 font-semibold text-lg">From $50</span>
-                        <a href="#contact" class="text-lyhana-blue hover:text-lyhana-light-blue transition-colors text-xl">
+                        <span class="text-green-600 font-semibold text-base md:text-lg">From $50</span>
+                        <a href="#contact" class="text-lyhana-blue hover:text-lyhana-light-blue transition-colors text-lg md:text-xl">
                             <i class="fas fa-arrow-right"></i>
                         </a>
                     </div>
                     
                 </div>
                 <!-- Service Card 5 -->
-                <div class="bg-white rounded-3xl p-10 shadow-xl card-hover border border-gray-100 reveal relative group transition-all duration-300 hover:scale-[1.03] hover:shadow-2xl">
-                    <div class="absolute -top-6 left-1/2 -translate-x-1/2 w-20 h-20 gradient-bg rounded-full flex items-center justify-center shadow-lg animate-float animation-delay-400">
-                        <i class="fas fa-laptop-code text-white text-3xl"></i>
+                <div class="bg-white rounded-3xl p-6 md:p-8 lg:p-10 shadow-xl card-hover border border-gray-100 reveal relative group transition-all duration-300 hover:scale-[1.03] hover:shadow-2xl">
+                    <div class="absolute -top-5 md:-top-6 left-1/2 -translate-x-1/2 w-16 h-16 md:w-18 md:h-18 lg:w-20 lg:h-20 gradient-bg rounded-full flex items-center justify-center shadow-lg animate-float animation-delay-400">
+                        <i class="fas fa-laptop-code text-white text-2xl md:text-3xl"></i>
                     </div>
-                    <h3 class="text-2xl font-bold gradient-text mb-4 mt-12">UI/UX Web Design</h3>
-                    <p class="text-gray-600 mb-6 text-base font-medium">Modern, intuitive websites that convert visitors into clients.</p>
+                    <h3 class="text-xl md:text-2xl font-bold gradient-text mb-3 md:mb-4 mt-14 md:mt-16 lg:mt-18">UI/UX Web Design</h3>
+                    <p class="text-gray-600 mb-4 md:mb-6 text-sm md:text-base font-medium">Modern, intuitive websites that convert visitors into clients.</p>
                     <div class="flex justify-between items-center">
-                        <span class="text-green-600 font-semibold text-lg">From $400</span>
-                        <a href="#contact" class="text-lyhana-blue hover:text-lyhana-light-blue transition-colors text-xl">
+                        <span class="text-green-600 font-semibold text-base md:text-lg">From $400</span>
+                        <a href="#contact" class="text-lyhana-blue hover:text-lyhana-light-blue transition-colors text-lg md:text-xl">
                             <i class="fas fa-arrow-right"></i>
                         </a>
                     </div>
                     
                 </div>
                 <!-- Service Card 6 - Motion Design Coming Soon -->
-                <div class="bg-white rounded-3xl p-10 shadow-xl card-hover border border-gray-100 reveal relative group transition-all duration-300 hover:scale-[1.03] hover:shadow-2xl opacity-70">
-                    <div class="absolute -top-6 left-1/2 -translate-x-1/2 w-20 h-20 bg-gradient-to-br from-lyhana-light-blue to-lyhana-blue rounded-full flex items-center justify-center shadow-lg animate-float animation-delay-500">
-                        <i class="fas fa-film text-white text-3xl"></i>
+                <div class="bg-white rounded-3xl p-6 md:p-8 lg:p-10 shadow-xl card-hover border border-gray-100 reveal relative group transition-all duration-300 hover:scale-[1.03] hover:shadow-2xl opacity-70">
+                    <div class="absolute -top-5 md:-top-6 left-1/2 -translate-x-1/2 w-16 h-16 md:w-18 md:h-18 lg:w-20 lg:h-20 bg-gradient-to-br from-lyhana-light-blue to-lyhana-blue rounded-full flex items-center justify-center shadow-lg animate-float animation-delay-500">
+                        <i class="fas fa-film text-white text-2xl md:text-3xl"></i>
                     </div>
-                    <h3 class="text-2xl font-bold gradient-text mb-4 mt-12">Motion Design</h3>
-                    <p class="text-gray-600 mb-6 text-base font-medium">Animated graphics and video content to energize your brand.</p>
+                    <h3 class="text-xl md:text-2xl font-bold gradient-text mb-3 md:mb-4 mt-14 md:mt-16 lg:mt-18">Motion Design</h3>
+                    <p class="text-gray-600 mb-4 md:mb-6 text-sm md:text-base font-medium">Animated graphics and video content to energize your brand.</p>
                 
-                    <div class="text-red-600 font-semibold text-lg">Available soon</div>
+                    <div class="text-red-600 font-semibold text-base md:text-lg">Available soon</div>
                   
                 </div>
             </div>
@@ -514,149 +511,149 @@
     </section>
 
     <!-- Portfolio Section - Original & Attractive -->
-    <section id="portfolio" class="py-24 bg-gradient-to-br from-white via-gray-50 to-lyhana-light-blue/10 relative overflow-hidden">
+    <section id="portfolio" class="py-16 md:py-20 lg:py-24 bg-gradient-to-br from-white via-gray-50 to-lyhana-light-blue/10 relative overflow-hidden">
         <!-- Animated Decorative Shapes -->
         <div class="absolute inset-0 z-0 pointer-events-none">
-            <div class="absolute top-10 left-10 w-32 h-32 bg-lyhana-blue/10 rounded-full blur-2xl animate-float-circle"></div>
-            <div class="absolute bottom-20 right-20 w-40 h-40 bg-lyhana-light-blue/10 rounded-full blur-2xl animate-float-circle animation-delay-200"></div>
-            <div class="absolute top-1/2 left-1/2 w-24 h-24 bg-gradient-to-br from-lyhana-blue/20 to-lyhana-light-blue/20 rounded-full blur-xl animate-spin-slow -translate-x-1/2 -translate-y-1/2"></div>
-            <div class="absolute top-1/4 right-1/3 w-16 h-16 bg-lyhana-blue/20 rounded-lg rotate-12 animate-spin-slow"></div>
+            <div class="absolute top-10 left-10 w-24 h-24 md:w-32 md:h-32 bg-lyhana-blue/10 rounded-full blur-xl md:blur-2xl animate-float-circle"></div>
+            <div class="absolute bottom-20 right-20 w-28 h-28 md:w-36 md:h-36 lg:w-40 lg:h-40 bg-lyhana-light-blue/10 rounded-full blur-xl md:blur-2xl animate-float-circle animation-delay-200"></div>
+            <div class="absolute top-1/2 left-1/2 w-20 h-20 md:w-24 md:h-24 bg-gradient-to-br from-lyhana-blue/20 to-lyhana-light-blue/20 rounded-full blur-lg md:blur-xl animate-spin-slow -translate-x-1/2 -translate-y-1/2"></div>
+            <div class="absolute top-1/4 right-1/3 w-14 h-14 md:w-16 md:h-16 bg-lyhana-blue/20 rounded-lg rotate-12 animate-spin-slow"></div>
         </div>
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-            <div class="text-center mb-16 reveal">
-                <h2 class="text-5xl md:text-6xl font-extrabold gradient-text mb-6 tracking-tight animate-gradient">Our Creations</h2>
-                <div class="w-24 h-1 bg-lyhana-blue mx-auto mb-8"></div>
-                <p class="text-2xl text-gray-700 max-w-2xl mx-auto font-light animate-fade-in">
+            <div class="text-center mb-12 md:mb-16 reveal">
+                <h2 class="text-3xl md:text-4xl lg:text-5xl font-extrabold gradient-text mb-4 md:mb-6 tracking-tight animate-gradient">Our Creations</h2>
+                <div class="w-20 h-1 md:w-24 md:h-1 bg-lyhana-blue mx-auto mb-6 md:mb-8"></div>
+                <p class="text-xl md:text-2xl text-gray-700 max-w-2xl mx-auto font-light animate-fade-in">
                     Explore our creative universe and get inspired!
                 </p>
             </div>
             <!-- Portfolio Filter with Icons -->
-            <div class="flex justify-center mb-12">
-                <div class="inline-flex rounded-full p-1 bg-gray-100 shadow-lg">
-                    <button class="portfolio-filter px-5 py-2 rounded-full font-medium text-sm flex items-center gap-2 transition-all active" data-filter="all">
-                        <i class="fas fa-globe"></i> All
+            <div class="flex justify-center mb-8 md:mb-10 lg:mb-12">
+                <div class="inline-flex flex-wrap justify-center gap-2 rounded-full p-1 bg-gray-100 shadow-lg">
+                    <button class="portfolio-filter px-4 py-2 md:px-5 md:py-2 rounded-full font-medium text-xs md:text-sm flex items-center gap-2 transition-all active" data-filter="all">
+                        <i class="fas fa-globe text-xs md:text-sm"></i> All
                     </button>
-                    <button class="portfolio-filter px-5 py-2 rounded-full font-medium text-sm flex items-center gap-2 transition-all" data-filter="branding">
-                        <i class="fas fa-palette"></i> Branding
+                    <button class="portfolio-filter px-4 py-2 md:px-5 md:py-2 rounded-full font-medium text-xs md:text-sm flex items-center gap-2 transition-all" data-filter="branding">
+                        <i class="fas fa-palette text-xs md:text-sm"></i> Branding
                     </button>
-                    <button class="portfolio-filter px-5 py-2 rounded-full font-medium text-sm flex items-center gap-2 transition-all" data-filter="social">
-                        <i class="fab fa-instagram"></i> Social Media
+                    <button class="portfolio-filter px-4 py-2 md:px-5 md:py-2 rounded-full font-medium text-xs md:text-sm flex items-center gap-2 transition-all" data-filter="social">
+                        <i class="fab fa-instagram text-xs md:text-sm"></i> Social Media
                     </button>
-                    <button class="portfolio-filter px-5 py-2 rounded-full font-medium text-sm flex items-center gap-2 transition-all" data-filter="packaging">
-                        <i class="fas fa-box-open"></i> Packaging
+                    <button class="portfolio-filter px-4 py-2 md:px-5 md:py-2 rounded-full font-medium text-xs md:text-sm flex items-center gap-2 transition-all" data-filter="packaging">
+                        <i class="fas fa-box-open text-xs md:text-sm"></i> Packaging
                     </button>
-                    <button class="portfolio-filter px-5 py-2 rounded-full font-medium text-sm flex items-center gap-2 transition-all" data-filter="web">
-                        <i class="fas fa-laptop-code"></i> UI/UX
+                    <button class="portfolio-filter px-4 py-2 md:px-5 md:py-2 rounded-full font-medium text-xs md:text-sm flex items-center gap-2 transition-all" data-filter="web">
+                        <i class="fas fa-laptop-code text-xs md:text-sm"></i> UI/UX
                     </button>
                 </div>
             </div>
             <!-- Portfolio Masonry Grid -->
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 lg:gap-10">
                 <!-- Portfolio Item 1 -->
                 <div class="portfolio-item reveal group relative overflow-visible" data-category="branding">
                     <div class="bg-white rounded-3xl overflow-hidden shadow-xl card-hover transition-all duration-300 hover:scale-[1.04] hover:shadow-2xl">
-                        <div class="h-72 bg-gradient-to-br from-lyhana-blue to-lyhana-light-blue flex items-center justify-center overflow-hidden relative">
+                        <div class="h-60 md:h-72 bg-gradient-to-br from-lyhana-blue to-lyhana-light-blue flex items-center justify-center overflow-hidden relative">
                             <img src="image/3.png" alt="Software Brand Logo" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
                             <div class="absolute inset-0 bg-black/30 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
-                                <button class="lightbox-trigger text-white bg-lyhana-blue rounded-full p-4 hover:bg-lyhana-light-blue transition-colors" data-image="image/3.png" data-title="Visual Identity - Software Brand">
-                                    <i class="fas fa-search-plus text-2xl"></i>
+                                <button class="lightbox-trigger text-white bg-lyhana-blue rounded-full p-3 md:p-4 hover:bg-lyhana-light-blue transition-colors" data-image="image/3.png" data-title="Visual Identity - Software Brand">
+                                    <i class="fas fa-search-plus text-xl md:text-2xl"></i>
                                 </button>
                             </div>
-                            <span class="absolute top-4 left-4 bg-white/80 text-lyhana-blue px-3 py-1 rounded-full font-semibold text-xs shadow">Branding</span>
+                            <span class="absolute top-3 md:top-4 left-3 md:left-4 bg-white/80 text-lyhana-blue px-2 md:px-3 py-1 rounded-full font-semibold text-xs shadow">Branding</span>
                         </div>
-                        <div class="p-6">
-                            <h3 class="font-bold text-gray-900 mb-2">Visual Identity - Software Brand</h3>
-                            <p class="text-gray-600 text-sm">Complete visual identity creation for a Software Company.</p>
+                        <div class="p-4 md:p-6">
+                            <h3 class="font-bold text-gray-900 mb-2 text-base md:text-lg">Visual Identity - Software Brand</h3>
+                            <p class="text-gray-600 text-xs md:text-sm">Complete visual identity creation for a Software Company.</p>
                         </div>
                     </div>
                 </div>
                 <!-- Portfolio Item 2 -->
                 <div class="portfolio-item reveal group relative overflow-visible" data-category="social">
                     <div class="bg-white rounded-3xl overflow-hidden shadow-xl card-hover transition-all duration-300 hover:scale-[1.04] hover:shadow-2xl">
-                        <div class="h-72 bg-gradient-to-br from-lyhana-light-blue to-lyhana-blue flex items-center justify-center overflow-hidden relative">
+                        <div class="h-60 md:h-72 bg-gradient-to-br from-lyhana-light-blue to-lyhana-blue flex items-center justify-center overflow-hidden relative">
                             <img src="image/instagram post.jpg" alt="Social Media - company" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
                             <div class="absolute inset-0 bg-black/30 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
-                                <button class="lightbox-trigger text-white bg-lyhana-blue rounded-full p-4 hover:bg-lyhana-light-blue transition-colors" data-image="image/instagram post.jpg" data-title="Social Media - company">
-                                    <i class="fas fa-search-plus text-2xl"></i>
+                                <button class="lightbox-trigger text-white bg-lyhana-blue rounded-full p-3 md:p-4 hover:bg-lyhana-light-blue transition-colors" data-image="image/instagram post.jpg" data-title="Social Media - company">
+                                    <i class="fas fa-search-plus text-xl md:text-2xl"></i>
                                 </button>
                             </div>
-                            <span class="absolute top-4 left-4 bg-white/80 text-lyhana-light-blue px-3 py-1 rounded-full font-semibold text-xs shadow">Social Media</span>
+                            <span class="absolute top-3 md:top-4 left-3 md:left-4 bg-white/80 text-lyhana-light-blue px-2 md:px-3 py-1 rounded-full font-semibold text-xs shadow">Social Media</span>
                         </div>
-                        <div class="p-6">
-                            <h3 class="font-bold text-gray-900 mb-2">Social Media - company</h3>
-                            <p class="text-gray-600 text-sm">Instagram templates and posts for a Software company.</p>
+                        <div class="p-4 md:p-6">
+                            <h3 class="font-bold text-gray-900 mb-2 text-base md:text-lg">Social Media - company</h3>
+                            <p class="text-gray-600 text-xs md:text-sm">Instagram templates and posts for a Software company.</p>
                         </div>
                     </div>
                 </div>
                 <!-- Portfolio Item 3 -->
                 <div class="portfolio-item reveal group relative overflow-visible" data-category="packaging">
                     <div class="bg-white rounded-3xl overflow-hidden shadow-xl card-hover transition-all duration-300 hover:scale-[1.04] hover:shadow-2xl">
-                        <div class="h-72 bg-gradient-to-br from-lyhana-blue to-lyhana-light-blue flex items-center justify-center overflow-hidden relative">
+                        <div class="h-60 md:h-72 bg-gradient-to-br from-lyhana-blue to-lyhana-light-blue flex items-center justify-center overflow-hidden relative">
                             <img src="image/product.jpg" alt="Packaging - food Product" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
                             <div class="absolute inset-0 bg-black/30 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
-                                <button class="lightbox-trigger text-white bg-lyhana-blue rounded-full p-4 hover:bg-lyhana-light-blue transition-colors" data-image="image/product.jpg" data-title="Packaging - food Product">
-                                    <i class="fas fa-search-plus text-2xl"></i>
+                                <button class="lightbox-trigger text-white bg-lyhana-blue rounded-full p-3 md:p-4 hover:bg-lyhana-light-blue transition-colors" data-image="image/product.jpg" data-title="Packaging - food Product">
+                                    <i class="fas fa-search-plus text-xl md:text-2xl"></i>
                                 </button>
                             </div>
-                            <span class="absolute top-4 left-4 bg-white/80 text-lyhana-blue px-3 py-1 rounded-full font-semibold text-xs shadow">Packaging</span>
+                            <span class="absolute top-3 md:top-4 left-3 md:left-4 bg-white/80 text-lyhana-blue px-2 md:px-3 py-1 rounded-full font-semibold text-xs shadow">Packaging</span>
                         </div>
-                        <div class="p-6">
-                            <h3 class="font-bold text-gray-900 mb-2">Packaging - food Product</h3>
-                            <p class="text-gray-600 text-sm">Packaging design for an innovative drink startup.</p>
+                        <div class="p-4 md:p-6">
+                            <h3 class="font-bold text-gray-900 mb-2 text-base md:text-lg">Packaging - food Product</h3>
+                            <p class="text-gray-600 text-xs md:text-sm">Packaging design for an innovative drink startup.</p>
                         </div>
                     </div>
                 </div>
                 <!-- Portfolio Item 4 -->
                 <div class="portfolio-item reveal group relative overflow-visible" data-category="social">
                     <div class="bg-white rounded-3xl overflow-hidden shadow-xl card-hover transition-all duration-300 hover:scale-[1.04] hover:shadow-2xl">
-                        <div class="h-72 bg-gradient-to-br from-lyhana-light-blue to-lyhana-blue flex items-center justify-center overflow-hidden relative">
+                        <div class="h-60 md:h-72 bg-gradient-to-br from-lyhana-light-blue to-lyhana-blue flex items-center justify-center overflow-hidden relative">
                             <img src="image/video.jpg" alt="Video Reel" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
                             <div class="absolute inset-0 bg-black/30 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
-                                <button class="lightbox-trigger text-white bg-lyhana-blue rounded-full p-4 hover:bg-lyhana-light-blue transition-colors" data-image="image/video.jpg" data-title="Video Editing - Sponsor">
-                                    <i class="fas fa-search-plus text-2xl"></i>
+                                <button class="lightbox-trigger text-white bg-lyhana-blue rounded-full p-3 md:p-4 hover:bg-lyhana-light-blue transition-colors" data-image="image/video.jpg" data-title="Video Editing - Sponsor">
+                                    <i class="fas fa-search-plus text-xl md:text-2xl"></i>
                                 </button>
                             </div>
-                            <span class="absolute top-4 left-4 bg-white/80 text-lyhana-light-blue px-3 py-1 rounded-full font-semibold text-xs shadow">Video</span>
+                            <span class="absolute top-3 md:top-4 left-3 md:left-4 bg-white/80 text-lyhana-light-blue px-2 md:px-3 py-1 rounded-full font-semibold text-xs shadow">Video</span>
                         </div>
-                        <div class="p-6">
-                            <h3 class="font-bold text-gray-900 mb-2">Video Editing - Sponsor</h3>
-                            <p class="text-gray-600 text-sm">Instagram reels editing for a Hairdressing training.</p>
+                        <div class="p-4 md:p-6">
+                            <h3 class="font-bold text-gray-900 mb-2 text-base md:text-lg">Video Editing - Sponsor</h3>
+                            <p class="text-gray-600 text-xs md:text-sm">Instagram reels editing for a Hairdressing training.</p>
                         </div>
                     </div>
                 </div>
                 <!-- Portfolio Item 5 -->
                 <div class="portfolio-item reveal group relative overflow-visible" data-category="web">
                     <div class="bg-white rounded-3xl overflow-hidden shadow-xl card-hover transition-all duration-300 hover:scale-[1.04] hover:shadow-2xl">
-                        <div class="h-72 bg-gradient-to-br from-lyhana-blue to-lyhana-light-blue flex items-stretch overflow-hidden relative">
+                        <div class="h-60 md:h-72 bg-gradient-to-br from-lyhana-blue to-lyhana-light-blue flex items-stretch overflow-hidden relative">
                             <img src="image/Website .png" alt="Website Mockup" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
                             <div class="absolute inset-0 bg-black/30 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
-                                <button class="lightbox-trigger text-white bg-lyhana-blue rounded-full p-4 hover:bg-lyhana-light-blue transition-colors" data-image="image/Website .png" data-title="Website Design">
-                                    <i class="fas fa-search-plus text-2xl"></i>
+                                <button class="lightbox-trigger text-white bg-lyhana-blue rounded-full p-3 md:p-4 hover:bg-lyhana-light-blue transition-colors" data-image="image/Website .png" data-title="Website Design">
+                                    <i class="fas fa-search-plus text-xl md:text-2xl"></i>
                                 </button>
                             </div>
-                            <span class="absolute top-4 left-4 bg-white/80 text-lyhana-blue px-3 py-1 rounded-full font-semibold text-xs shadow">UI/UX</span>
+                            <span class="absolute top-3 md:top-4 left-3 md:left-4 bg-white/80 text-lyhana-blue px-2 md:px-3 py-1 rounded-full font-semibold text-xs shadow">UI/UX</span>
                         </div>
-                        <div class="p-6">
-                            <h3 class="font-bold text-gray-900 mb-2">Website Design</h3>
-                            <p class="text-gray-600 text-sm">UI/UX design for a travel agency website.</p>
+                        <div class="p-4 md:p-6">
+                            <h3 class="font-bold text-gray-900 mb-2 text-base md:text-lg">Website Design</h3>
+                            <p class="text-gray-600 text-xs md:text-sm">UI/UX design for a travel agency website.</p>
                         </div>
                     </div>
                 </div>
                 <!-- Portfolio Item 6 -->
                 <div class="portfolio-item reveal group relative overflow-visible" data-category="branding">
                     <div class="bg-white rounded-3xl overflow-hidden shadow-xl card-hover transition-all duration-300 hover:scale-[1.04] hover:shadow-2xl">
-                        <div class="h-72 bg-gradient-to-br from-lyhana-light-blue to-lyhana-blue flex items-center justify-center overflow-hidden relative">
+                        <div class="h-60 md:h-72 bg-gradient-to-br from-lyhana-light-blue to-lyhana-blue flex items-center justify-center overflow-hidden relative">
                             <img src="image/dates.png" alt="Branding - Dates filled Shop" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
                             <div class="absolute inset-0 bg-black/30 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
-                                <button class="lightbox-trigger text-white bg-lyhana-blue rounded-full p-4 hover:bg-lyhana-light-blue transition-colors" data-image="image/dates.png" data-title="Branding - Dates filled Shop">
-                                    <i class="fas fa-search-plus text-2xl"></i>
+                                <button class="lightbox-trigger text-white bg-lyhana-blue rounded-full p-3 md:p-4 hover:bg-lyhana-light-blue transition-colors" data-image="image/dates.png" data-title="Branding - Dates filled Shop">
+                                    <i class="fas fa-search-plus text-xl md:text-2xl"></i>
                                 </button>
                             </div>
-                            <span class="absolute top-4 left-4 bg-white/80 text-lyhana-blue px-3 py-1 rounded-full font-semibold text-xs shadow">Branding</span>
+                            <span class="absolute top-3 md:top-4 left-3 md:left-4 bg-white/80 text-lyhana-blue px-2 md:px-3 py-1 rounded-full font-semibold text-xs shadow">Branding</span>
                         </div>
-                        <div class="p-6">
-                            <h3 class="font-bold text-gray-900 mb-2">Branding - Dates filled Shop</h3>
-                            <p class="text-gray-600 text-sm">Complete identity for a local and authentic specialty Dates shop.</p>
+                        <div class="p-4 md:p-6">
+                            <h3 class="font-bold text-gray-900 mb-2 text-base md:text-lg">Branding - Dates filled Shop</h3>
+                            <p class="text-gray-600 text-xs md:text-sm">Complete identity for a local and authentic specialty Dates shop.</p>
                         </div>
                     </div>
                 </div>
@@ -664,13 +661,13 @@
             <!-- Lightbox Modal with Animation -->
             <div id="lightbox-modal" class="fixed inset-0 bg-black/90 z-50 flex items-center justify-center p-4 opacity-0 pointer-events-none transition-opacity duration-500">
                 <div class="relative max-w-4xl w-full animate-fade-in">
-                    <button id="close-lightbox" class="absolute -top-12 right-0 text-white text-3xl hover:text-lyhana-light-blue transition-colors">
+                    <button id="close-lightbox" class="absolute -top-8 md:-top-10 right-0 text-white text-2xl md:text-3xl hover:text-lyhana-light-blue transition-colors">
                         <i class="fas fa-times"></i>
                     </button>
                     <div class="bg-white rounded-lg overflow-hidden shadow-2xl">
-                        <img id="lightbox-image" src="" alt="" class="w-full max-h-[70vh] object-contain">
+                        <img id="lightbox-image" src="" alt="" class="w-full max-h-[60vh] md:max-h-[70vh] object-contain">
                         <div class="p-4 bg-white">
-                            <h3 id="lightbox-title" class="text-xl font-bold text-gray-900"></h3>
+                            <h3 id="lightbox-title" class="text-lg md:text-xl font-bold text-gray-900"></h3>
                         </div>
                     </div>
                 </div>
@@ -679,28 +676,28 @@
     </section>
 
     <!-- Testimonials améliorés -->
-    <section class="py-20 bg-gray-50">
+    <section class="py-16 md:py-20 bg-gray-50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16 reveal">
-                <h2 class="text-5xl md:text-6xl font-extrabold gradient-text mb-6 tracking-tight animate-gradient">Client Voices </h2>
-                <div class="w-24 h-1 bg-lyhana-blue mx-auto mb-8"></div>
+            <div class="text-center mb-12 md:mb-16 reveal">
+                <h2 class="text-3xl md:text-4xl lg:text-5xl font-extrabold gradient-text mb-4 md:mb-6 tracking-tight animate-gradient">Client Voices </h2>
+                <div class="w-20 h-1 md:w-24 md:h-1 bg-lyhana-blue mx-auto mb-6 md:mb-8"></div>
             </div>
-            <div class="grid md:grid-cols-3 gap-8">
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
                 <!-- Testimonial 1 -->
-                <div class="bg-white rounded-3xl p-8 card-hover reveal shadow-lg transition-all duration-300 hover:scale-[1.03]">
-                    <div class="flex items-center mb-6">
-                        <div class="w-12 h-12 bg-lyhana-blue rounded-full flex items-center justify-center mr-4 text-white font-bold text-xl">
+                <div class="bg-white rounded-3xl p-6 md:p-8 card-hover reveal shadow-lg transition-all duration-300 hover:scale-[1.03]">
+                    <div class="flex items-center mb-4 md:mb-6">
+                        <div class="w-10 h-10 md:w-12 md:h-12 bg-lyhana-blue rounded-full flex items-center justify-center mr-3 md:mr-4 text-white font-bold text-lg md:text-xl">
                             A
                         </div>
                         <div>
-                            <div class="font-semibold text-gray-900">All Education</div>
-                            <div class="text-sm text-gray-600">Training School</div>
+                            <div class="font-semibold text-gray-900 text-base md:text-lg">All Education</div>
+                            <div class="text-xs md:text-sm text-gray-600">Training School</div>
                         </div>
                     </div>
-                    <p class="text-gray-700 italic mb-4">
+                    <p class="text-gray-700 italic mb-4 text-sm md:text-base">
                         “Lyhana Agency created a perfect reel video for my hairdresser training. Their creativity and professionalism are exceptional!”
                     </p>
-                    <div class="flex text-yellow-400 space-x-1">
+                    <div class="flex text-yellow-400 space-x-1 text-sm md:text-base">
                         <i class="fas fa-star"></i>
                         <i class="fas fa-star"></i>
                         <i class="fas fa-star"></i>
@@ -709,20 +706,20 @@
                     </div>
                 </div>
                 <!-- Testimonial 2 -->
-                <div class="bg-white rounded-3xl p-8 card-hover reveal shadow-lg transition-all duration-300 hover:scale-[1.03]">
-                    <div class="flex items-center mb-6">
-                        <div class="w-12 h-12 bg-lyhana-light-blue rounded-full flex items-center justify-center mr-4 text-white font-bold text-xl">
+                <div class="bg-white rounded-3xl p-6 md:p-8 card-hover reveal shadow-lg transition-all duration-300 hover:scale-[1.03]">
+                    <div class="flex items-center mb-4 md:mb-6">
+                        <div class="w-10 h-10 md:w-12 md:h-12 bg-lyhana-light-blue rounded-full flex items-center justify-center mr-3 md:mr-4 text-white font-bold text-lg md:text-xl">
                             Z
                         </div>
                         <div>
-                            <div class="font-semibold text-gray-900">Zahra Délice</div>
-                            <div class="text-sm text-gray-600">Chef, Dates Shop</div>
+                            <div class="font-semibold text-gray-900 text-base md:text-lg">Zahra Délice</div>
+                            <div class="text-xs md:text-sm text-gray-600">Chef, Dates Shop</div>
                         </div>
                     </div>
-                    <p class="text-gray-700 italic mb-4">
+                    <p class="text-gray-700 italic mb-4 text-sm md:text-base">
                         “Our social media came to life thanks to Lyhana's creations. Our community engagement has doubled!”
                     </p>
-                    <div class="flex text-yellow-400 space-x-1">
+                    <div class="flex text-yellow-400 space-x-1 text-sm md:text-base">
                         <i class="fas fa-star"></i>
                         <i class="fas fa-star"></i>
                         <i class="fas fa-star"></i>
@@ -731,20 +728,20 @@
                     </div>
                 </div>
                 <!-- Testimonial 3 -->
-                <div class="bg-white rounded-3xl p-8 card-hover reveal shadow-lg transition-all duration-300 hover:scale-[1.03]">
-                    <div class="flex items-center mb-6">
-                        <div class="w-12 h-12 bg-lyhana-blue rounded-full flex items-center justify-center mr-4 text-white font-bold text-xl">
+                <div class="bg-white rounded-3xl p-6 md:p-8 card-hover reveal shadow-lg transition-all duration-300 hover:scale-[1.03]">
+                    <div class="flex items-center mb-4 md:mb-6">
+                        <div class="w-10 h-10 md:w-12 md:h-12 bg-lyhana-blue rounded-full flex items-center justify-center mr-3 md:mr-4 text-white font-bold text-lg md:text-xl">
                             T
                         </div>
                         <div>
-                            <div class="font-semibold text-gray-900">Trendy Shop</div>
-                            <div class="text-sm text-gray-600">Fashion Store</div>
+                            <div class="font-semibold text-gray-900 text-base md:text-lg">Trendy Shop</div>
+                            <div class="text-xs md:text-sm text-gray-600">Fashion Store</div>
                         </div>
                     </div>
-                    <p class="text-gray-700 italic mb-4">
+                    <p class="text-gray-700 italic mb-4 text-sm md:text-base">
                         “Thank you for this magical collaboration!”
                     </p>
-                    <div class="flex text-yellow-400 space-x-1">
+                    <div class="flex text-yellow-400 space-x-1 text-sm md:text-base">
                         <i class="fas fa-star"></i>
                         <i class="fas fa-star"></i>
                         <i class="fas fa-star"></i>
@@ -757,7 +754,7 @@
     </section>
 
     <!-- Contact amélioré -->
-    <section id="contact" class="py-20 gradient-bg text-white relative overflow-hidden">
+    <section id="contact" class="py-16 md:py-20 gradient-bg text-white relative overflow-hidden">
         <!-- Éléments décoratifs -->
         <div class="absolute top-0 left-0 w-full h-full overflow-hidden z-0">
             <div class="shape shape-contact-1"></div>
@@ -765,80 +762,80 @@
         </div>
         
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-            <div class="text-center mb-16 reveal">
-                <h2 class="text-4xl md:text-5xl font-bold mb-6">Let's create magic together!</h2>
-                <div class="w-24 h-1 bg-white mx-auto mb-8"></div>
-                <p class="text-xl text-white/90 max-w-3xl mx-auto">
+            <div class="text-center mb-12 md:mb-16 reveal">
+                <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 md:mb-6">Let's create magic together!</h2>
+                <div class="w-20 h-1 md:w-24 md:h-1 bg-white mx-auto mb-6 md:mb-8"></div>
+                <p class="text-lg md:text-xl text-white/90 max-w-3xl mx-auto">
                     Ready to bring your project to life? Contact us for a free consultation!
                 </p>
             </div>
             
-            <div class="grid lg:grid-cols-2 gap-16 items-center">
+            <div class="grid lg:grid-cols-2 gap-12 md:gap-16 items-center">
                 <div class="reveal">
-                    <div class="space-y-8">
+                    <div class="space-y-6 md:space-y-8">
                         <div class="flex items-center hover-card">
-                            <div class="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center mr-4 transition-transform hover:scale-110">
+                            <div class="w-10 h-10 md:w-12 md:h-12 bg-white/20 rounded-full flex items-center justify-center mr-3 md:mr-4 transition-transform hover:scale-110">
                                 <i class="fas fa-envelope"></i>
                             </div>
                             <div>
-                                <div class="font-semibold">Email</div>
-                                <div class="text-white/80">hanabouikni42@gmail.com</div>
+                                <div class="font-semibold text-base md:text-lg">Email</div>
+                                <div class="text-white/80 text-sm md:text-base">hanabouikni42@gmail.com</div>
                             </div>
                         </div>
                         
                         <div class="flex items-center hover-card">
-                            <div class="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center mr-4 transition-transform hover:scale-110">
+                            <div class="w-10 h-10 md:w-12 md:h-12 bg-white/20 rounded-full flex items-center justify-center mr-3 md:mr-4 transition-transform hover:scale-110">
                                 <i class="fab fa-whatsapp"></i>
                             </div>
                             <div>
-                                <div class="font-semibold">WhatsApp</div>
-                                <div class="text-white/80">+213 779520330</div>
+                                <div class="font-semibold text-base md:text-lg">WhatsApp</div>
+                                <div class="text-white/80 text-sm md:text-base">+213 779520330</div>
                             </div>
                         </div>
                         
                         <div class="flex items-center hover-card">
-                            <div class="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center mr-4 transition-transform hover:scale-110">
+                            <div class="w-10 h-10 md:w-12 md:h-12 bg-white/20 rounded-full flex items-center justify-center mr-3 md:mr-4 transition-transform hover:scale-110">
                                 <i class="fab fa-instagram"></i>
                             </div>
                             <div>
-                                <div class="font-semibold">Instagram</div>
-                                <div class="text-white/80">@lyhana_agency</div>
+                                <div class="font-semibold text-base md:text-lg">Instagram</div>
+                                <div class="text-white/80 text-sm md:text-base">@lyhana_agency</div>
                             </div>
                         </div>
                     </div>
                     
-                    <div class="mt-12 flex flex-wrap gap-4">
+                    <div class="mt-8 md:mt-12 flex flex-wrap gap-3 md:gap-4">
                         <a href="https://wa.me/213779520330" target="_blank" 
-                           class="bg-green-500 hover:bg-green-600 text-white px-6 py-3 rounded-full font-semibold transition-colors flex items-center transform hover:scale-105">
+                           class="bg-green-500 hover:bg-green-600 text-white px-5 py-2 md:px-6 md:py-3 rounded-full font-semibold transition-colors flex items-center transform hover:scale-105 text-sm md:text-base">
                             <i class="fab fa-whatsapp mr-2"></i>
                             WhatsApp
                         </a>
                         <a href="https://instagram.com/lyhana_agency" target="_blank" 
-                           class="bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white px-6 py-3 rounded-full font-semibold transition-colors flex items-center transform hover:scale-105">
+                           class="bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white px-5 py-2 md:px-6 md:py-3 rounded-full font-semibold transition-colors flex items-center transform hover:scale-105 text-sm md:text-base">
                             <i class="fab fa-instagram mr-2"></i>
                             Instagram
                         </a>
                     </div>
                     
                     <!-- Social Links -->
-                    <div class="mt-12">
-                        <h3 class="text-lg font-semibold mb-4">Follow us</h3>
-                        <div class="flex space-x-4">
-                            <a href="#" class="w-10 h-10 bg-white/20 rounded-full flex items-center justify-center hover:bg-white/30 transition-colors">
-                                <i class="fab fa-behance"></i>
+                    <div class="mt-8 md:mt-12">
+                        <h3 class="text-lg font-semibold mb-3 md:mb-4">Follow us</h3>
+                        <div class="flex space-x-3 md:space-x-4">
+                            <a href="#" class="w-8 h-8 md:w-10 md:h-10 bg-white/20 rounded-full flex items-center justify-center hover:bg-white/30 transition-colors">
+                                <i class="fab fa-behance text-sm md:text-base"></i>
                             </a>
-                            <a href="#" class="w-10 h-10 bg-white/20 rounded-full flex items-center justify-center hover:bg-white/30 transition-colors">
-                                <i class="fab fa-dribbble"></i>
+                            <a href="#" class="w-8 h-8 md:w-10 md:h-10 bg-white/20 rounded-full flex items-center justify-center hover:bg-white/30 transition-colors">
+                                <i class="fab fa-dribbble text-sm md:text-base"></i>
                             </a>
-                            <a href="#" class="w-10 h-10 bg-white/20 rounded-full flex items-center justify-center hover:bg-white/30 transition-colors">
-                                <i class="fab fa-linkedin-in"></i>
+                            <a href="#" class="w-8 h-8 md:w-10 md:h-10 bg-white/20 rounded-full flex items-center justify-center hover:bg-white/30 transition-colors">
+                                <i class="fab fa-linkedin-in text-sm md:text-base"></i>
                             </a>
                         </div>
                     </div>
                 </div>
                 
-                <div class="bg-white/10 backdrop-blur-sm rounded-3xl p-8 hover-card reveal">
-                    <form class="space-y-6" id="contact-form">
+                <div class="bg-white/10 backdrop-blur-sm rounded-3xl p-6 md:p-8 hover-card reveal">
+                    <form class="space-y-4 md:space-y-6" id="contact-form">
                         <div>
                             <label class="block text-sm font-medium mb-2">Full Name</label>
                             <input type="text" class="w-full px-4 py-3 rounded-xl bg-white/20 border border-white/30 text-white placeholder-white/70 focus:outline-none focus:ring-2 focus:ring-white/50" placeholder="Your name" required>
@@ -862,7 +859,7 @@
                             <label class="block text-sm font-medium mb-2">Message</label>
                             <textarea rows="4" class="w-full px-4 py-3 rounded-xl bg-white/20 border border-white/30 text-white placeholder-white/70 focus:outline-none focus:ring-2 focus:ring-white/50" placeholder="Tell us about your project..." required></textarea>
                         </div>
-                        <button type="submit" class="w-full bg-white text-lyhana-blue hover:bg-gray-100 hover:text-lyhana-blue px-8 py-4 rounded-xl font-semibold transition-colors transform hover:scale-[1.02]">
+                        <button type="submit" class="w-full bg-white text-lyhana-blue hover:bg-gray-100 hover:text-lyhana-blue px-6 py-3 md:px-8 md:py-4 rounded-xl font-semibold transition-colors transform hover:scale-[1.02] text-base md:text-lg">
                             Send Message 
                             <i class="fas fa-paper-plane ml-2"></i>
                         </button>
@@ -875,62 +872,62 @@
     <!-- Footer amélioré -->
     <footer class="bg-gray-900 text-white py-12">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid md:grid-cols-4 gap-8">
-                <div class="md:col-span-2">
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="md:col-span-2 lg:col-span-2">
                     <div class="flex items-center mb-6">
-                        <div class="w-12 h-12 gradient-bg rounded-full flex items-center justify-center mr-3 overflow-hidden transition-transform hover:rotate-12">
+                        <div class="w-10 h-10 md:w-12 md:h-12 gradient-bg rounded-full flex items-center justify-center mr-3 overflow-hidden transition-transform hover:rotate-12">
                             <img src="image/lyhana.png" alt="Lyhana Agency Logo" class="w-full h-full object-cover object-center" />
                         </div>
                         <div>
-                            <span class="text-2xl font-bold gradient-text">Lyhana</span>
-                            <div class="text-sm text-gray-400 -mt-1">Agency</div>
+                            <span class="text-xl md:text-2xl font-bold gradient-text">Lyhana</span>
+                            <div class="text-xs md:text-sm text-gray-400 -mt-1">Agency</div>
                         </div>
                     </div>
-                    <p class="text-gray-400 mb-6">
+                    <p class="text-gray-400 mb-6 text-sm md:text-base">
                         Creative studio specialized in branding, design and visual identity. 
                         We bring your ideas to life with elegance and impact.
                     </p>
-                    <div class="flex space-x-4">
+                    <div class="flex space-x-3 md:space-x-4">
                         <a href="#" class="text-gray-400 hover:text-white transition-colors">
-                            <i class="fab fa-facebook-f"></i>
+                            <i class="fab fa-facebook-f text-sm md:text-base"></i>
                         </a>
                         <a href="#" class="text-gray-400 hover:text-white transition-colors">
-                            <i class="fab fa-instagram"></i>
+                            <i class="fab fa-instagram text-sm md:text-base"></i>
                         </a>
                         <a href="#" class="text-gray-400 hover:text-white transition-colors">
-                            <i class="fab fa-behance"></i>
+                            <i class="fab fa-behance text-sm md:text-base"></i>
                         </a>
                         <a href="#" class="text-gray-400 hover:text-white transition-colors">
-                            <i class="fab fa-linkedin-in"></i>
+                            <i class="fab fa-linkedin-in text-sm md:text-base"></i>
                         </a>
                     </div>
                 </div>
                 
                 <div>
-                    <h3 class="text-lg font-semibold mb-6">Quick Links</h3>
-                    <ul class="space-y-3">
-                        <li><a href="#home" class="text-gray-400 hover:text-white transition-colors">Home</a></li>
-                        <li><a href="#about" class="text-gray-400 hover:text-white transition-colors">About</a></li>
-                        <li><a href="#services" class="text-gray-400 hover:text-white transition-colors">Services</a></li>
-                        <li><a href="#portfolio" class="text-gray-400 hover:text-white transition-colors">Portfolio</a></li>
-                        <li><a href="#contact" class="text-gray-400 hover:text-white transition-colors">Contact</a></li>
+                    <h3 class="text-lg font-semibold mb-4 md:mb-6">Quick Links</h3>
+                    <ul class="space-y-2 md:space-y-3">
+                        <li><a href="#home" class="text-gray-400 hover:text-white transition-colors text-sm md:text-base">Home</a></li>
+                        <li><a href="#about" class="text-gray-400 hover:text-white transition-colors text-sm md:text-base">About</a></li>
+                        <li><a href="#services" class="text-gray-400 hover:text-white transition-colors text-sm md:text-base">Services</a></li>
+                        <li><a href="#portfolio" class="text-gray-400 hover:text-white transition-colors text-sm md:text-base">Portfolio</a></li>
+                        <li><a href="#contact" class="text-gray-400 hover:text-white transition-colors text-sm md:text-base">Contact</a></li>
                     </ul>
                 </div>
                 
                 <div>
-                    <h3 class="text-lg font-semibold mb-6">Services</h3>
-                    <ul class="space-y-3">
-                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Branding</a></li>
-                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Social Media</a></li>
-                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Packaging Design</a></li>
-                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Video Editing</a></li>
-                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">UI/UX Design</a></li>
+                    <h3 class="text-lg font-semibold mb-4 md:mb-6">Services</h3>
+                    <ul class="space-y-2 md:space-y-3">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors text-sm md:text-base">Branding</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors text-sm md:text-base">Social Media</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors text-sm md:text-base">Packaging Design</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors text-sm md:text-base">Video Editing</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors text-sm md:text-base">UI/UX Design</a></li>
                     </ul>
                 </div>
             </div>
             
-            <div class="border-t border-gray-800 mt-12 pt-8 text-center">
-                <p class="text-gray-400 text-sm">
+            <div class="border-t border-gray-800 mt-8 md:mt-12 pt-8 text-center">
+                <p class="text-gray-400 text-xs md:text-sm">
                     © 2024 Lyhana Agency. All rights reserved. Created by Bouikni Lydia Hana.
                 </p>
             </div>
@@ -938,7 +935,7 @@
     </footer>
 
     <!-- Back to top button -->
-    <button id="back-to-top" class="fixed bottom-8 right-8 w-12 h-12 bg-lyhana-blue text-white rounded-full shadow-lg flex items-center justify-center opacity-0 invisible transition-all duration-300 hover:bg-lyhana-light-blue">
+    <button id="back-to-top" class="fixed bottom-6 right-6 md:bottom-8 md:right-8 w-10 h-10 md:w-12 md:h-12 bg-lyhana-blue text-white rounded-full shadow-lg flex items-center justify-center opacity-0 invisible transition-all duration-300 hover:bg-lyhana-light-blue">
         <i class="fas fa-arrow-up"></i>
     </button>
 
