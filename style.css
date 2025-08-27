@@ -17,6 +17,12 @@ body {
   scroll-behavior: smooth;
   overflow-x: hidden;
   width: 100%;
+  scroll-padding-top: 90px; /* Compensation pour la navigation fixe */
+}
+
+/* Espacement pour les sections avec navigation fixe */
+section[id] {
+  scroll-margin-top: 90px;
 }
 
 /* Gradient styles */

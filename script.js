@@ -94,9 +94,17 @@ document.addEventListener("DOMContentLoaded", function () {
       e.preventDefault();
       const target = document.querySelector(this.getAttribute("href"));
       if (target) {
-        target.scrollIntoView({
+        // Calculer la hauteur de la navigation
+        const nav = document.querySelector("nav");
+        const navHeight = nav ? nav.offsetHeight : 80; // 80px par défaut si nav non trouvé
+
+        // Calculer la position avec offset pour la navigation fixe
+        const targetPosition = target.offsetTop - navHeight - 10; // 10px de marge supplémentaire
+
+        // Scroll vers la position calculée
+        window.scrollTo({
+          top: targetPosition,
           behavior: "smooth",
-          block: "start",
         });
       }
       // Fermer le menu mobile après clic
