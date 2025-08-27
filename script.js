@@ -64,11 +64,27 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   if (mobileMenuBtn && mobileMenu) {
-    mobileMenuBtn.addEventListener("click", () => {
+    mobileMenuBtn.addEventListener("click", (e) => {
+      e.preventDefault();
+      console.log("Bouton menu mobile cliqué");
       mobileMenu.classList.toggle("hidden");
+      console.log(
+        "Menu mobile hidden:",
+        mobileMenu.classList.contains("hidden")
+      );
       document.body.style.overflow = mobileMenu.classList.contains("hidden")
         ? ""
         : "hidden";
+    });
+
+    // Fermer le menu quand on clique en dehors
+    document.addEventListener("click", (e) => {
+      if (!mobileMenuBtn.contains(e.target) && !mobileMenu.contains(e.target)) {
+        if (!mobileMenu.classList.contains("hidden")) {
+          mobileMenu.classList.add("hidden");
+          document.body.style.overflow = "";
+        }
+      }
     });
   }
 
