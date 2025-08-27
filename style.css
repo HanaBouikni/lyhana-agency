@@ -1,7 +1,22 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+:root {
+    --lyhana-blue: #0073E6;
+    --lyhana-light-blue: #00BFFF;
+    --lyhana-purple: #8A2BE2;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
 body { 
     font-family: 'Poppins', sans-serif;
     scroll-behavior: smooth;
+    overflow-x: hidden;
+    width: 100%;
 }
 
 /* Gradient styles */
@@ -186,641 +201,594 @@ body {
 ::-webkit-scrollbar-thumb:hover {
     background: #00BFFF;
 }
- /* New Background Animations */
-    .bg-grid-pattern {
-        background-image: 
-            linear-gradient(rgba(59, 130, 246, 0.1) 1px, transparent 1px),
-            linear-gradient(90deg, rgba(59, 130, 246, 0.1) 1px, transparent 1px);
-        background-size: 40px 40px;
-    }
 
-    @keyframes float-circle {
-        0%, 100% {
-            transform: translate(0, 0) rotate(0deg);
-        }
-        25% {
-            transform: translate(10px, 15px) rotate(5deg);
-        }
-        50% {
-            transform: translate(5px, 20px) rotate(0deg);
-        }
-        75% {
-            transform: translate(15px, 10px) rotate(-5deg);
-        }
-    }
+/* New Background Animations */
+.bg-grid-pattern {
+    background-image: 
+        linear-gradient(rgba(59, 130, 246, 0.1) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(59, 130, 246, 0.1) 1px, transparent 1px);
+    background-size: 40px 40px;
+}
 
-    .animate-float-circle {
-        animation: float-circle 15s ease-in-out infinite;
+@keyframes float-circle {
+    0%, 100% {
+        transform: translate(0, 0) rotate(0deg);
     }
-
-    .animation-delay-100 {
-        animation-delay: 1s;
+    25% {
+        transform: translate(10px, 15px) rotate(5deg);
     }
-
-    .animation-delay-300 {
-        animation-delay: 3s;
+    50% {
+        transform: translate(5px, 20px) rotate(0deg);
     }
-
-    @keyframes spin-slow {
-        from {
-            transform: rotate(0deg);
-        }
-        to {
-            transform: rotate(360deg);
-        }
+    75% {
+        transform: translate(15px, 10px) rotate(-5deg);
     }
+}
 
-    .animate-spin-slow {
-        animation: spin-slow 30s linear infinite;
+.animate-float-circle {
+    animation: float-circle 15s ease-in-out infinite;
+}
+
+.animation-delay-100 {
+    animation-delay: 1s;
+}
+
+.animation-delay-300 {
+    animation-delay: 3s;
+}
+
+@keyframes spin-slow {
+    from {
+        transform: rotate(0deg);
     }
-
-    @keyframes pulse-slow {
-        0%, 100% {
-            transform: scale(1);
-            opacity: 0.3;
-        }
-        50% {
-            transform: scale(1.2);
-            opacity: 0.5;
-        }
+    to {
+        transform: rotate(360deg);
     }
+}
 
-    .animate-pulse-slow {
-        animation: pulse-slow 8s ease-in-out infinite;
+.animate-spin-slow {
+    animation: spin-slow 30s linear infinite;
+}
+
+@keyframes pulse-slow {
+    0%, 100% {
+        transform: scale(1);
+        opacity: 0.3;
     }
-
-    /* Particle animations */
-    .particles-container {
-        pointer-events: none;
+    50% {
+        transform: scale(1.2);
+        opacity: 0.5;
     }
+}
 
-    .particle {
-        position: absolute;
-        background-color: rgba(59, 130, 246, 0.15);
-        border-radius: 50%;
-        pointer-events: none;
+.animate-pulse-slow {
+    animation: pulse-slow 8s ease-in-out infinite;
+}
+
+/* Particle animations */
+.particles-container {
+    pointer-events: none;
+}
+
+.particle {
+    position: absolute;
+    background-color: rgba(59, 130, 246, 0.15);
+    border-radius: 50%;
+    pointer-events: none;
+}
+
+.particle-1 {
+    width: 6px;
+    height: 6px;
+    top: 20%;
+    left: 15%;
+    animation: particle-move 20s linear infinite;
+}
+
+.particle-2 {
+    width: 8px;
+    height: 8px;
+    top: 60%;
+    left: 80%;
+    animation: particle-move 25s linear infinite reverse;
+}
+
+.particle-3 {
+    width: 4px;
+    height: 4px;
+    top: 70%;
+    left: 10%;
+    animation: particle-move 18s linear infinite;
+}
+
+.particle-4 {
+    width: 10px;
+    height: 10px;
+    top: 30%;
+    left: 50%;
+    animation: particle-move 30s linear infinite;
+}
+
+.particle-5 {
+    width: 5px;
+    height: 5px;
+    top: 80%;
+    left: 60%;
+    animation: particle-move 22s linear infinite reverse;
+}
+
+@keyframes particle-move {
+    0% {
+        transform: translate(0, 0);
     }
-
-    .particle-1 {
-        width: 6px;
-        height: 6px;
-        top: 20%;
-        left: 15%;
-        animation: particle-move 20s linear infinite;
+    25% {
+        transform: translate(50px, 30px);
     }
-
-    .particle-2 {
-        width: 8px;
-        height: 8px;
-        top: 60%;
-        left: 80%;
-        animation: particle-move 25s linear infinite reverse;
+    50% {
+        transform: translate(20px, 80px);
     }
-
-    .particle-3 {
-        width: 4px;
-        height: 4px;
-        top: 70%;
-        left: 10%;
-        animation: particle-move 18s linear infinite;
+    75% {
+        transform: translate(70px, 20px);
     }
-
-    .particle-4 {
-        width: 10px;
-        height: 10px;
-        top: 30%;
-        left: 50%;
-        animation: particle-move 30s linear infinite;
+    100% {
+        transform: translate(0, 0);
     }
+}
 
-    .particle-5 {
-        width: 5px;
-        height: 5px;
-        top: 80%;
-        left: 60%;
-        animation: particle-move 22s linear infinite reverse;
+/* Creative Process Styles */
+.wave-path {
+    width: 100%;
+    height: 100%;
+    background-size: 50px 50px;
+    mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cpath d='M0,50 Q25,25 50,50 T100,50' fill='none' stroke='black' stroke-width='2'/%3E%3C/svg%3E");
+    mask-repeat: repeat-y;
+    mask-position: center;
+}
+
+.animate-wave {
+    animation: waveMove 20s linear infinite;
+}
+
+@keyframes waveMove {
+    0% { background-position: 0 0; }
+    100% { background-position: 0 100%; }
+}
+
+.process-step {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    position: relative;
+}
+
+.process-card {
+    width: 100%;
+    max-width: 400px;
+    background: white;
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    position: relative;
+    overflow: hidden;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    border: 1px solid rgba(0, 0, 0, 0.03);
+}
+
+.process-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 5px;
+    height: 100%;
+    background: linear-gradient(to bottom, var(--tw-gradient-stops));
+    --tw-gradient-from: #3b82f6;
+    --tw-gradient-to: #60a5fa;
+    --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+}
+
+.process-card:hover {
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+}
+
+.step-number {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: rgba(35, 32, 250, 0.307);
+    line-height: 1;
+}
+
+.step-icon {
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #3b82f6, #60a5fa);
+    border-radius: 18px;
+    margin-bottom: 20px;
+    color: white;
+}
+
+.step-icon svg {
+    width: 30px;
+    height: 30px;
+}
+
+.step-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 15px;
+    color: #111827;
+    position: relative;
+}
+
+.step-description {
+    color: #4b5563;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.step-dots {
+    display: flex;
+    gap: 5px;
+}
+
+.step-dots span {
+    display: block;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #e5e7eb;
+}
+
+/* Different card colors */
+.discovery .step-icon { background: linear-gradient(135deg, #3b82f6, #60a5fa); }
+.research .step-icon { background: linear-gradient(135deg, #10b981, #34d399); }
+.concept .step-icon { background: linear-gradient(135deg, #f59e0b, #fbbf24); }
+.design .step-icon { background: linear-gradient(135deg, #8b5cf6, #a78bfa); }
+.feedback .step-icon { background: linear-gradient(135deg, #ec4899, #f472b6); }
+.delivery .step-icon { background: linear-gradient(135deg, #6366f1, #818cf8); }
+
+/* Animations */
+.animate-float {
+    animation: float 6s ease-in-out infinite;
+}
+
+.animate-float.delay-100 { animation-delay: 0.6s; }
+.animate-float.delay-200 { animation-delay: 1.2s; }
+.animate-float.delay-300 { animation-delay: 1.8s; }
+.animate-float.delay-400 { animation-delay: 2.4s; }
+.animate-float.delay-500 { animation-delay: 3s; }
+
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-15px); }
+}
+
+/* Mobile menu animation */
+#mobile-menu {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+}
+
+#mobile-menu:not(.hidden) {
+    max-height: 300px;
+}
+
+/* Image optimization */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Lazy loading */
+.lazy {
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.lazy.loaded {
+    opacity: 1;
+}
+
+/* Responsive adjustments */
+@media (min-width: 1024px) {
+    .process-step:nth-child(odd) .process-card {
+        margin-left: auto;
+        margin-right: 50px;
     }
-
-    @keyframes particle-move {
-        0% {
-            transform: translate(0, 0);
-        }
-        25% {
-            transform: translate(50px, 30px);
-        }
-        50% {
-            transform: translate(20px, 80px);
-        }
-        75% {
-            transform: translate(70px, 20px);
-        }
-        100% {
-            transform: translate(0, 0);
-        }
+    
+    .process-step:nth-child(even) .process-card {
+        margin-right: auto;
+        margin-left: 50px;
     }
+}
 
-    /* Creative Process Styles */
-    .wave-path {
-        width: 100%;
-        height: 100%;
-        background-size: 50px 50px;
-        mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cpath d='M0,50 Q25,25 50,50 T100,50' fill='none' stroke='black' stroke-width='2'/%3E%3C/svg%3E");
-        mask-repeat: repeat-y;
-        mask-position: center;
-    }
-
-    .animate-wave {
-        animation: waveMove 20s linear infinite;
-    }
-
-    @keyframes waveMove {
-        0% { background-position: 0 0; }
-        100% { background-position: 0 100%; }
-    }
-
+@media (max-width: 1024px) {
+    /* Adjust process section for tablets */
     .process-step {
-        display: flex;
-        justify-content: center;
-        width: 100%;
-        position: relative;
+        margin-bottom: 40px;
     }
-
+    
     .process-card {
-        width: 100%;
-        max-width: 400px;
-        background: white;
-        border-radius: 20px;
-        padding: 30px;
-        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
-        position: relative;
-        overflow: hidden;
-        transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-        border: 1px solid rgba(0, 0, 0, 0.03);
+        max-width: 100%;
     }
-
+    
+    /* Services grid */
+    .grid-cols-3 {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    /* Hero section */
+    .hero-content {
+        text-align: left;
+    }
+    
+    .hero-buttons {
+        justify-content: flex-start;
+    }
+    
+    .wave-path {
+        left: 40px;
+    }
+    
+    .process-card {
+        margin-left: 60px;
+    }
+    
     .process-card::before {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 5px;
-        height: 100%;
-        background: linear-gradient(to bottom, var(--tw-gradient-stops));
-        --tw-gradient-from: #3b82f6;
-        --tw-gradient-to: #60a5fa;
-        --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+        left: -40px;
     }
+}
 
-    .process-card:hover {
-        transform: translateY(-10px) scale(1.02);
-        box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+@media (max-width: 768px) {
+    /* Navigation */
+    .nav-links {
+        display: none;
     }
-
-    .step-number {
-        position: absolute;
-        top: 20px;
-        right: 20px;
-        font-size: 1.5rem;
-        font-weight: 800;
-        color: rgba(35, 32, 250, 0.307);
-        line-height: 1;
+    
+    .mobile-menu-btn {
+        display: block;
     }
-
+    
+    /* Hero section */
+    .hero-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .hero-image {
+        margin-top: 40px;
+    }
+    
+    /* Services grid */
+    .grid-cols-3, .grid-cols-2 {
+        grid-template-columns: 1fr;
+    }
+    
+    /* Portfolio grid */
+    .portfolio-grid {
+        grid-template-columns: 1fr;
+        justify-items: start;
+    }
+    
+    /* Testimonials */
+    .testimonial-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    /* Contact section */
+    .contact-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+    
+    /* Footer */
+    .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+    
+    /* Process timeline */
+    .wave-path {
+        display: none;
+    }
+    
+    .process-card {
+        margin-left: 0;
+    }
+    
+    .process-card::before {
+        display: none;
+    }
+    
+    /* Adjust shapes for mobile */
+    .shape-1, .shape-2, .shape-3 {
+        width: 150px;
+        height: 150px;
+    }
+    
+    .shape-1 {
+        top: -75px;
+        right: -75px;
+    }
+    
+    .shape-2 {
+        bottom: -75px;
+        left: -75px;
+    }
+    
+    .shape-contact-1, .shape-contact-2 {
+        width: 200px;
+        height: 200px;
+    }
+    
+    .shape-contact-1 {
+        top: -100px;
+        left: -100px;
+    }
+    
+    .shape-contact-2 {
+        bottom: -100px;
+        right: -100px;
+    }
+    
+    /* Adjust client logos */
+    .client-logo {
+        min-width: 150px;
+        justify-content: flex-start;
+    }
+    
+    /* Adjust process cards */
+    .process-card {
+        padding: 20px;
+    }
+    
     .step-icon {
-        width: 60px;
-        height: 60px;
+        width: 50px;
+        height: 50px;
+        margin-bottom: 15px;
+    }
+    
+    .step-title {
+        font-size: 1.3rem;
+        margin-bottom: 10px;
+    }
+    
+    .step-description {
+        font-size: 0.9rem;
+        margin-bottom: 15px;
+    }
+    
+    /* Improved touch targets for mobile */
+    .nav-link, .portfolio-filter, button, a {
+        min-height: 44px;
+        min-width: 44px;
         display: flex;
         align-items: center;
-        justify-content: center;
-        background: linear-gradient(135deg, #3b82f6, #60a5fa);
-        border-radius: 18px;
-        margin-bottom: 20px;
-        color: white;
-    }
-
-    .step-icon svg {
-        width: 30px;
-        height: 30px;
-    }
-
-    .step-title {
-        font-size: 1.5rem;
-        font-weight: 700;
-        margin-bottom: 15px;
-        color: #111827;
-        position: relative;
-    }
-
-    .step-description {
-        color: #4b5563;
-        line-height: 1.6;
-        margin-bottom: 20px;
-    }
-
-    .step-dots {
-        display: flex;
-        gap: 5px;
-    }
-
-    .step-dots span {
-        display: block;
-        width: 8px;
-        height: 8px;
-        border-radius: 50%;
-        background: #e5e7eb;
-    }
-
-    /* Different card colors */
-    .discovery .step-icon { background: linear-gradient(135deg, #3b82f6, #60a5fa); }
-    .research .step-icon { background: linear-gradient(135deg, #10b981, #34d399); }
-    .concept .step-icon { background: linear-gradient(135deg, #f59e0b, #fbbf24); }
-    .design .step-icon { background: linear-gradient(135deg, #8b5cf6, #a78bfa); }
-    .feedback .step-icon { background: linear-gradient(135deg, #ec4899, #f472b6); }
-    .delivery .step-icon { background: linear-gradient(135deg, #6366f1, #818cf8); }
-
-    /* Animations */
-    .animate-float {
-        animation: float 6s ease-in-out infinite;
-    }
-
-    .animate-float.delay-100 { animation-delay: 0.6s; }
-    .animate-float.delay-200 { animation-delay: 1.2s; }
-    .animate-float.delay-300 { animation-delay: 1.8s; }
-    .animate-float.delay-400 { animation-delay: 2.4s; }
-    .animate-float.delay-500 { animation-delay: 3s; }
-
-    @keyframes float {
-        0%, 100% { transform: translateY(0); }
-        50% { transform: translateY(-15px); }
-    }
-
-    /* CORRECTIONS POUR LES LIENS CENTRÉS SUR MOBILE */
-    
-    /* Remplacer les règles problématiques */
-    @media (max-width: 1024px) {
-        .hero-content {
-            text-align: left; /* Remplacer 'center' par 'left' */
-        }
-        
-        .hero-buttons {
-            justify-content: flex-start; /* Remplacer 'center' par 'flex-start' */
-        }
+        justify-content: flex-start;
     }
     
-    /* Ajouter une règle pour les liens */
-    @media (max-width: 768px) {
-        a, .nav-link, .menu-item {
-            text-align: left !important;
-            justify-content: flex-start !important;
-        }
-        
-        /* Correction pour les conteneurs flex qui centrent */
-        .container.flex, .flex-container {
-            align-items: flex-start !important;
-        }
-        
-        /* Correction pour les éléments de grille */
-        .grid-item, .portfolio-item {
-            justify-self: start !important;
-        }
-    }
-
-    /* Responsive adjustments */
-    @media (min-width: 1024px) {
-        .process-step:nth-child(odd) .process-card {
-            margin-left: auto;
-            margin-right: 50px;
-        }
-        
-        .process-step:nth-child(even) .process-card {
-            margin-right: auto;
-            margin-left: 50px;
-        }
-    }
-
-    @media (max-width: 1023px) {
-        .wave-path {
-            left: 40px;
-        }
-        
-        .process-card {
-            margin-left: 60px;
-        }
-        
-        .process-card::before {
-            left: -40px;
-        }
-    }
-    
-    /* Responsive adjustments */
-    @media (max-width: 1024px) {
-        /* Adjust process section for tablets */
-        .process-step {
-            margin-bottom: 40px;
-        }
-        
-        .process-card {
-            max-width: 100%;
-        }
-        
-        /* Services grid */
-        .grid-cols-3 {
-            grid-template-columns: repeat(2, 1fr);
-        }
-        
-        /* Hero section - CORRECTION */
-        .hero-content {
-            text-align: left; /* Changé de center à left */
-        }
-        
-        .hero-buttons {
-            justify-content: flex-start; /* Changé de center à flex-start */
-        }
-    }
-
-    @media (max-width: 768px) {
-        /* Navigation */
-        .nav-links {
-            display: none;
-        }
-        
-        .mobile-menu-btn {
-            display: block;
-        }
-        
-        /* Hero section */
-        .hero-grid {
-            grid-template-columns: 1fr;
-        }
-        
-        .hero-image {
-            margin-top: 40px;
-        }
-        
-        /* Services grid */
-        .grid-cols-3, .grid-cols-2 {
-            grid-template-columns: 1fr;
-        }
-        
-        /* Portfolio grid */
-        .portfolio-grid {
-            grid-template-columns: 1fr;
-            justify-items: start; /* Ajouté pour aligner à gauche */
-        }
-        
-        /* Testimonials */
-        .testimonial-grid {
-            grid-template-columns: 1fr;
-        }
-        
-        /* Contact section */
-        .contact-grid {
-            grid-template-columns: 1fr;
-            gap: 40px;
-        }
-        
-        /* Footer */
-        .footer-grid {
-            grid-template-columns: 1fr;
-            gap: 30px;
-        }
-        
-        /* Process timeline */
-        .wave-path {
-            display: none;
-        }
-        
-        .process-card {
-            margin-left: 0;
-        }
-        
-        .process-card::before {
-            display: none;
-        }
-        
-        /* Adjust shapes for mobile */
-        .shape-1, .shape-2, .shape-3 {
-            width: 150px;
-            height: 150px;
-        }
-        
-        .shape-1 {
-            top: -75px;
-            right: -75px;
-        }
-        
-        .shape-2 {
-            bottom: -75px;
-            left: -75px;
-        }
-        
-        .shape-contact-1, .shape-contact-2 {
-            width: 200px;
-            height: 200px;
-        }
-        
-        .shape-contact-1 {
-            top: -100px;
-            left: -100px;
-        }
-        
-        .shape-contact-2 {
-            bottom: -100px;
-            right: -100px;
-        }
-        
-        /* Adjust client logos */
-        .client-logo {
-            min-width: 150px;
-            justify-content: flex-start; /* Ajouté pour aligner à gauche */
-        }
-        
-        /* Adjust process cards */
-        .process-card {
-            padding: 20px;
-        }
-        
-        .step-icon {
-            width: 50px;
-            height: 50px;
-            margin-bottom: 15px;
-        }
-        
-        .step-title {
-            font-size: 1.3rem;
-            margin-bottom: 10px;
-        }
-        
-        .step-description {
-            font-size: 0.9rem;
-            margin-bottom: 15px;
-        }
-        
-        /* CORRECTION SPÉCIFIQUE POUR LES LIENS */
-        a, .btn, .nav-link {
-            text-align: left !important;
-            justify-content: flex-start !important;
-        }
-        
-        .flex-mobile {
-            align-items: flex-start !important;
-        }
-    }
-
-    @media (max-width: 480px) {
-        /* Hero section */
-        .hero-title {
-            font-size: 2.5rem;
-        }
-        
-        .hero-subtitle {
-            font-size: 1.2rem;
-        }
-        
-        .hero-buttons {
-            flex-direction: column;
-            gap: 15px;
-            align-items: flex-start; /* Ajouté pour aligner à gauche */
-        }
-        
-        .hero-button {
-            width: 100%;
-            text-align: center; /* Garder le centrage pour les boutons */
-        }
-        
-        /* Section titles */
-        .section-title {
-            font-size: 2rem;
-        }
-        
-        /* Portfolio filter */
-        .portfolio-filter {
-            padding: 8px 12px;
-            font-size: 0.8rem;
-            justify-content: flex-start; /* Ajouté pour aligner à gauche */
-        }
-        
-        /* Contact form */
-        .contact-form {
-            padding: 20px;
-        }
-        
-        /* Footer */
-        .footer-logo {
-            flex-direction: column;
-            text-align: center;
-        }
-        
-        .footer-logo img {
-            margin-right: 0;
-            margin-bottom: 15px;
-        }
-        
-        /* Adjust client logos */
-        .client-logo {
-            min-width: 120px;
-        }
-        
-        /* Adjust process cards */
-        .process-card {
-            padding: 15px;
-        }
-        
-        .step-number {
-            top: 15px;
-            right: 15px;
-            font-size: 1.2rem;
-        }
-        
-        .step-icon {
-            width: 40px;
-            height: 40px;
-            border-radius: 12px;
-            margin-bottom: 10px;
-        }
-        
-        .step-icon svg {
-            width: 20px;
-            height: 20px;
-        }
-        
-        .step-title {
-            font-size: 1.1rem;
-            margin-bottom: 8px;
-        }
-        
-        .step-description {
-            font-size: 0.8rem;
-            margin-bottom: 12px;
-        }
-    }
-    
-    /* Image optimization */
-    img {
-        max-width: 100%;
-        height: auto;
-        display: block;
-    }
-
-    /* Lazy loading */
-    .lazy {
-        opacity: 0;
-        transition: opacity 0.3s ease;
-    }
-
-    .lazy.loaded {
-        opacity: 1;
-    }
-
-    /* Mobile menu animation */
-    #mobile-menu {
-        max-height: 0;
-        overflow: hidden;
-        transition: max-height 0.3s ease-out;
-    }
-
-    #mobile-menu:not(.hidden) {
-        max-height: 300px;
-    }
-
-    /* Improved touch targets for mobile */
-    @media (max-width: 768px) {
-        .nav-link, .portfolio-filter, button, a {
-            min-height: 44px;
-            min-width: 44px;
-            display: flex;
-            align-items: center;
-            justify-content: flex-start; /* Changé de center à flex-start */
-        }
-    }
-
-    /* Prevent horizontal scrolling */
-    html, body {
-        overflow-x: hidden;
-        width: 100%;
-    }
-
     /* Improved text readability on mobile */
-    @media (max-width: 768px) {
-        body {
-            font-size: 16px; /* Prevents zoom on iOS */
-            line-height: 1.6;
-        }
-        
-        h1, h2, h3, h4, h5, h6 {
-            line-height: 1.3;
-        }
+    body {
+        font-size: 16px;
+        line-height: 1.6;
     }
-
+    
+    h1, h2, h3, h4, h5, h6 {
+        line-height: 1.3;
+    }
+    
     /* Improved form elements on mobile */
-    @media (max-width: 768px) {
-        input, select, textarea {
-            font-size: 16px; /* Prevents zoom on iOS */
-        }
+    input, select, textarea {
+        font-size: 16px;
     }
-    @media (max-width: 768px) {
-    a, .nav-link, .menu-item {
+    
+    /* Text alignment corrections */
+    a, .nav-link, .menu-item, .text-mobile-left {
         text-align: left !important;
         justify-content: flex-start !important;
+    }
+    
+    .container.flex, .flex-container {
+        align-items: flex-start !important;
+    }
+    
+    .grid-item, .portfolio-item {
+        justify-self: start !important;
+    }
+}
+
+@media (max-width: 480px) {
+    /* Hero section */
+    .hero-title {
+        font-size: 2.5rem;
+    }
+    
+    .hero-subtitle {
+        font-size: 1.2rem;
+    }
+    
+    .hero-buttons {
+        flex-direction: column;
+        gap: 15px;
+        align-items: flex-start;
+    }
+    
+    .hero-button {
+        width: 100%;
+        text-align: center;
+    }
+    
+    /* Section titles */
+    .section-title {
+        font-size: 2rem;
+    }
+    
+    /* Portfolio filter */
+    .portfolio-filter {
+        padding: 8px 12px;
+        font-size: 0.8rem;
+        justify-content: flex-start;
+    }
+    
+    /* Contact form */
+    .contact-form {
+        padding: 20px;
+    }
+    
+    /* Footer */
+    .footer-logo {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .footer-logo img {
+        margin-right: 0;
+        margin-bottom: 15px;
+    }
+    
+    /* Adjust client logos */
+    .client-logo {
+        min-width: 120px;
+    }
+    
+    /* Adjust process cards */
+    .process-card {
+        padding: 15px;
+    }
+    
+    .step-number {
+        top: 15px;
+        right: 15px;
+        font-size: 1.2rem;
+    }
+    
+    .step-icon {
+        width: 40px;
+        height: 40px;
+        border-radius: 12px;
+        margin-bottom: 10px;
+    }
+    
+    .step-icon svg {
+        width: 20px;
+        height: 20px;
+    }
+    
+    .step-title {
+        font-size: 1.1rem;
+        margin-bottom: 8px;
+    }
+    
+    .step-description {
+        font-size: 0.8rem;
+        margin-bottom: 12px;
     }
 }

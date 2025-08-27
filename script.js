@@ -1,3 +1,4 @@
+// Configuration de Tailwind
 tailwind.config = {
     theme: {
         extend: {
@@ -23,6 +24,7 @@ document.addEventListener('DOMContentLoaded', function() {
     if (mobileMenuBtn && mobileMenu) {
         mobileMenuBtn.addEventListener('click', () => {
             mobileMenu.classList.toggle('hidden');
+            document.body.style.overflow = mobileMenu.classList.contains('hidden') ? '' : 'hidden';
         });
     }
 
@@ -38,8 +40,9 @@ document.addEventListener('DOMContentLoaded', function() {
                 });
             }
             // Fermer le menu mobile après clic
-            if (mobileMenu) {
+            if (mobileMenu && !mobileMenu.classList.contains('hidden')) {
                 mobileMenu.classList.add('hidden');
+                document.body.style.overflow = '';
             }
         });
     });
@@ -120,7 +123,7 @@ document.addEventListener('DOMContentLoaded', function() {
             
             if (count < target) {
                 counter.innerText = Math.ceil(count + increment);
-                setTimeout(animateCounters, 1);
+                setTimeout(() => animateCounters(), 1);
             } else {
                 counter.innerText = target;
             }
@@ -157,8 +160,16 @@ document.addEventListener('DOMContentLoaded', function() {
             portfolioItems.forEach(item => {
                 if (filterValue === 'all' || item.getAttribute('data-category') === filterValue) {
                     item.style.display = 'block';
+                    setTimeout(() => {
+                        item.style.opacity = '1';
+                        item.style.transform = 'translateY(0)';
+                    }, 50);
                 } else {
-                    item.style.display = 'none';
+                    item.style.opacity = '0';
+                    item.style.transform = 'translateY(20px)';
+                    setTimeout(() => {
+                        item.style.display = 'none';
+                    }, 300);
                 }
             });
         });
@@ -245,4 +256,21 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Add event listener
     window.addEventListener('resize', handleResize);
+    
+    // Lazy loading des images
+    const lazyImages = document.querySelectorAll('.lazy');
+    const imageObserver = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const img = entry.target;
+                img.src = img.dataset.src;
+                img.classList.add('loaded');
+                observer.unobserve(img);
+            }
+        });
+    });
+
+    lazyImages.forEach(img => {
+        imageObserver.observe(img);
+    });
 });
